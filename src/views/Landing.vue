@@ -1,20 +1,27 @@
 <template>
     <div class="landing-page">
         <div class="on-desktop">
-            <div>&nbsp;</div>
-            <div>&nbsp;</div>
-            <div>&nbsp;</div>
             <div class="desktop-table">
                 <h3>Check back soon for the Desktop version!</h3>
                 <img class='no-desktop' src="./../../public/icons/sad.png" alt="Sad">
             </div>
         </div>
         <div class="mobile-landing">
+            <div class="WelcomeText">
+                <h5>Welcome to Gamematch</h5>
+            </div>
+            <div class="sign-in-button">
+                <button>Sign In</button>
+            </div>
+            <div class="sign-up-button">
+                <button>Sign Up</button>
+            </div>
         </div>
     </div>
 </template>
 <script>
 </script>
+
 <style scoped>
 /*for browsers*/
 @media screen and (min-width:821px){
@@ -23,18 +30,81 @@
         text-align: center;
         vertical-align: center;
     }
+    .mobile-landing {
+        display: none;
+    }
+
+    .landing-page {
+        background-color: #292929;
+        height: 100%;
+        width: 100%;
+    }
 }
 /*for mobile devices*/
 @media screen and (max-width: 820px){
 
-    .on-desktop {
-        display: none;
-    }
     * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
     }
 
+    .on-desktop {
+        display: none;
+    }
+
+    .mobile-landing {
+        height: 100%;
+    }
+
+    .landing-page {
+        background-color: #292929;
+        height: 100%;
+        width: 100%;
+    }
+
+    .WelcomeText {
+        color: #00A7CC;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+    }
+    .sign-in-button {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+
+    }
+    .sign-in-button button {
+        border: 1px solid #00A7CC;
+        top: 50%;
+        left: 50%;
+        width: 211px;
+        height: 76px;
+        color: #00A7CC;
+        border-radius: 10px;
+    }
+    .sign-up-button {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -85%);
+    }
+
+    .sign-up-button button {
+        background: #00A7CC;
+        top: 50%;
+        left: 50%;
+        width: 211px;
+        height: 76px;
+        color: #ffffff;
+        border-radius: 10px;
+    }
 }
 </style>
