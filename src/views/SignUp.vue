@@ -38,10 +38,4 @@
 }
 /*for mobile devices*/
 @media screen and (max-width: 820px){
-
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
 }

@@ -39,5 +39,18 @@
 }
 /*for mobile devices*/
 @media screen and (max-width: 820px){
+    .on-desktop {
+        display: none;
+    }
+    .landing-page {
+        background-color: #292929;
+        height: 100%;
+        width: 100%;
+    }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 }
 </style>
