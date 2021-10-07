@@ -7,7 +7,6 @@
             </div>
         </div>
         <div class="mobile-landing">
-
         </div>
     </div>
 </template>
@@ -39,5 +38,10 @@
 }
 /*for mobile devices*/
 @media screen and (max-width: 820px){
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 }
-</style>
