@@ -7,7 +7,10 @@
             </div>
         </div>
         <div class="mobile-landing">
-
+            <img class='return-button' src="./../../public/icons/left.png" alt="return-icon">
+            <div class="login-text">
+                <h5>Welcome Back</h5>
+            </div>
         </div>
     </div>
 </template>
@@ -51,6 +54,27 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+    }
+
+    .return-button {
+        position: absolute;
+        width: 28px;
+        top: 5%;
+        left: 5%;
+        opacity: 0.8;
+    }
+
+    .login-text{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 35px;
+        color: #00A7CC;
+
+        position: absolute;
+        left: 5%;
+        top: 17%;
     }
 }
 </style>

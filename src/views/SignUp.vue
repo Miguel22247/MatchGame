@@ -7,6 +7,10 @@
             </div>
         </div>
         <div class="mobile-landing">
+            <img class='return-button' src="./../../public/icons/left.png" alt="return-icon">
+            <div class="sign-up-text">
+                <h5>Welcome to GameMatch</h5>
+            </div>
         </div>
     </div>
 </template>
@@ -38,4 +42,39 @@
 }
 /*for mobile devices*/
 @media screen and (max-width: 820px){
+    .on-desktop {
+        display: none;
+    }
+    .landing-page {
+        background-color: #292929;
+        height: 100%;
+        width: 100%;
+    }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .return-button {
+        position: absolute;
+        width: 28px;
+        top: 5%;
+        left: 5%;
+        opacity: 0.8;
+    }
+
+    .sign-up-text{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 35px;
+        color: #00A7CC;
+
+        position: absolute;
+        top: 17%;
+        left: 5%;
+    }
 }
+</style>
