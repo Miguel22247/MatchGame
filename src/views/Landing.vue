@@ -7,7 +7,7 @@
             </div>
         </div>
         <div class="mobile-landing">
-            <div class="WelcomeText">
+            <div class="welcome-text">
                 <h5>Welcome to Gamematch</h5>
             </div>
             <div class="sign-in-button">
@@ -71,7 +71,7 @@
         width: 100%;
     }
 
-    .WelcomeText {
+    .welcome-text {
         color: #00A7CC;
         position: absolute;
         top: 50%;
@@ -80,7 +80,7 @@
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
-        font-size: 16px;
+        font-size: 20px;
     }
     .sign-in-button {
         position: absolute;
@@ -94,15 +94,15 @@
         top: 50%;
         left: 50%;
         width: 211px;
-        height: 76px;
+        height: 70px;
         color: #00A7CC;
         border-radius: 10px;
     }
     .sign-up-button {
         position: absolute;
-        top: 85%;
+        top: 82%;
         left: 50%;
-        transform: translate(-50%, -85%);
+        transform: translate(-50%, -100%);
     }
 
     .sign-up-button button {
@@ -110,7 +110,7 @@
         top: 50%;
         left: 50%;
         width: 211px;
-        height: 76px;
+        height: 70px;
         color: #ffffff;
         border-radius: 10px;
     }
