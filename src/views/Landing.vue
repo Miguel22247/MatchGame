@@ -27,8 +27,16 @@
 @media screen and (min-width:821px){
     .on-desktop {
         color: #00A7CC;
-        text-align: center;
-        vertical-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .on-desktop img {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
     }
     .mobile-landing {
         display: none;
@@ -78,7 +86,7 @@
         position: absolute;
         top: 70%;
         left: 50%;
-        transform: translate(-50%, -60%);
+        transform: translate(-50%, -70%);
 
     }
     .sign-in-button button {
