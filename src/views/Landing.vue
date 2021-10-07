@@ -102,7 +102,7 @@
         position: absolute;
         top: 82%;
         left: 50%;
-        transform: translate(-50%, -100%);
+        transform: translate(-50%, -50%);
     }
 
     .sign-up-button button {
