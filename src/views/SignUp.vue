@@ -20,18 +20,18 @@
                     </v-btn>
                 </router-link>
             </div>
-            <div class="login-text">
+            <div class="signup-text">
                 <h5>Welcome to Gamematch</h5>
             </div>
-            <div class="login-forms">
-                <div class="login-form-basic">
-                    <form class="login-form">
-                        <input type="text" class="login-email">
-                        <input type="text" class="login-password">
+            <div class="signup-forms">
+                <div class="signup-form-basic">
+                    <form class="signup-form">
+                        <input type="text" class="signup-email">
+                        <input type="text" class="signup-password">
                     </form>
-                    <button class="button-login-submit" type="submit">Sign Up</button>	
+                    <button class="button-signup-submit" type="submit">Sign Up</button>	
                 </div>
-                <!--- Add the login button here --->
+                <!--- Add the signup with google button here --->
             </div>
         </div>
     </div>
@@ -87,7 +87,7 @@
         top: 5%;
         left: 5%;
     }
-    .signu-up-text{
+    .signup-text{
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
@@ -100,7 +100,7 @@
         top: 17%;
     }
 
-    .login-forms {
+    .signup-forms {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -109,7 +109,7 @@
         transform: translate(-50%, -50%);
     }
 
-    .login-email {
+    .signup-email {
         width: 211px;
         color: #00A7CC;
         border-radius: 10px;
@@ -121,7 +121,7 @@
 
     }
 
-    .login-password {
+    .signup-password {
         width: 211px;
         color: #00A7CC;
         border-radius: 10px;
@@ -130,10 +130,9 @@
         top: 43%;
         left: 50%;
         transform: translate(-50%, -50%);
-
     }
 
-    .button-login-submit {
+    .button-signup-submit {
         width: 211px;
         height: 70px;
         color: #FFFFFF;
