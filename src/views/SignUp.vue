@@ -14,17 +14,24 @@
                     color="#00A7CC"
                     dark
                     >
-                        <v-icon
-                            dark
-                            left
-                        >
+                        <v-icon dark left>
                             mdi-arrow-left
                         </v-icon>Back
                     </v-btn>
                 </router-link>
             </div>
-            <div class="sign-up-text">
-                <h5>Welcome to GameMatch</h5>
+            <div class="login-text">
+                <h5>Welcome to Gamematch</h5>
+            </div>
+            <div class="login-forms">
+                <div class="login-form-basic">
+                    <form class="login-form">
+                        <input type="text" class="login-email">
+                        <input type="text" class="login-password">
+                    </form>
+                    <button class="button-login-submit" type="submit">Sign Up</button>	
+                </div>
+                <!--- Add the login button here --->
             </div>
         </div>
     </div>
@@ -41,6 +48,7 @@
     }
 
     .on-desktop img {
+        margin-top: 10px;
         position: absolute;
         left: 50%;
         transform: translate(-50%, 0%);
@@ -60,6 +68,7 @@
     .on-desktop {
         display: none;
     }
+
     .landing-page {
         background-color: #292929;
         height: 100%;
@@ -78,8 +87,7 @@
         top: 5%;
         left: 5%;
     }
-
-    .sign-up-text{
+    .signu-up-text{
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
@@ -88,8 +96,54 @@
         color: #00A7CC;
 
         position: absolute;
-        top: 17%;
         left: 5%;
+        top: 17%;
+    }
+
+    .login-forms {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .login-email {
+        width: 211px;
+        color: #00A7CC;
+        border-radius: 10px;
+        border: 1px solid #00A7CC;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .login-password {
+        width: 211px;
+        color: #00A7CC;
+        border-radius: 10px;
+        border: 1px solid #00A7CC;
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .button-login-submit {
+        width: 211px;
+        height: 70px;
+        color: #FFFFFF;
+        background-color: #00A7CC;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, 0%);
     }
 }
 </style>
