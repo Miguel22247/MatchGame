@@ -7,7 +7,22 @@
             </div>
         </div>
         <div class="mobile-landing">
-            <img class='return-button' src="./../../public/icons/left.png" alt="return-icon">
+            <div class="return-button">
+                <router-link to="/">
+                    <v-btn
+                    class="ma-2"
+                    color="#00A7CC"
+                    dark
+                    >
+                        <v-icon
+                            dark
+                            left
+                        >
+                            mdi-arrow-left
+                        </v-icon>Back
+                    </v-btn>
+                </router-link>
+            </div>
             <div class="sign-up-text">
                 <h5>Welcome to GameMatch</h5>
             </div>
@@ -56,12 +71,12 @@
         padding: 0;
     }
 
-    .return-button {
+    .return-button button {
+        height: 50px;
+        width: 90px;
         position: absolute;
-        width: 28px;
         top: 5%;
         left: 5%;
-        opacity: 0.8;
     }
 
     .sign-up-text{

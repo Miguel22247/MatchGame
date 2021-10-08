@@ -11,10 +11,10 @@
                 <h5>Welcome to Gamematch</h5>
             </div>
             <div class="sign-in-button">
-                <button>Sign In</button>
+                <router-link to="/signin"><button>Sign In</button></router-link>
             </div>
             <div class="sign-up-button">
-                <button>Sign Up</button>
+                <router-link to="/signup"><button>Sign Up</button></router-link>
             </div>
         </div>
     </div>
@@ -87,7 +87,6 @@
         top: 70%;
         left: 50%;
         transform: translate(-50%, -70%);
-
     }
     .sign-in-button button {
         border: 1px solid #00A7CC;
@@ -98,6 +97,7 @@
         color: #00A7CC;
         border-radius: 10px;
     }
+
     .sign-up-button {
         position: absolute;
         top: 82%;
