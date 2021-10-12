@@ -81,7 +81,7 @@
         width: 90px;
         position: absolute;
         top: 5%;
-        left: 5%;
+        left: 10%;
     }
     .login-text{
         font-family: Roboto;
@@ -92,8 +92,8 @@
         color: #00A7CC;
 
         position: absolute;
-        left: 5%;
-        top: 17%;
+        left: 10%;
+        top: 15%;
     }
 
     .login-forms {
