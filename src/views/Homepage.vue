@@ -10,14 +10,26 @@
 			<div class="hello-user">
 				<h5>Hello Miguel!</h5>
 			</div>
+			<div class="display-info">
+			</div>
 			<div class="navbar">
 				<v-row
 				align="center"
 				justify="space-around"
 				>
 					<router-link to="/search">
-						<v-btn>
-							<v-icon>fab fa-search</v-icon>
+						<v-btn color="#00A7CC">
+							<v-icon color="#ffffff">mdi-magnify</v-icon>
+						</v-btn>
+					</router-link>
+					<router-link to="/matches">
+						<v-btn color="#00A7CC">
+							<v-icon color="#ffffff">mdi-account-multiple-plus</v-icon>
+						</v-btn>
+					</router-link>
+					<router-link to="/profile">
+						<v-btn color="#00A7CC">
+							<v-icon color="#ffffff">mdi-face-man-profile</v-icon>
 						</v-btn>
 					</router-link>
 				</v-row>
@@ -78,11 +90,17 @@
 		font-size: 20px;
 	}
 	.navbar {
-		border: 1px solid red;
 		width: 100%;
-		height: 36px;
+		height: 40px;
 		position: absolute;
 		top: 95%;
+	}
+	.display-info {
+		border: 1px solid red;
+		width: 100%;
+		height: 750px;
+		position: absolute;
+		top:15%;
 	}
 }
 </style>
