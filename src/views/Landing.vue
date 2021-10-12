@@ -24,7 +24,7 @@
 
 <style scoped>
 /*for browsers*/
-@media screen and (min-width:821px){
+@media screen and (min-width:1025px){
     .on-desktop {
         color: #00A7CC;
         position: absolute;
@@ -49,7 +49,7 @@
     }
 }
 /*for mobile devices*/
-@media screen and (max-width: 820px){
+@media screen and (max-width: 1024px){
 
     * {
         box-sizing: border-box;

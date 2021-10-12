@@ -34,7 +34,7 @@
 </template>
 
 <style scoped>
-@media screen and (min-width:1024px){
+@media screen and (min-width:1025px){
     .on-desktop {
         color: #00A7CC;
         position: absolute;
@@ -60,7 +60,7 @@
     }
 }
 /*for mobile devices*/
-@media screen and (max-width: 820px){
+@media screen and (max-width: 1024px){
     .on-desktop {
         display: none;
     }

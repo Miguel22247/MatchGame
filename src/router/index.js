@@ -25,7 +25,10 @@ const routes = [
     component: () => import('../views/SignIn.vue')
   },
   {
-    path: '/home'
+    path: '/home',
+    name: 'HomePage',
+
+    component: () => import('../views/Homepage.vue')
   }
 ]
 
