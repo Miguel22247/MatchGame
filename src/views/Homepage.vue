@@ -32,11 +32,6 @@
 							<v-icon color="#ffffff">mdi-face-man-profile</v-icon>
 						</v-btn>
 					</router-link>
-					<router-link to="/settings">
-						<v-btn color="#00A7CC">
-							<v-icon color="#ffffff">mdi-account-settings</v-icon>
-						</v-btn>
-					</router-link>
 				</v-row>
 			</div>
 		</div>
@@ -101,9 +96,7 @@
 		top: 95%;
 	}
 	.display-info {
-		border: 1px solid red;
 		width: 100%;
-		height: 750px;
 		position: absolute;
 		top:15%;
 	}
