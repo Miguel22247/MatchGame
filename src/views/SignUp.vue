@@ -22,8 +22,8 @@
                 </div>
                 <div class="signup-form-basic">
                     <form class="signup-form">
-                        <input type="text" class="signup-email">
-                        <input type="text" class="signup-password">
+                        <input type="text" class="signup-email" placeholder="Email">
+                        <input type="text" class="signup-password" placeholder="Password">
                     </form>
                     <button class="button-signup-submit" type="submit">Sign Up</button>	
                 </div>
@@ -114,7 +114,7 @@
         top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
-
+        text-align: center;
     }
 
     .signup-password {
@@ -126,6 +126,7 @@
         top: 43%;
         left: 50%;
         transform: translate(-50%, -50%);
+        text-align: center;
     }
 
     .button-signup-submit {

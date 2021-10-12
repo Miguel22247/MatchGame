@@ -22,8 +22,8 @@
                 </div>
                 <div class="login-form-basic">
                     <form class="login-form">
-                        <input type="text" class="login-email">
-                        <input type="text" class="login-password">
+                        <input type="text" class="login-email" name="email" placeholder="Email">
+                        <input type="text" class="login-password" name="password" placeholder="Password">
                     </form>
                     <router-link to="/home"><button class="button-login-submit" type="submit">Sign In</button></router-link>	
                 </div>
@@ -114,7 +114,7 @@
         top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
-
+        text-align: center;
     }
 
     .login-password {
@@ -126,7 +126,7 @@
         top: 43%;
         left: 50%;
         transform: translate(-50%, -50%);
-
+        text-align: center;
     }
 
     .button-login-submit {
