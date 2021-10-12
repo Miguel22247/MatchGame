@@ -14,7 +14,7 @@ const routes = [
   {
     path: '/signup',
     name: 'SignUp',
-    
+
     component: () => import('../views/SignUp.vue')
   },
   {
@@ -31,7 +31,7 @@ const routes = [
   },
   {
     path: '/matches',
-    name: 'SignIn',
+    name: 'Matches',
     
     component: () => import('../views/Matches.vue')
   },
@@ -39,7 +39,7 @@ const routes = [
     path: '/profile',
     name: 'Profile',
     
-    component: () => import('../views/profile.vue')
+    component: () => import('../views/Profile.vue')
   },
 ]
 
