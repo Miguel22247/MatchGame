@@ -78,7 +78,7 @@
 
     .return-button button {
         height: 50px;
-        width: 90px;
+        width: 50px;
         position: absolute;
         top: 5%;
         left: 10%;
