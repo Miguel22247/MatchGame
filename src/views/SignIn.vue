@@ -81,7 +81,7 @@
         width: 90px;
         position: absolute;
         top: 5%;
-        left: 10%;
+        left: 7%;
     }
     .login-text{
         font-family: Roboto;
