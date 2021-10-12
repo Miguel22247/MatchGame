@@ -22,10 +22,14 @@
                 </div>
                 <div class="signup-form-basic">
                     <form class="signup-form">
+
                         <input type="text" class="signup-email" placeholder="Email">
+                        <input type="text" class="signup-username" placeholder="Username">
                         <input type="text" class="signup-password" placeholder="Password">
+                        <input type="text" class="signup-confirm-password" placeholder="Confirm password">
+                        <input type="text" class="signup-gametag" placeholder="Gametag (at least one)">
                     </form>
-                    <button class="button-signup-submit" type="submit">Sign Up</button>	
+                    <router-link to="/home"><button class="button-signup-submit" type="submit">Sign Up</button></router-link>
                 </div>
                 <!--- Add the signup with google button here --->
             </div>
@@ -117,13 +121,49 @@
         text-align: center;
     }
 
+        .signup-username {
+        width: 211px;
+        color: #00A7CC;
+        border-radius: 10px;
+        border: 1px solid #00A7CC;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
     .signup-password {
         width: 211px;
         color: #00A7CC;
         border-radius: 10px;
         border: 1px solid #00A7CC;
         position: absolute;
-        top: 43%;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .signup-confirm-password{
+        width: 211px;
+        color: #00A7CC;
+        border-radius: 10px;
+        border: 1px solid #00A7CC;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .signup-gametag {
+        width: 211px;
+        color: #00A7CC;
+        border-radius: 10px;
+        border: 1px solid #00A7CC;
+        position: absolute;
+        top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -136,7 +176,7 @@
         background-color: #00A7CC;
         border-radius: 10px;
         position: absolute;
-        top: 50%;
+        top: 60%;
         left: 50%;
         transform: translate(-50%, 0%);
     }
