@@ -7,19 +7,19 @@
             </div>
         </div>
         <div class="mobile-landing">
-            <div class="return-button">
-                <router-link to="/">
-                    <v-btn class="ma-2" color="#00A7CC" dark>
-                        <v-icon dark left>
-                            mdi-arrow-left
-                        </v-icon>Back
-                    </v-btn>
-                </router-link>
-            </div>
             <div class="login-text">
                 <h5>Welcome Back</h5>
             </div>
             <div class="login-forms">
+                <div class="return-button">
+                    <router-link to="/">
+                        <v-btn color="#00A7CC">
+                            <v-icon color="#ffffff">
+                                mdi-arrow-left
+                            </v-icon>
+                        </v-btn>
+                    </router-link>
+                </div>
                 <div class="login-form-basic">
                     <form class="login-form">
                         <input type="text" class="login-email">

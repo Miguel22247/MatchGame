@@ -7,19 +7,19 @@
             </div>
         </div>
         <div class="mobile-landing">
-            <div class="return-button">
-                <router-link to="/">
-                    <v-btn class="ma-2" color="#00A7CC" dark>
-                        <v-icon dark left>
-                            mdi-arrow-left
-                        </v-icon>Back
-                    </v-btn>
-                </router-link>
-            </div>
             <div class="signup-text">
                 <h5>Welcome to Gamematch</h5>
             </div>
             <div class="signup-forms">
+                <div class="return-button">
+                    <router-link to="/">
+                        <v-btn color="#00A7CC">
+                            <v-icon color="#ffffff">
+                                mdi-arrow-left
+                            </v-icon>
+                        </v-btn>
+                    </router-link>
+                </div>
                 <div class="signup-form-basic">
                     <form class="signup-form">
                         <input type="text" class="signup-email">
@@ -81,7 +81,7 @@
         width: 90px;
         position: absolute;
         top: 5%;
-        left: 7%;
+        left: 10%;
     }
     .signup-text{
         font-family: Roboto;
