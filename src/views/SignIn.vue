@@ -8,7 +8,7 @@
         </div>
         <div class="mobile-landing">
             <div class="return-button">
-                <router-link to="/">
+                <router-link to="/welcome">
                     <v-btn class="ma-2" color="#00A7CC" dark>
                         <v-icon dark left>
                             mdi-arrow-left
