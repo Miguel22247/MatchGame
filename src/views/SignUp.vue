@@ -27,7 +27,6 @@
                         <input type="text" class="signup-username" placeholder="Username">
                         <input type="text" class="signup-password" placeholder="Password">
                         <input type="text" class="signup-confirm-password" placeholder="Confirm password">
-                        <input type="text" class="signup-gametag" placeholder="Gametag (at least one)">
                     </form>
                     <router-link to="/home"><button class="button-signup-submit" type="submit">Sign Up</button></router-link>
                 </div>
