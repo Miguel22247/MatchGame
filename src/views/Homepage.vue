@@ -10,6 +10,7 @@
 			<div class="hello-user">
 				<h5>Hello Miguel!</h5>
 			</div>
+			<input type="text" class="search" placeholder="Search">
 			<div class="display-info">
 			</div>
 			<div class="navbar">
@@ -17,11 +18,6 @@
 				align="center"
 				justify="space-around"
 				>
-					<router-link to="/search">
-						<v-btn color="#00A7CC">
-							<v-icon color="#ffffff">mdi-magnify</v-icon>
-						</v-btn>
-					</router-link>
 					<router-link to="/matches">
 						<v-btn color="#00A7CC">
 							<v-icon color="#ffffff">mdi-account-multiple-plus</v-icon>
@@ -95,10 +91,16 @@
 		position: absolute;
 		top: 95%;
 	}
-	.display-info {
-		width: 100%;
+	.search {
+		color: #00A7CC;
+		border: 1px solid #00A7CC;
+		border-radius: 5px;
+		text-align: center;
 		position: absolute;
-		top:15%;
+		width: 250px;
+		top: 20%;
+		left: 50%;
+		transform: translate(-50%, 0);
 	}
 }
 </style>
