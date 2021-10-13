@@ -10,7 +10,10 @@
 			<div class="hello-user">
 				<h5>Hello Miguel!</h5>
 			</div>
-			<input type="text" class="search" placeholder="Search">
+			<div>
+				<input type="text" class="search" placeholder="Search">
+				<router-link to="/search"><v-btn>Search</v-btn></router-link>
+			</div>
 			<div class="display-info">
 			</div>
 			<div class="navbar">
