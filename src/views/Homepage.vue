@@ -12,10 +12,10 @@
 			</div>
 			<div>
 				<input type="text" class="search" placeholder="Search">
-				<router-link to="/search"><v-btn>Search</v-btn></router-link>
+				<router-link to="/search"><v-btn class="btn">Search</v-btn></router-link>
 			</div>
 			<div class="display-info">
-			
+
 			</div>
 			<div class="navbar">
 				<v-row
@@ -41,20 +41,6 @@
 <style scoped>
 @media screen and (min-width:1025px){
     .on-desktop {
-        color: #00A7CC;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .on-desktop img {
-        margin-top: 10px;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0%);
-    }
-    .mobile-landing {
         display: none;
     }
 
@@ -63,6 +49,45 @@
         height: 100%;
         width: 100%;
     }
+
+	.btn {
+		position: absolute;
+		top: 19.5%;
+		left: 60%;
+		color: #00A7CC;
+	}
+
+	* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+	.hello-user {
+		position: absolute;
+		top: 10%;
+		left: 10%;
+		color: #00A7CC;
+		font-weight: bold;
+		font-size: 20px;
+	}
+	.navbar {
+		width: 100%;
+		height: 40px;
+		position: absolute;
+		top: 95%;
+	}
+	.search {
+		color: #00A7CC;
+		border: 1px solid #00A7CC;
+		border-radius: 5px;
+		text-align: center;
+		position: absolute;
+		width: 250px;
+		top: 20%;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
 }
 @media screen and (max-width: 1024px){
     .on-desktop {
@@ -89,6 +114,14 @@
 		font-weight: bold;
 		font-size: 20px;
 	}
+
+		.btn {
+		position: absolute;
+		top: 19.5%;
+		left: 65%;
+		color: #00A7CC;
+	}
+
 	.navbar {
 		width: 100%;
 		height: 40px;
