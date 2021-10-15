@@ -8,7 +8,7 @@
         </div>
         <div class="mobile-landing">
 			<div class="hello-user">
-				<h5>Hello Miguel!</h5>
+				<h5>Hello Miguel!</h5> <!--- Add the ability to recognize the user ---->
 			</div>
 			<div>
 				<input type="text" class="search" placeholder="Search">
