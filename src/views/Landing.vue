@@ -25,27 +25,69 @@
 <style scoped>
 /*for browsers*/
 @media screen and (min-width:1025px){
-    .on-desktop {
-        color: #00A7CC;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
 
-    .on-desktop img {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0%);
-    }
-    .mobile-landing {
+    .on-desktop {
         display: none;
+    }
+
+    .mobile-landing {
+        height: 100%;
     }
 
     .landing-page {
         background-color: #292929;
         height: 100%;
         width: 100%;
+    }
+
+    .welcome-text {
+        color: #00A7CC;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+    }
+    .sign-in-button {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+    }
+    .sign-in-button button {
+        border: 1px solid #00A7CC;
+        top: 50%;
+        left: 50%;
+        width: 211px;
+        height: 70px;
+        color: #00A7CC;
+        border-radius: 10px;
+    }
+
+    .sign-up-button {
+        position: absolute;
+        top: 82%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .sign-up-button button {
+        background: #00A7CC;
+        top: 50%;
+        left: 50%;
+        width: 211px;
+        height: 70px;
+        color: #ffffff;
+        border-radius: 10px;
     }
 }
 /*for mobile devices*/

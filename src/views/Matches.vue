@@ -6,6 +6,10 @@
                 <img class='no-desktop' src="./../../public/icons/sad.png" alt="Sad">
             </div>
         </div>
+        <div class="mobile-landing">
+            <div class="container">
+            </div>
+        </div>
 	</div>
 </template>
 <script>
@@ -38,7 +42,7 @@
         transform: translate(-50%, 0%);
     }
 }
-
+/*for mobile*/
 @media screen and (max-width: 1024px) {
     .on-desktop {
         display: none;

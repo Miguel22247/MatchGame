@@ -15,6 +15,7 @@
 				<router-link to="/search"><v-btn>Search</v-btn></router-link>
 			</div>
 			<div class="display-info">
+			
 			</div>
 			<div class="navbar">
 				<v-row

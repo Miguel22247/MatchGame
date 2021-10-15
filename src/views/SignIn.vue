@@ -35,21 +35,7 @@
 
 <style scoped>
 @media screen and (min-width:1025px){
-    .on-desktop {
-        color: #00A7CC;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .on-desktop img {
-        margin-top: 10px;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0%);
-    }
-    .mobile-landing {
+   .on-desktop {
         display: none;
     }
 
@@ -57,6 +43,76 @@
         background-color: #292929;
         height: 100%;
         width: 100%;
+    }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .return-button button {
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: 14.5%;
+        left: 5%;
+    }
+    .login-text{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 35px;
+        color: #00A7CC;
+        position: absolute;
+        left: 10%;
+        top: 15%;
+    }
+
+    .login-forms {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .login-email {
+        width: 211px;
+        color: #00A7CC;
+        border-radius: 10px;
+        border: 1px solid #00A7CC;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .login-password {
+        width: 211px;
+        color: #00A7CC;
+        border-radius: 10px;
+        border: 1px solid #00A7CC;
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .button-login-submit {
+        width: 211px;
+        height: 70px;
+        color: #FFFFFF;
+        background-color: #00A7CC;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, 0%);
     }
 }
 /*for mobile devices*/
