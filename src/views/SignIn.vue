@@ -33,23 +33,24 @@
     </div>
 </template>
 
+<script>
+</script>
+
 <style scoped>
 @media screen and (min-width:1025px){
    .on-desktop {
         display: none;
     }
-
     .landing-page {
         background-color: #292929;
-        height: 100vh;
-        width: 100vh;
+        height: 100%;
+        width: 100%;
     }
     * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
     }
-
     .return-button button {
         height: 50px;
         width: 50px;
@@ -68,16 +69,14 @@
         left: 10%;
         top: 15%;
     }
-
     .login-forms {
-        width: 100vh;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
     }
-
     .login-email {
         width: 211px;
         color: #00A7CC;
@@ -89,7 +88,6 @@
         transform: translate(-50%, -50%);
         text-align: center;
     }
-
     .login-password {
         width: 211px;
         color: #00A7CC;
@@ -101,7 +99,6 @@
         transform: translate(-50%, -50%);
         text-align: center;
     }
-
     .button-login-submit {
         width: 211px;
         height: 70px;
@@ -111,10 +108,10 @@
         position: absolute;
         top: 50%;
         left: 50%;
-
         transform: translate(-50%, 0%);
     }
 }
+
 /*for mobile devices*/
 @media screen and (max-width: 1024px){
     .on-desktop {
@@ -123,8 +120,8 @@
 
     .landing-page {
         background-color: #292929;
-        height: 100vh;
-        width: 100vh;
+        height: 100%;
+        width: 100%;
     }
     * {
         box-sizing: border-box;
@@ -137,7 +134,7 @@
         width: 50px;
         position: absolute;
         top: 5%;
-        left: 7%;
+        left: 10%;
     }
     .login-text{
         font-family: Roboto;
@@ -146,14 +143,15 @@
         font-size: 26px;
         line-height: 35px;
         color: #00A7CC;
+
         position: absolute;
         left: 10%;
         top: 15%;
     }
 
     .login-forms {
-        width: 100vh;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -178,7 +176,7 @@
         border-radius: 10px;
         border: 1px solid #00A7CC;
         position: absolute;
-        top: 43%;
+        top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -191,9 +189,8 @@
         background-color: #00A7CC;
         border-radius: 10px;
         position: absolute;
-        top: 50%;
+        top: 60%;
         left: 50%;
-
         transform: translate(-50%, 0%);
     }
 }
