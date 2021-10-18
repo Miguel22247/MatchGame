@@ -44,18 +44,7 @@
                 password: '',
             }
         },
-        methods: {
-            signIn: function() {
-                firebase.auth().signInwithEmailAndPassword(this.email, this.password).then(
-                    function(user) {
-                        alert('Well done! You have signed in')
-                    },
-                    function(error) {
-                        alert('Oops. ' + error.message)
-                    }
-                );
-            }
-        }
+        methods: {}
     }
 </script>
 
