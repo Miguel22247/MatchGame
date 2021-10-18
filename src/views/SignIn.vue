@@ -34,6 +34,29 @@
 </template>
 
 <script>
+    import firebase from 'firebase';
+
+    export default {
+        name: 'signIn',
+        data() {
+            return {
+                email: '',
+                password: '',
+            }
+        },
+        methods: {
+            signIn: function() {
+                firebase.auth().signInwithEmailAndPassword(this.email, this.password).then(
+                    function(user) {
+                        alert('Well done! You have signed in')
+                    },
+                    function(error) {
+                        alert('Oops. ' + error.message)
+                    }
+                );
+            }
+        }
+    }
 </script>
 
 <style scoped>
