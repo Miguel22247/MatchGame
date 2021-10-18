@@ -1,11 +1,21 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-import vuetify from './plugins/vuetify'
-import GAuth from 'vue-google-oauth2'
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './store';
+import vuetify from './plugins/vuetify';
+import firebase from 'firebase';
 
 Vue.config.productionTip = false
+
+let config = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "hbtn-final-project-mvd.firebaseapp.com",
+  databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT_ID.appspot.com",
+  messagingSenderId: "YOUR_MESSAGING_SEND_ID"
+};
+firebase.initializeApp(config);
 
 new Vue({
   router,
@@ -13,10 +23,3 @@ new Vue({
   vuetify,
   render: h => h(App)
 }).$mount('#app')
-
-const gauthOption = {
-  clientId: 'CLIENT_ID.apps.googleusercontent.com',
-  scope: 'profile email',
-  prompt: 'select_account'
-}
-Vue.use(GAuth, gauthOption)
