@@ -36,6 +36,9 @@
     </div>
 </template>
 
+<script>
+</script>
+
 <style scoped>
 @media screen and (min-width:1025px){
     .on-desktop {
