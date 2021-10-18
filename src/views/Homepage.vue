@@ -46,8 +46,8 @@
 
     .landing-page {
         background-color: #292929;
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vh;
     }
 
 	.btn {
@@ -73,7 +73,7 @@
 		font-size: 20px;
 	}
 	.navbar {
-		width: 100%;
+		width: 100vh;
 		height: 40px;
 		position: absolute;
 		top: 95%;
@@ -97,8 +97,8 @@
 
     .landing-page {
         background-color: #292929;
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vh;
     }
 
 	* {
@@ -124,7 +124,7 @@
 	}
 
 	.navbar {
-		width: 100%;
+		width: 100vh;
 		height: 40px;
 		position: absolute;
 		top: 95%;
