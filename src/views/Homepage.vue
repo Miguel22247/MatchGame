@@ -52,9 +52,10 @@
 
 	.btn {
 		position: absolute;
-		top: 19.5%;
+		top: 50%;
 		left: 60%;
 		color: #00A7CC;
+		transform: translate(-50%, -50%);
 	}
 
 	* {
@@ -84,9 +85,9 @@
 		text-align: center;
 		position: absolute;
 		width: 250px;
-		top: 20%;
+		top: 50%;
 		left: 50%;
-		transform: translate(-50%, 0);
+		transform: translate(-50%, -50%);
 	}
 }
 @media screen and (max-width: 1024px){
@@ -117,7 +118,7 @@
 
 		.btn {
 		position: absolute;
-		top: 19.5%;
+		top: 49%;
 		left: 65%;
 		color: #00A7CC;
 	}
@@ -135,9 +136,9 @@
 		text-align: center;
 		position: absolute;
 		width: 250px;
-		top: 20%;
+		top: 50%;
 		left: 50%;
-		transform: translate(-50%, 0);
+		transform: translate(-50%, -50%);
 	}
 }
 </style>
