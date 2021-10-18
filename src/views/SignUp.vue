@@ -37,6 +37,16 @@
 </template>
 
 <script>
+    export default {
+        name: 'signUp',
+        data() {
+            return {
+                email: '',
+                password: '',
+            }
+        },
+        methods: {}
+    }
 </script>
 
 <style scoped>
