@@ -25,8 +25,8 @@
 
                         <input type="text" class="signup-email" placeholder="Email">
                         <input type="text" class="signup-username" placeholder="Username">
-                        <input type="text" class="signup-password" placeholder="Password">
-                        <input type="text" class="signup-confirm-password" placeholder="Confirm password">
+                        <input type="password" class="signup-password" placeholder="Password">
+                        <input type="password" class="signup-confirm-password" placeholder="Confirm password">
                     </form>
                     <router-link to="/home"><button class="button-signup-submit" type="submit">Sign Up</button></router-link>
                 </div>

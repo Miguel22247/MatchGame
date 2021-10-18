@@ -23,7 +23,7 @@
                 <div class="login-form-basic">
                     <form class="login-form">
                         <input type="text" class="login-email" name="email" placeholder="Email">
-                        <input type="text" class="login-password" name="password" placeholder="Password">
+                        <input type="password" class="login-password" name="password" placeholder="Password">
                     </form>
                     <router-link to="/home"><button class="button-login-submit" type="submit">Sign In</button></router-link>	
                 </div>
@@ -130,8 +130,6 @@
     }
 
     .return-button button {
-        height: 50px;
-        width: 50px;
         position: absolute;
         top: 5%;
         left: 10%;
