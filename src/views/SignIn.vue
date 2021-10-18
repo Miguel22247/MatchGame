@@ -41,8 +41,8 @@
 
     .landing-page {
         background-color: #292929;
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vh;
     }
     * {
         box-sizing: border-box;
@@ -70,8 +70,8 @@
     }
 
     .login-forms {
-        width: 100%;
-        height: 100%;
+        width: 100vh;
+        height: 100vh;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -123,8 +123,8 @@
 
     .landing-page {
         background-color: #292929;
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vh;
     }
     * {
         box-sizing: border-box;
@@ -152,8 +152,8 @@
     }
 
     .login-forms {
-        width: 100%;
-        height: 100%;
+        width: 100vh;
+        height: 100vh;
         position: absolute;
         left: 50%;
         top: 50%;
