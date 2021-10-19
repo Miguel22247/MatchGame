@@ -11,7 +11,10 @@
 					<h5>Hello Miguel!</h5> <!--- Add the ability to recognize the user ---->
 			</div>
 			<div class="display-info">	
-					<div class="info"></div>
+					<p>This is a test application</p>
+					<div class="info">
+					
+					</div>
 			</div>
 			<div class="navbar">
 				<v-row
@@ -106,7 +109,7 @@
 	.display-info {
 		border: 1px solid red;
 		width: 70%;
-		height: 60%;
+		height: 65%;
 		position: fixed;
 		top: 15%;
 		left: 15%;
