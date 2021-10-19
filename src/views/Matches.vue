@@ -1,5 +1,5 @@
 <template>
-	<div class="landing-page">
+    <div class="landing-page">
         <div class="on-desktop">
             <div class="desktop-table">
                 <h3>Check back soon for the Desktop version!</h3>
@@ -20,17 +20,17 @@
                 </router-link>
             </div>
             <div class="navbar">
-				<v-row
-				align="center"
-				justify="space-around"
-				>
+                <v-row
+                align="center"
+                justify="space-around"
+                >
                     <v-btn color="#00A7CC">
                         <v-icon color="#ffffff">mdi-account-multiple-minus</v-icon>
                     </v-btn>
                 </v-row>
-			</div>
+            </div>
         </div>
-	</div>
+    </div>
 </template>
 <script>
 </script>
@@ -48,7 +48,7 @@
         width: 100%;
     }
 
-	* {
+    * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
@@ -67,7 +67,7 @@
         position: fixed;
     }
 
-	* {
+    * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
@@ -89,11 +89,11 @@
     }
 
     .navbar {
-		width: 100%;
-		height: 40px;
-		position: absolute;
-		top: 90%;
-	}
+        width: 100%;
+        height: 40px;
+        position: absolute;
+        top: 90%;
+    }
 
 }
 </style>
