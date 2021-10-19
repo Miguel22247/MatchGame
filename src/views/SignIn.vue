@@ -25,7 +25,7 @@
                         <input type="text" class="login-email" name="email" placeholder="Email">
                         <input type="text" class="login-password" name="password" placeholder="Password">
                     </form>
-                    <router-link to="/home"><button class="button-login-submit" type="submit">Sign In</button></router-link>	
+                    <router-link to="/home"><button class="button-login-submit" type="submit">Sign In</button></router-link>
                 </div>
                 <!--- Add the login button here --->
             </div>

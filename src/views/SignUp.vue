@@ -1,3 +1,4 @@
+<script type='module' src='../main.js'></script>
 <template>
     <div class="landing-page">
         <div class="on-desktop">
