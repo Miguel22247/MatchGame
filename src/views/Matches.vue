@@ -7,8 +7,28 @@
             </div>
         </div>
         <div class="mobile-landing">
-            <div class="container">
+            <div class="my-matches-text">
+                <h5>My Matches</h5>
             </div>
+            <div class="return-button">
+                <router-link to="/home">
+                    <v-btn color="#00A7CC">
+                        <v-icon color="#ffffff">
+                            mdi-arrow-left
+                        </v-icon>
+                    </v-btn>
+                </router-link>
+            </div>
+            <div class="navbar">
+				<v-row
+				align="center"
+				justify="space-around"
+				>
+                    <v-btn color="#00A7CC">
+                        <v-icon color="#ffffff">mdi-account-multiple-minus</v-icon>
+                    </v-btn>
+                </v-row>
+			</div>
         </div>
 	</div>
 </template>
@@ -18,32 +38,6 @@
 <style scoped>
 /*for browsers*/
 @media screen and (min-width:1025px){
-    .landing-page {
-        background-color: #292929;
-        height: 100%;
-        width: 100%;
-    }
-
-    .mobile-landing {
-        display: none;
-    }
-
-    .on-desktop {
-        color: #00A7CC;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .on-desktop img {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0%);
-    }
-}
-/*for mobile*/
-@media screen and (max-width: 1024px) {
     .on-desktop {
         display: none;
     }
@@ -59,5 +53,47 @@
         margin: 0;
         padding: 0;
     }
+}
+/*for mobile*/
+@media screen and (max-width: 1024px) {
+    .on-desktop {
+        display: none;
+    }
+
+    .landing-page {
+        background-color: #292929;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+    }
+
+	* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .my-matches-text {
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        color: #00A7CC;
+    }
+
+    .return-button button {
+        position: absolute;
+        top: 5%;
+        left: 10%;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .navbar {
+		width: 100%;
+		height: 40px;
+		position: absolute;
+		top: 90%;
+	}
+
 }
 </style>
