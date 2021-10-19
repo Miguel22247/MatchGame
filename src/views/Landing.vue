@@ -37,13 +37,13 @@
     }
 
     .mobile-landing {
-        height: 100vh;
+        height: 100%;
     }
 
     .landing-page {
         background-color: #292929;
-        height: 100vh;
-        width: 100vh;
+        height: 100%;
+        width: 100%;
     }
 
     .welcome-text {
@@ -104,13 +104,13 @@
     }
 
     .mobile-landing {
-        height: 100vh;
+        height: 100%;
     }
 
     .landing-page {
         background-color: #292929;
-        height: 100vh;
-        width: 100vh;
+        height: 100%;
+        width: 100%;
     }
 
     .welcome-text {

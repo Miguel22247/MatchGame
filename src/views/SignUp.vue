@@ -92,6 +92,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
+        padding: 5px;
         transform: translate(-50%, -50%);
     }
 

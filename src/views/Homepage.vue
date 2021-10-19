@@ -8,14 +8,10 @@
         </div>
         <div class="mobile-landing">
 			<div class="hello-user">
-				<h5>Hello Miguel!</h5> <!--- Add the ability to recognize the user ---->
+					<h5>Hello Miguel!</h5> <!--- Add the ability to recognize the user ---->
 			</div>
-			<div>
-				<input type="text" class="search" placeholder="Search">
-				<router-link to="/search"><v-btn class="btn">Search</v-btn></router-link>
-			</div>
-			<div class="display-info">
-
+			<div class="display-info">	
+					<div class="info"></div>
 			</div>
 			<div class="navbar">
 				<v-row
@@ -51,14 +47,6 @@
         width: 100%;
     }
 
-	.btn {
-		position: absolute;
-		top: 50%;
-		left: 60%;
-		color: #00A7CC;
-		transform: translate(-50%, -50%);
-	}
-
 	* {
         box-sizing: border-box;
         margin: 0;
@@ -79,17 +67,6 @@
 		position: absolute;
 		top: 95%;
 	}
-	.search {
-		color: #00A7CC;
-		border: 1px solid #00A7CC;
-		border-radius: 5px;
-		text-align: center;
-		position: absolute;
-		width: 250px;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
 }
 @media screen and (max-width: 1024px){
     .on-desktop {
@@ -97,6 +74,7 @@
     }
 
     .landing-page {
+		position: fixed;
         background-color: #292929;
         height: 100%;
         width: 100%;
@@ -106,6 +84,7 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+		/*overflow: hidden;*/
     }
 
 	.hello-user {
@@ -117,30 +96,22 @@
 		font-size: 20px;
 	}
 
-	.btn {
-		position: absolute;
-		top: 60%;
-		left: 50%;
-		color: #00A7CC;
-		transform: translate(-50%, -50%);
-	}
-
 	.navbar {
 		width: 100%;
 		height: 40px;
 		position: absolute;
-		top: 95%;
+		top: 90%;
 	}
-	.search {
-		color: #00A7CC;
-		border: 1px solid #00A7CC;
-		border-radius: 5px;
-		text-align: center;
-		position: absolute;
-		width: 250px;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+
+	.display-info {
+		border: 1px solid red;
+		width: 70%;
+		height: 60%;
+		position: fixed;
+		top: 10%;
+		left: 15%;
+		margin: 1%;
+		
 	}
 }
 </style>
