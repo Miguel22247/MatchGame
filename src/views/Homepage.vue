@@ -108,10 +108,9 @@
 		width: 70%;
 		height: 60%;
 		position: fixed;
-		top: 10%;
+		top: 15%;
 		left: 15%;
 		margin: 1%;
-		
 	}
 }
 </style>
