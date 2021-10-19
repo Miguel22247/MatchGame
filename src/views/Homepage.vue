@@ -37,7 +37,8 @@
 		</div>
 	</div>
 </template>
-<script></script>
+<script>
+</script>
 <style scoped>
 @media screen and (min-width:1025px){
     .on-desktop {
@@ -46,8 +47,8 @@
 
     .landing-page {
         background-color: #292929;
-        height: 100vh;
-        width: 100vh;
+        height: 100%;
+        width: 100%;
     }
 
 	.btn {
@@ -73,7 +74,7 @@
 		font-size: 20px;
 	}
 	.navbar {
-		width: 100vh;
+		width: 100%;
 		height: 40px;
 		position: absolute;
 		top: 95%;
@@ -97,8 +98,8 @@
 
     .landing-page {
         background-color: #292929;
-        height: 100vh;
-        width: 100vh;
+        height: 100%;
+        width: 100%;
     }
 
 	* {
@@ -116,15 +117,16 @@
 		font-size: 20px;
 	}
 
-		.btn {
+	.btn {
 		position: absolute;
-		top: 49%;
-		left: 65%;
+		top: 60%;
+		left: 50%;
 		color: #00A7CC;
+		transform: translate(-50%, -50%);
 	}
 
 	.navbar {
-		width: 100vh;
+		width: 100%;
 		height: 40px;
 		position: absolute;
 		top: 95%;
