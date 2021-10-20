@@ -8,59 +8,56 @@
         </div>
         <div class="mobile-landing">
             <div class="header">			
-				<div class="my-profile-text">
-					<h5>My Profile</h5>
-				</div>
-				<div class="return-button">
-					<router-link to="/home">
-						<v-btn color="#00A7CC" small>
-							<v-icon color="#ffffff">
-								mdi-arrow-left
-							</v-icon>
-						</v-btn>
-					</router-link>
-				</div>
-			</div>
-			<div class="container">
-				<div class="nickname">
-					<p> Miguel22247 </p> <!-- Add dynamic username with login -->
-				</div>
-				<div class="bio">
-				</div>
-				<div class="games">
-					<ul>
-						<li v-for="game in games" :key="game.name">
-						{{ game.name }}
-						</li>
-					</ul>
-				</div>
-				<div class="social-accounts">
-					<ul>
-						<li v-for="social in socials" :key="social.name">
-							{{ social.name }}
-						</li>
-						<div class="social-account">
-                            <p>Social media</p>
-							<v-row  align="center" justify="space-around">
+                <div class="my-profile-text">
+                    <h5>My Profile</h5>
+                </div>
+                <div class="return-button">
+                    <router-link to="/home">
+                        <v-btn color="#00A7CC" outlined depressed small>
+                            <v-icon color="#ffffff">
+                                mdi-arrow-left
+                            </v-icon>
+                        </v-btn>
+                    </router-link>
+                </div>
+            </div>
+            <div class="container">
+                <div class="nickname">
+                    <h4> Miguel22247 </h4> <!-- Add dynamic username with login -->
+                </div>
+                <div class="bio">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam libero, facilisis a posuere nec, tempor vel risus. Etiam dictum tortor erat, vel aliquam arcu aliquet vitae. In semper, magna at hendrerit pretium, ligula nisl vulputate lacus, sed varius ligula purus at orci.</p>
+                </div>
+                <div class="games">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="social-accounts">
+                    <ul>
+                        <div class="social-account">
+                            <p class="text-social">Social media</p>
+                            <v-row  align="center" justify="space-around">
                             <a target="_blank" href="https://steamcommunity.com/id/Miguel22247/">
-								<v-btn color="#00A7CC" small>
-									<v-icon color="#ffffff">
-										mdi-steam
-									</v-icon>
-								</v-btn>
+                                <v-btn color="#00A7CC" outlined depressed small>
+                                    <v-icon color="#ffffff">
+                                        mdi-steam
+                                    </v-icon>
+                                </v-btn>
                             </a>
-								<v-btn color="#00A7CC" small>
-									<v-icon color="#ffffff">
-										mdi-discord
-									</v-icon>
-								</v-btn>
-							</v-row>
-						</div>
-					</ul>
-				</div>
-			</div>
+                            <a target="_blank" href="https://discord.gg/Z5K4NWmbDq">
+                                <v-btn color="#00A7CC" outlined depressed small>
+                                    <v-icon color="#ffffff">
+                                        mdi-discord
+                                    </v-icon>
+                                </v-btn>
+                            </a>
+                            </v-row>
+                        </div>
+                    </ul>
+                </div>
+            </div>
         </div>
-	</div>
+    </div>
 </template>
 <script>
 </script>
@@ -78,7 +75,7 @@
         position: fixed;
     }
 
-	* {
+    * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
@@ -99,7 +96,7 @@
         font-size: 20px;
     }
 
-	.navbar {
+    .navbar {
         width: 100%;
         height: 40px;
         position: absolute;
@@ -119,7 +116,7 @@
         position: fixed;
     }
 
-	* {
+    * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
@@ -131,9 +128,10 @@
 
     .my-profile-text {
         position: absolute;
-        top: 6.5%;
+        top: 5%;
         left: 60%;
         color: #00A7CC;
+        font-size: 20px;
     }
 
     .return-button button {
@@ -142,22 +140,32 @@
         left: 10%;
     }
 
-	.nickname {
-		color: #00A7CC;
-		text-align: right;
-		position: absolute;
-		top: 15%;
-		left: 10%;
-	}
-
-	.social-accounts p {
-        position: absolute;
-        top: 30%;
-        left: 70%;
-        justify-content: space-around;
+    .nickname {
         color: #00A7CC;
-	}
+        text-align: right;
+        position: absolute;
+        top: 15%;
+        left: 10%;  
+    }
 
+    .bio {
+        width: 90%;
+        height: 10%;
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        font-size: 70%;
+        color: #00A7CC;
+        text-align: center;
+        padding: 0px 0;
+    }
 
+    .social-accounts{
+        position: absolute;
+        top: 35%;
+        left: 60%;
+        color: #00A7CC;
+        font-size: 18px;
+    }
 }
 </style>
