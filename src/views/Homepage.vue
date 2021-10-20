@@ -11,16 +11,14 @@
 					<h5>Hello Miguel!</h5> <!--- Add the ability to recognize the user ---->
 			</div>
 			<div class="display-info">
-				<p class='nickname'>Rielch</p>
-				<div class="bio">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam libero, facilisis a posuere nec, tempor vel risus. Etiam dictum tortor erat, vel aliquam arcu aliquet vitae. In semper, magna at hendrerit pretium, ligula nisl vulputate lacus, sed varius ligula purus at orci.</p>
-				</div>
-				<div class="games">
-					<ul>
-						<li v-for="game in games" :key="game.message">
-							{{ game.message }}
-						</li>
-					</ul>
+				<h3 class="text-matches">Posible Matches</h3>
+				<div class="match-info">
+					<p class='nickname'>Rielch</p>
+					<div class="bio">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam libero, facilisis a posuere nec, tempor vel risus. Etiam dictum tortor erat, vel aliquam arcu aliquet vitae. In semper, magna at hendrerit pretium, ligula nisl vulputate lacus, sed varius ligula purus at orci.</p>
+					</div>
+					<div class="games">
+					</div>
 				</div>
 			</div>
 			<div class="navbar">
@@ -84,7 +82,7 @@
 		top: 90%;
 	}
 
-	.display-info {
+	.match-info {
 		border: 1px solid blue;
 		width: 70%;
 		height: 65%;
@@ -150,7 +148,7 @@
 		top: 90%;
 	}
 
-	.display-info {
+	.match-info {
 		border: 1px solid blue;
 		width: 70%;
 		height: 65%;
