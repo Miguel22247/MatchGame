@@ -12,8 +12,8 @@
             </div>
             <div class="return-button">
                 <router-link to="/home">
-                    <v-btn color="#00A7CC">
-                        <v-icon color="#ffffff">
+                    <v-btn color="#00A7CC" outlined depressed>
+                        <v-icon color="#00A7CC" outlined depressed>
                             mdi-arrow-left
                         </v-icon>
                     </v-btn>
@@ -24,7 +24,7 @@
                 align="center"
                 justify="space-around"
                 >
-                    <v-btn color="#00A7CC">
+                    <v-btn color="#00A7CC" outlined depressed>
                         <v-icon color="#ffffff">mdi-account-multiple-minus</v-icon>
                     </v-btn>
                 </v-row>
@@ -94,6 +94,5 @@
         position: absolute;
         top: 90%;
     }
-
 }
 </style>
