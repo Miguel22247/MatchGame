@@ -4,7 +4,7 @@ import router from './router';
 import store from './store';
 import vuetify from './plugins/vuetify';
 //import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"';
-import firebase from 'firebase/compat/app';
+// import firebase from 'firebase/compat/app';
 // import { getAuth } from 'https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js"';
 
 // onAuthStateChanged(auth, user => {
@@ -15,6 +15,13 @@ import firebase from 'firebase/compat/app';
 //     console.log('not logged');
 //   }
 // });
+
+
+//import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+//import { getDoc } from 'firebase/firestore'
+import { onAuthStateChanged, getAuth } from "firebase/auth"
+import { initializeApp } from "firebase/app"
 
 Vue.config.productionTip = false
 
@@ -29,9 +36,10 @@ const firebaseConfig = {
   measurementId: "G-GQNWF2Y937"
 };
 
-firebase.initializeApp(firebaseConfig);
+const firebaseApp = initializeApp(firebaseConfig);
 
-firebase.auth().onAuthStateChanged(user => {
+const auth = getAuth(firebaseApp);
+onAuthStateChanged(auth, user => {
   store.dispatch("fetchUser", user);
 });
 
@@ -42,9 +50,3 @@ new Vue({
   render: h => h(App)
 }).$mount('#app')
 
-const gauthOption = {
-  clientId: 'CLIENT_ID.apps.googleusercontent.com',
-  scope: 'profile email',
-  prompt: 'select_account'
-}
-Vue.use(GAuth, gauthOption)

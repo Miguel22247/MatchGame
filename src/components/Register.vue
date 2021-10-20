@@ -71,7 +71,9 @@
 
 
 <script>
-import firebase from 'firebase/compat/app';
+import { getAuth } from "firebase/auth";
+import firebaseApp from '../firebaseapp'
+const auth = getAuth(firebaseApp);
 
 export default {
   data() {
@@ -86,8 +88,7 @@ export default {
   },
   methods: {
     submit() {
-      firebase
-        .auth()
+      auth
         .createUserWithEmailAndPassword(this.form.email, this.form.password)
         .then(data => {
           data.user
