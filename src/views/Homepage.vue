@@ -16,6 +16,11 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam libero, facilisis a posuere nec, tempor vel risus. Etiam dictum tortor erat, vel aliquam arcu aliquet vitae. In semper, magna at hendrerit pretium, ligula nisl vulputate lacus, sed varius ligula purus at orci.</p>
 				</div>
 				<div class="games">
+					<ul>
+						<li v-for="game in games" :key="game.message">
+							{{ game.message }}
+						</li>
+					</ul>
 				</div>
 			</div>
 			<div class="navbar">
