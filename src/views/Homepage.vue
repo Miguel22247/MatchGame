@@ -56,6 +56,10 @@
         padding: 0;
     }
 
+    a {
+        text-decoration: none;
+    }
+
 	.hello-user {
 		position: absolute;
 		top: 10%;
@@ -87,7 +91,10 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-		/*overflow: hidden;*/
+    }
+
+    a {
+        text-decoration: none;
     }
 
 	.hello-user {
