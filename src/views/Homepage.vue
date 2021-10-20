@@ -10,11 +10,13 @@
 			<div class="hello-user">
 					<h5>Hello Miguel!</h5> <!--- Add the ability to recognize the user ---->
 			</div>
-			<div class="display-info">	
-					<p>This is a test application</p>
-					<div class="info">
-					
-					</div>
+			<div class="display-info">
+				<p class='nickname'>Rielch</p>
+				<div class="bio">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam libero, facilisis a posuere nec, tempor vel risus. Etiam dictum tortor erat, vel aliquam arcu aliquet vitae. In semper, magna at hendrerit pretium, ligula nisl vulputate lacus, sed varius ligula purus at orci.</p>
+				</div>
+				<div class="games">
+				</div>
 			</div>
 			<div class="navbar">
 				<v-row
@@ -45,6 +47,7 @@
     }
 
     .landing-page {
+		position: fixed;
         background-color: #292929;
         height: 100%;
         width: 100%;
@@ -68,11 +71,40 @@
 		font-weight: bold;
 		font-size: 20px;
 	}
+
 	.navbar {
 		width: 100%;
 		height: 40px;
 		position: absolute;
-		top: 95%;
+		top: 90%;
+	}
+
+	.display-info {
+		border: 1px solid blue;
+		width: 70%;
+		height: 65%;
+		position: fixed;
+		top: 15%;
+		left: 15%;
+		margin: 1%;
+	}
+
+	.nickname {
+		color: #00A7CC;
+	}
+
+	.bio {
+		width: 100%;
+		height: 40%;
+		font-size: 100%;
+		color: #00A7CC;
+		text-align: left;
+	}
+
+	.games {
+		border: 1px solid red;
+		width: 100%;
+		height: 49%;
 	}
 }
 @media screen and (max-width: 1024px){
@@ -114,13 +146,33 @@
 	}
 
 	.display-info {
-		border: 1px solid red;
+		border: 1px solid blue;
 		width: 70%;
 		height: 65%;
 		position: fixed;
 		top: 15%;
 		left: 15%;
 		margin: 1%;
+	}
+
+	.nickname {
+		color: #00A7CC;
+	}
+
+	.bio {
+		width: 100%;
+		height: 40%;
+		position: relative;
+		font-size: 70%;
+		color: #00A7CC;
+		text-align: left;
+		border: 1px solid green;
+	}
+
+	.games {
+		border: 1px solid red;
+		width: 100%;
+		height: 49%;
 	}
 }
 </style>
