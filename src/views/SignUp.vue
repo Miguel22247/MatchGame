@@ -13,7 +13,7 @@
             <div class="signup-forms">
                 <div class="return-button">
                     <router-link to="/">
-                        <v-btn color="#00A7CC" small>
+                        <v-btn color="#00A7CC" outlined depressed small>
                             <v-icon color="#ffffff">
                                 mdi-arrow-left
                             </v-icon>
