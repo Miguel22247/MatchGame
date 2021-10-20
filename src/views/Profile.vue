@@ -39,13 +39,16 @@
 						<li v-for="social in socials" :key="social.name">
 							{{ social.name }}
 						</li>
-						<div class="social-account"> 
+						<div class="social-account">
+                            <p>Social media</p>
 							<v-row  align="center" justify="space-around">
+                            <a target="_blank" href="https://steamcommunity.com/id/Miguel22247/">
 								<v-btn color="#00A7CC" small>
 									<v-icon color="#ffffff">
 										mdi-steam
 									</v-icon>
 								</v-btn>
+                            </a>
 								<v-btn color="#00A7CC" small>
 									<v-icon color="#ffffff">
 										mdi-discord
@@ -122,6 +125,10 @@
         padding: 0;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     .my-profile-text {
         position: absolute;
         top: 6.5%;
@@ -143,7 +150,14 @@
 		left: 10%;
 	}
 
-	.social-accounts {
+	.social-accounts p {
+        position: absolute;
+        top: 30%;
+        left: 70%;
+        justify-content: space-around;
+        color: #00A7CC;
 	}
+
+
 }
 </style>

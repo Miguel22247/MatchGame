@@ -29,6 +29,7 @@
                         <input type="password" class="signup-confirm-password" placeholder="Confirm password">
                     </form>
                     <router-link to="/home"><button class="button-signup-submit" type="submit">Sign Up</button></router-link>
+                    <p class="signin-message">If you already have an account, please login <a href="/signin">here</a></p>
                 </div>
                 <!--- Add the signup with google button here --->
             </div>
@@ -167,6 +168,17 @@
         left: 50%;
         transform: translate(-50%, 0%);
     }
+
+    .signin-message {
+        color: #FFFFFF;
+        position: absolute;
+        left: 50%;
+        top: 80%;
+        transform: translate(-50%, 0);
+        text-decoration: none;
+        text-align: center;
+        font-size: 14px;
+    }
 }
 /*for mobile devices*/
 @media screen and (max-width: 1024px){
@@ -284,6 +296,17 @@
         top: 60%;
         left: 50%;
         transform: translate(-50%, 0%);
+    }
+
+    .signin-message {
+        color: #FFFFFF;
+        position: absolute;
+        left: 50%;
+        top: 80%;
+        transform: translate(-50%, 0);
+        text-decoration: none;
+        text-align: center;
+        font-size: 9px;
     }
 }
 </style>

@@ -25,7 +25,8 @@
                         <input type="text" class="login-email" name="email" placeholder="Email">
                         <input type="password" class="login-password" name="password" placeholder="Password">
                     </form>
-                    <router-link to="/home"><button class="button-login-submit" type="submit">Sign In</button></router-link>	
+                    <router-link to="/home"><button class="button-login-submit" type="submit">Sign In</button></router-link>
+                    <p class="signup-message"> if you don't have an account you can create it <a href="/signup">here</a></p>	
                 </div>
                 <!--- Add the login button here --->
             </div>
@@ -48,9 +49,10 @@
 
 <style scoped>
 @media screen and (min-width:1025px){
-   .on-desktop {
+    .on-desktop {
         display: none;
     }
+
     .landing-page {
         background-color: #292929;
         height: 100%;
@@ -61,12 +63,11 @@
         margin: 0;
         padding: 0;
     }
+
     .return-button button {
-        height: 50px;
-        width: 50px;
         position: absolute;
-        top: 14.5%;
-        left: 5%;
+        top: 5%;
+        left: 10%;
     }
     .login-text{
         font-family: Roboto;
@@ -75,10 +76,12 @@
         font-size: 26px;
         line-height: 35px;
         color: #00A7CC;
+
         position: absolute;
         left: 10%;
         top: 15%;
     }
+
     .login-forms {
         width: 100%;
         height: 100%;
@@ -87,6 +90,7 @@
         top: 50%;
         transform: translate(-50%, -50%);
     }
+
     .login-email {
         width: 211px;
         color: #00A7CC;
@@ -98,17 +102,19 @@
         transform: translate(-50%, -50%);
         text-align: center;
     }
+
     .login-password {
         width: 211px;
         color: #00A7CC;
         border-radius: 10px;
         border: 1px solid #00A7CC;
         position: absolute;
-        top: 43%;
+        top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
     }
+
     .button-login-submit {
         width: 211px;
         height: 70px;
@@ -116,9 +122,20 @@
         background-color: #00A7CC;
         border-radius: 10px;
         position: absolute;
-        top: 50%;
+        top: 60%;
         left: 50%;
         transform: translate(-50%, 0%);
+    }
+
+    .signup-message {
+        color: #FFFFFF;
+        position: absolute;
+        left: 50%;
+        top: 80%;
+        transform: translate(-50%, 0);
+        text-decoration: none;
+        text-align: center;
+        font-size: 14px;
     }
 }
 
@@ -201,5 +218,17 @@
         left: 50%;
         transform: translate(-50%, 0%);
     }
+
+    .signup-message {
+        color: #FFFFFF;
+        position: absolute;
+        left: 50%;
+        top: 80%;
+        transform: translate(-50%, 0);
+        text-decoration: none;
+        text-align: center;
+        font-size: 9px;
+    }
+
 }
 </style>
