@@ -20,6 +20,7 @@
     </div>
 </template>
 <script>
+
 </script>
 
 <style scoped>
@@ -44,6 +45,7 @@
         background-color: #292929;
         height: 100%;
         width: 100%;
+        position: fixed;
     }
 
     .welcome-text {
@@ -111,6 +113,7 @@
         background-color: #292929;
         height: 100%;
         width: 100%;
+        position: fixed;
     }
 
     .welcome-text {
