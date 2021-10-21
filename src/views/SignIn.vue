@@ -22,7 +22,7 @@
                 </div>
                 <div class="login-form-basic">
                     <form class="login-form">
-                        <input type="text" class="login-email" name="email" placeholder="Email">
+                        <input type="email" class="login-email" name="email" placeholder="Email">
                         <input type="password" class="login-password" name="password" placeholder="Password">
                     </form>
                     <router-link to="/home"><button class="button-login-submit" type="submit">Sign In</button></router-link>

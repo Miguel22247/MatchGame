@@ -22,8 +22,7 @@
                 </div>
                 <div class="signup-form-basic">
                     <form class="signup-form">
-
-                        <input type="text" class="signup-email" placeholder="Email">
+                        <input type="email" class="signup-email" placeholder="Email">
                         <input type="text" class="signup-username" placeholder="Username">
                         <input type="password" class="signup-password" placeholder="Password">
                         <input type="password" class="signup-confirm-password" placeholder="Confirm password">

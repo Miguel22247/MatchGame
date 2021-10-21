@@ -13,21 +13,11 @@
 			<div class="display-info">
 				<h3 class="text-matches">Posible Matches</h3>
 				<div class="match-info">
-					<div class="match-1">
-						<p class='nickname'>Rielch</p>
-						<div class="bio">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam libero, facilisis a posuere nec, tempor vel risus. Etiam dictum tortor erat, vel aliquam arcu aliquet vitae. In semper, magna at hendrerit pretium, ligula nisl vulputate lacus, sed varius ligula purus at orci.</p>
-						</div>
-						<div class="games-1">
-						</div>
+					<p class='nickname'>Rielch</p>
+					<div class="bio">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam libero, facilisis a posuere nec, tempor vel risus. Etiam dictum tortor erat, vel aliquam arcu aliquet vitae. In semper, magna at hendrerit pretium, ligula nisl vulputate lacus, sed varius ligula purus at orci.</p>
 					</div>
-					<div class="match-2">
-						<p class='nickname'>ezedksl</p>
-						<div class="bio">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam libero, facilisis a posuere nec, tempor vel risus. Etiam dictum tortor erat, vel aliquam arcu aliquet vitae. In semper, magna at hendrerit pretium, ligula nisl vulputate lacus, sed varius ligula purus at orci.</p>
-						</div>
-						<div class="games-2">
-						</div>
+					<div class="games-1">
 					</div>
 				</div>
 			</div>
