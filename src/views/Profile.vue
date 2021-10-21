@@ -110,7 +110,7 @@
 
     .my-profile-text {
         position: absolute;
-        top: 5%;
+        top: 6%;
         left: 60%;
         color: #00A7CC;
         font-size: 20px;
@@ -135,7 +135,7 @@
 		height: 10%;
 		position: absolute;
         top: 20%;
-        left: 5%;
+        left: 9%;
 		font-size: 70%;
 		color: #00A7CC;
 		text-align: center;
