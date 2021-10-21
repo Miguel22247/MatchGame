@@ -68,7 +68,7 @@
                 <div class="games">
                     <ul>
 						<div class="game-list">
-                            <p class="text-game">Games</p>
+                            <p class="text-game">My Games</p>
 							<v-row  align="center" justify="space-around">
                             <a target="_blank" href="https://steamcommunity.com/app/227300">
 								<v-btn color="#00A7CC" outlined depressed small>
@@ -170,7 +170,7 @@
 	}
 
     .games {
-        width: 50%;
+        width: 25%;
         height: 40%;
         justify-content: space-between;
         position: absolute;
@@ -254,12 +254,12 @@
 	}
 
     .games {
-        width: 50%;
+        width: 30%;
         height: 40%;
         justify-content: space-between;
         position: absolute;
         top: 35%;
-        left: 3%;
+        left: 8%;
         color: #00A7CC;
         font-size: 18px;
         text-align: center;

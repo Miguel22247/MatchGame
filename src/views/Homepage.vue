@@ -178,7 +178,6 @@
 		font-size: 70%;
 		color: #00A7CC;
 		text-align: left;
-		border: 1px solid green;
 	}
 
 	.games-1 {
@@ -186,15 +185,7 @@
 		width: 100%;
 		height: 20%;
 		position: absolute;
-		top: 25%;
-	}
-
-	.games-2 {
-		border: 1px solid red;
-		width: 100%;
-		height: 20%;
-		position: absolute;
-		top: 75%;
+		top: 30%;
 	}
 
 	.text-matches {
