@@ -42,6 +42,7 @@
 									<v-icon color="#ffffff">
 										mdi-steam
 									</v-icon>
+                                    Steam
 								</v-btn>
                             </a>
 							<a target="_blank" href="https://discord.gg/Z5K4NWmbDq">
@@ -49,6 +50,15 @@
 									<v-icon color="#ffffff">
 										mdi-discord
 									</v-icon>
+                                    Discord
+								</v-btn>
+                            </a>
+                            <a target="_blank" href="https://discord.gg/Z5K4NWmbDq">
+								<v-btn color="#00A7CC" outlined depressed small>
+									<v-icon color="#ffffff">
+										mdi-twitter
+									</v-icon>
+                                    Twitter
 								</v-btn>
                             </a>
 							</v-row>
@@ -61,10 +71,11 @@
                             <p class="text-game">Games</p>
 							<v-row  align="center" justify="space-around">
                             <a target="_blank" href="https://steamcommunity.com/id/Miguel22247/">
-								<v-btn color="#00A7CC" outlined depressed small>
-									<v-icon color="#ffffff">
+								<v-btn color="#00A7CC" outlined depressed small mx-2>
+									<v-icon color="#ffffff" mx-2>
 										mdi-truck
 									</v-icon>
+                                    ETS 2
 								</v-btn>
                             </a>
 							<a target="_blank" href="https://discord.gg/Z5K4NWmbDq">
@@ -72,6 +83,7 @@
 									<v-icon color="#ffffff">
 										mdi-tractor
 									</v-icon>
+                                    FS 2019
 								</v-btn>
                             </a>
 							</v-row>
@@ -143,19 +155,26 @@
 	}
 
 	.social-accounts {
+        width: 25%;
+        height: 40%;
         position: absolute;
         top: 35%;
         left: 60%;
         color: #00A7CC;
         font-size: 18px;
+        text-align: center;
 	}
 
     .games {
+        width: 50%;
+        height: 40%;
+        justify-content: space-between;
         position: absolute;
         top: 35%;
         left: 10%;
         color: #00A7CC;
         font-size: 18px;
+        text-align: center;
 	}
 
     .game-list {
@@ -220,23 +239,30 @@
 	}
 
 	.social-accounts {
+        width: 50%;
+        height: 40%;
         position: absolute;
         top: 35%;
-        left: 60%;
+        left: 50%;
         color: #00A7CC;
         font-size: 18px;
+        text-align: center;
 	}
 
     .games {
+        width: 50%;
+        height: 40%;
+        justify-content: space-between;
         position: absolute;
         top: 35%;
-        left: 10%;
+        left: 3%;
         color: #00A7CC;
         font-size: 18px;
+        text-align: center;
 	}
 
     .game-list {
-        justify-content: center;
+    justify-content: center;
     }
 }
 </style>
