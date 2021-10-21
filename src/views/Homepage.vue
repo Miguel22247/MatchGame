@@ -27,12 +27,12 @@
 				justify="space-around"
 				>
 					<router-link to="/matches">
-						<v-btn color="#00A7CC">
+						<v-btn color="#00A7CC" outlined depressed>
 							<v-icon color="#ffffff">mdi-account-multiple-plus</v-icon>
 						</v-btn>
 					</router-link>
 					<router-link to="/profile">
-						<v-btn color="#00A7CC">
+						<v-btn color="#00A7CC" outlined depressed>
 							<v-icon color="#ffffff">mdi-face-man-profile</v-icon>
 						</v-btn>
 					</router-link>
