@@ -153,7 +153,7 @@
 		width: 70%;
 		height: 65%;
 		position: fixed;
-		top: 15%;
+		top: 17%;
 		left: 15%;
 		margin: 1%;
 	}
@@ -176,6 +176,14 @@
 		border: 1px solid red;
 		width: 100%;
 		height: 49%;
+	}
+
+	.text-matches {
+		color: #00A7CC;
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		transform: translate(-50%, -15%);
 	}
 }
 </style>
