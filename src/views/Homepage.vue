@@ -8,7 +8,7 @@
         </div>
         <div class="mobile-landing">
 			<div class="hello-user">
-					<h5>Hello Miguel!</h5> <!--- Add the ability to recognize the user ---->
+				<h5>Hello Miguel!</h5> <!--- Add the ability to recognize the user ---->
 			</div>
 			<div class="display-info">
 				<h3 class="text-matches">Posible Matches</h3>
@@ -27,15 +27,22 @@
 				justify="space-around"
 				>
 					<router-link to="/matches">
-						<v-btn color="#00A7CC" outlined depressed>
+						<v-btn color="#00A7CC" outlined depressed small>
 							<v-icon color="#ffffff">mdi-account-multiple-plus</v-icon>
+							Match
 						</v-btn>
 					</router-link>
 					<router-link to="/profile">
-						<v-btn color="#00A7CC" outlined depressed>
+						<v-btn color="#00A7CC" outlined depressed small>
 							<v-icon color="#ffffff">mdi-face-man-profile</v-icon>
+							Profile
 						</v-btn>
 					</router-link>
+					<router-link to="/">
+					<v-btn color="#00A7CC" outlined depressed small>
+						<v-icon color="#ffffff">mdi-logout</v-icon>
+					</v-btn>
+				</router-link>
 				</v-row>
 			</div>
 		</div>
@@ -85,9 +92,9 @@
 	.match-info {
 		border: 1px solid blue;
 		width: 70%;
-		height: 65%;
+		height: 60%;
 		position: fixed;
-		top: 15%;
+		top: 20%;
 		left: 15%;
 		margin: 1%;
 	}
@@ -136,9 +143,11 @@
 		position: absolute;
 		top: 10%;
 		left: 10%;
+		width: 100%;
 		color: #00A7CC;
 		font-weight: bold;
 		font-size: 20px;
+		justify-content: space-between;
 	}
 
 	.navbar {
@@ -153,19 +162,9 @@
 		width: 70%;
 		height: 65%;
 		position: fixed;
-		top: 17%;
+		top: 19%;
 		left: 15%;
 		margin: 1%;
-	}
-
-	.match-1 {
-		height: 50%;
-		border: 1px solid yellow;
-	}
-
-	.match-2 {
-		height: 50%;
-		border: 1px solid yellow;
 	}
 
 	.nickname {
@@ -204,16 +203,6 @@
 		top: 15%;
 		left: 50%;
 		transform: translate(-50%, -15%);
-	}
-	
-	.match-info-1 {
-		border: 1px solid blue;
-		width: 70%;
-		height: 65%;
-		position: fixed;
-		top: 50%;
-		left: 15%;
-		margin: 1%;
 	}
 }
 </style>

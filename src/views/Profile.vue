@@ -55,6 +55,29 @@
 						</div>
 					</ul>
 				</div>
+                <div class="games">
+                    <ul>
+						<div class="game-list">
+                            <p class="text-game">Games</p>
+							<v-row  align="center" justify="space-around">
+                            <a target="_blank" href="https://steamcommunity.com/id/Miguel22247/">
+								<v-btn color="#00A7CC" outlined depressed small>
+									<v-icon color="#ffffff">
+										mdi-truck
+									</v-icon>
+								</v-btn>
+                            </a>
+							<a target="_blank" href="https://discord.gg/Z5K4NWmbDq">
+								<v-btn color="#00A7CC" outlined depressed small>
+									<v-icon color="#ffffff">
+										mdi-tractor
+									</v-icon>
+								</v-btn>
+                            </a>
+							</v-row>
+						</div>
+					</ul>
+                </div>
 			</div>
         </div>
 	</div>
@@ -81,26 +104,63 @@
         padding: 0;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     .my-profile-text {
         position: absolute;
-        top: 15%;
-        left: 10%;
+        top: 5%;
+        left: 60%;
         color: #00A7CC;
+        font-size: 20px;
     }
 
     .return-button button {
         position: absolute;
         top: 5%;
         left: 10%;
-        font-weight: bold;
-        font-size: 20px;
     }
 
-	.navbar {
-        width: 100%;
-        height: 40px;
+	.nickname {
+		color: #00A7CC;
+		text-align: right;
+		position: absolute;
+		top: 15%;
+		left: 10%;  
+	}
+
+	.bio {
+		width: 90%;
+		height: 10%;
+		position: absolute;
+        top: 20%;
+        left: 5%;
+		font-size: 70%;
+		color: #00A7CC;
+		text-align: center;
+        padding: 0px 0;
+	}
+
+	.social-accounts {
         position: absolute;
-        top: 90%;
+        top: 35%;
+        left: 60%;
+        color: #00A7CC;
+        font-size: 18px;
+	}
+
+    .games {
+        position: absolute;
+        top: 35%;
+        left: 10%;
+        color: #00A7CC;
+        font-size: 18px;
+	}
+
+    .game-list {
+    border-top: 1px solid red;
+    justify-content: center;
     }
 }
 
@@ -160,12 +220,24 @@
         padding: 0px 0;
 	}
 
-	.social-accounts{
+	.social-accounts {
         position: absolute;
         top: 35%;
         left: 60%;
         color: #00A7CC;
         font-size: 18px;
 	}
+
+    .games {
+        position: absolute;
+        top: 35%;
+        left: 10%;
+        color: #00A7CC;
+        font-size: 18px;
+	}
+
+    .game-list {
+        justify-content: center;
+    }
 }
 </style>
