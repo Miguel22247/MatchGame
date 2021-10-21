@@ -53,7 +53,7 @@
                                     Discord
 								</v-btn>
                             </a>
-                            <a target="_blank" href="https://discord.gg/Z5K4NWmbDq">
+                            <a target="_blank" href="https://twitter.com/miguelpacheco_">
 								<v-btn color="#00A7CC" outlined depressed small>
 									<v-icon color="#ffffff">
 										mdi-twitter
@@ -70,7 +70,7 @@
 						<div class="game-list">
                             <p class="text-game">Games</p>
 							<v-row  align="center" justify="space-around">
-                            <a target="_blank" href="https://steamcommunity.com/id/Miguel22247/">
+                            <a target="_blank" href="https://steamcommunity.com/app/227300">
 								<v-btn color="#00A7CC" outlined depressed small>
 									<v-icon color="#ffffff" mx-2>
 										mdi-truck
@@ -78,7 +78,7 @@
                                     ETS 2
 								</v-btn>
                             </a>
-							<a target="_blank" href="https://discord.gg/Z5K4NWmbDq">
+							<a target="_blank" href="https://steamcommunity.com/app/787860">
 								<v-btn color="#00A7CC" outlined depressed small>
 									<v-icon color="#ffffff">
 										mdi-tractor
@@ -99,6 +99,10 @@
 
 <style scoped>
 @media screen and (min-width:1025px) {
+
+    .v-btn::hover {
+    background-color:#00A7CC;
+    }
     .on-desktop {
         display: none;
     }
