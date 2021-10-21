@@ -71,7 +71,7 @@
                             <p class="text-game">Games</p>
 							<v-row  align="center" justify="space-around">
                             <a target="_blank" href="https://steamcommunity.com/id/Miguel22247/">
-								<v-btn color="#00A7CC" outlined depressed small mx-2>
+								<v-btn color="#00A7CC" outlined depressed small>
 									<v-icon color="#ffffff" mx-2>
 										mdi-truck
 									</v-icon>
