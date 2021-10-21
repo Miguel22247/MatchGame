@@ -159,7 +159,6 @@
 	}
 
     .game-list {
-    border-top: 1px solid red;
     justify-content: center;
     }
 }
