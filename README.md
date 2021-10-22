@@ -1,4 +1,4 @@
-# appt
+# GameMatch
 
 ## Project setup
 ```
