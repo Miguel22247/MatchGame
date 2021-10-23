@@ -1,10 +1,7 @@
 <template>
 	<v-container fill-height fluid mt-14>
-    	<v-row justify="left">
-			<h2>Hello Miguel!</h2>
-		</v-row>
 		<v-row align="center" justify="center">
-			<h4>Possible Matches</h4>
+			<h3>Last Matches</h3>
 		</v-row>
 		<v-row justify="space-around">
 			<v-col>
@@ -60,11 +57,14 @@
 							active-class="blue accent-4 white--text"
 							column
 							>
-								<v-chip><v-icon>mdi-steam</v-icon></v-chip>
+								<v-chip active-class="indigo darken-2 accent-4 white--text"><v-icon>mdi-steam</v-icon></v-chip>
 						
-								<v-chip><v-icon>mdi-discord</v-icon></v-chip>
+								<v-chip active-class="blue accent-4 white--text"><v-icon>mdi-discord</v-icon></v-chip>
 						
-								<v-chip><v-icon>mdi-twitter</v-icon></v-chip>
+								<v-chip active-class="light-blue accent-4 white--text"><v-icon>mdi-twitter</v-icon></v-chip>
+
+								<v-chip active-class="orange accent-4 white--text"><v-icon>mdi-account-circle-outline</v-icon></v-chip>
+
 							</v-chip-group>
 						</v-card-text>
 				
@@ -129,9 +129,11 @@
 						v-model="selection"
 						column
 						>
-							<v-chip active-class="indigo darken-2 accent-4 white--text"><v-icon>mdi-steam</v-icon> Steam</v-chip>
+							<v-chip active-class="indigo darken-2 accent-4 white--text"><v-icon>mdi-steam</v-icon></v-chip>
 					
-							<v-chip><v-icon>mdi-discord</v-icon></v-chip>
+							<v-chip active-class="blue accent-4 white--text"><v-icon>mdi-discord</v-icon></v-chip>
+
+							<v-chip active-class="orange accent-4 white--text"><v-icon>mdi-account-circle-outline</v-icon></v-chip>
 						</v-chip-group>
 					</v-card-text>
 				
@@ -148,6 +150,3 @@
 			</v-col>
 		</v-row>
 	</v-container>
-</template>
-<script>
-</script>	

@@ -4,6 +4,7 @@ import Landing from '../views/Landing.vue'
 import Register from '../components/Register'
 import Login from '../components/Login'
 import Profile from '../components/Profile'
+import Matches from '../components/Matches'
 import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
@@ -33,6 +34,11 @@ const routes = [
     path: '/profile',
     name: 'Profile',
     component: Profile
+  },
+  {
+    path: '/matches',
+    name: 'Matches',
+    component: Matches
   }
 ]
 

@@ -1,5 +1,3 @@
 <template>
-	
+	<profile/>
 </template>
-<script>
-</script>
