@@ -24,6 +24,6 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Authors
-* [Ezequiel](https://github.com/ezedksl)
-* [Gabriel Prochnau](https://github.com/Rielch)
-* [Miguel Pacheco](https://github.com/Miguel22247)
+* Ezequiel - [Github](https://github.com/ezedksl)
+* Gabriel Prochnau - [Github](https://github.com/Rielch)
+* Miguel Pacheco - [Github](https://github.com/Miguel22247)
