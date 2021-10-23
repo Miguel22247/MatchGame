@@ -15,7 +15,7 @@
 				v-model="selection"
 				column
 				>
-					<v-chip active-class="indigo darken-2 accent-4 white--text"><v-icon>mdi-steam</v-icon> Steam</v-chip>
+					<a target="_blank" href="https://steamcommunity.com/id/Miguel22247/"><v-chip active-class="blue darken-4 white--text"><v-icon>mdi-steam</v-icon> Steam</v-chip></a>
 
 					<v-chip active-class="orange accent-4 white--text"><v-icon>mdi-origin</v-icon> Origin</v-chip>
 

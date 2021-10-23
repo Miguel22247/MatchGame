@@ -6,13 +6,13 @@
 		<v-row justify="space-around">
 			<v-col>
 				<v-card
-					:loading="loading"
+					:loading="loading1"
 					class="mx-auto my-12"
 					max-width="374"
 					>
 					<template slot="progress">
 						<v-progress-linear
-						color="deep-blue"
+						color="blue darken-4"
 						height="10"
 						indeterminate
 						></v-progress-linear>
@@ -54,10 +54,9 @@
 						<v-card-text>
 							<v-chip-group
 							v-model="selection"
-							active-class="blue accent-4 white--text"
 							column
 							>
-								<v-chip active-class="indigo darken-2 accent-4 white--text"><v-icon>mdi-steam</v-icon></v-chip>
+								<v-chip active-class="blue darken-4 white--text"><v-icon>mdi-steam</v-icon></v-chip>
 						
 								<v-chip active-class="blue accent-4 white--text"><v-icon>mdi-discord</v-icon></v-chip>
 						
@@ -70,22 +69,22 @@
 				
 						<v-card-actions>
 							<v-btn
-							color="deep-blue lighten-2"
+							color="blue darken-4"
 							text
-							@click="reserve"
+							@click="match1"
 							>
-							Match
+							Match Again
 							</v-btn>
 						</v-card-actions>
 					</v-card>
 					<v-card
-					:loading="loading"
+					:loading="loading2"
 					class="mx-auto my-12"
 					max-width="374"
 					>
 					<template slot="progress">
 						<v-progress-linear
-						color="deep-purple"
+						color="blue darken-4"
 						height="10"
 						indeterminate
 						></v-progress-linear>
@@ -129,7 +128,7 @@
 						v-model="selection"
 						column
 						>
-							<v-chip active-class="indigo darken-2 accent-4 white--text"><v-icon>mdi-steam</v-icon></v-chip>
+							<v-chip active-class="blue darken-4 white--text"><v-icon>mdi-steam</v-icon></v-chip>
 					
 							<v-chip active-class="blue accent-4 white--text"><v-icon>mdi-discord</v-icon></v-chip>
 
@@ -139,14 +138,37 @@
 				
 					<v-card-actions>
 						<v-btn
-						color="deep-blue lighten-2"
+						color="blue darken-4"
 						text
-						@click="reserve"
+						@click="match2"
 						>
-						Match
+						Match Again
 						</v-btn>
 					</v-card-actions>
 					</v-card>
 			</v-col>
 		</v-row>
 	</v-container>
+</template>
+<script>
+export default {
+	data: () => ({
+    loading1: false,
+	loading2: false,
+    selection: 1,
+  }),
+
+  methods: {
+    match1 () {
+      this.loading1 = true
+
+      setTimeout(() => (this.loading1 = false), 2000)
+    },
+	match2 () {
+      this.loading2 = true
+
+      setTimeout(() => (this.loading2 = false), 2000)
+    },
+  },
+}
+</script>
