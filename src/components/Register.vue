@@ -9,6 +9,9 @@
                 <v-layout row>
                   <v-flex xs12>
                     <v-text-field
+                      outlined
+                      rounded
+                      color="#00A7CC"
                       name="email"
                       label="Mail"
                       id="email"
@@ -20,6 +23,9 @@
                 <v-layout row>
                   <v-flex xs12>
                     <v-text-field
+                      outlined
+                      rounded
+                      color="#00A7CC"
                       name="password"
                       label="Password"
                       id="password"
@@ -31,6 +37,9 @@
                 <v-layout row>
                   <v-flex xs12>
                     <v-text-field
+                      outlined
+                      rounded
+                      color="#00A7CC"
                       name="confirmPassword"
                       label="Confirm Password"
                       id="confirmPassword"
@@ -41,7 +50,7 @@
                 </v-layout>
                 <v-layout row>
                   <v-flex xs12>
-                    <v-btn type="submit">Sign up</v-btn>
+                    <v-btn outlined rounded color="#00A7CC" type="submit">Sign up</v-btn>
                   </v-flex>
                 </v-layout>
               </form>
@@ -63,7 +72,6 @@ export default {
     return {
       email: '',
       password: '',
-      confirmPassword: ''
     }
   },
   computed: {

@@ -2,7 +2,7 @@
   <v-app id="inspire">
     <v-app-bar
       app
-      color="deep-purple accent-4"
+      color="deep-blue accent-4"
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
@@ -72,10 +72,11 @@
       drawer: false,
       group: null,
       items: [
-        { title: 'Home', icon: 'mdi-home', to: '/' },
+        { title: 'Home', icon: 'mdi-home', to: '/home' },
         { title: 'Profile', icon: 'mdi-account-circle-outline', to: '/profile' },
         { title: 'Matches', icon: 'mdi-account-group', to: '/matches' },
         { title: 'Settings', icon: 'mdi-cog', to: '/settings'},
+        { title: 'Log Out', icon: 'mdi-logout', to: '/'}
       ],
     }),
 
