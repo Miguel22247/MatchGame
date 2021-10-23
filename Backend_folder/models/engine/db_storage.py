@@ -6,7 +6,7 @@ from models.user import User
 from models.socials import Social
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
-
+from os import getenv
 
 class DBStorage:
     """A database storage engine"""
@@ -15,10 +15,10 @@ class DBStorage:
     __engine = None
     __session = None
     __class_list = {"User": User, "Game": Game, "Social": Social}
-    __user = ""
-    __pwd = ""
-    __host = ""
-    __db = ""
+    __user = getenv("DB_USER")
+    __pwd = getenv("DB_PSW")
+    __host = getenv("DB_HOST")
+    __db = getenv("GM_DB")
 
 
     def __init__(self):
