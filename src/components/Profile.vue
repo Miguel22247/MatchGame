@@ -41,6 +41,8 @@
 						<v-chip><v-icon>mdi-tractor</v-icon></v-chip>
 				
 						<v-chip><v-icon>mdi-airplane</v-icon></v-chip>
+
+						<v-chip><v-icon>mdi-target</v-icon></v-chip>
 					</v-chip-group>
 				</v-card>
 			</v-col>
