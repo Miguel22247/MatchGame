@@ -17,81 +17,9 @@
 						indeterminate
 						></v-progress-linear>
 					</template>
-				
-				
-						<v-card-title>Rielch</v-card-title>
-					
-						<v-card-text>
-							<v-row
-							align="center"
-							class="mx-0"
-							>
-							<v-rating
-								:value="4.5"
-								color="amber"
-								dense
-								half-increments
-								readonly
-								size="14"
-							></v-rating>
-					
-							<div class="grey--text ms-4">
-								4.5 (413)
-							</div>
-							</v-row>
-					
-							<div class="my-4 text-subtitle-1">
-								Simulation Player
-							</div>
-					
-							<div>Player specialized on Euro Truck Simulator and Farming Simulator</div>
-						</v-card-text>
-					
-						<v-divider class="mx-4"></v-divider>
-					
-						<v-card-title>Social Media</v-card-title>
-				
-						<v-card-text>
-							<v-chip-group
-							v-model="selection"
-							column
-							>
-								<v-chip active-class="blue darken-4 white--text"><v-icon>mdi-steam</v-icon></v-chip>
-						
-								<v-chip active-class="blue accent-4 white--text"><v-icon>mdi-discord</v-icon></v-chip>
-						
-								<v-chip active-class="light-blue accent-4 white--text"><v-icon>mdi-twitter</v-icon></v-chip>
-
-								<v-chip active-class="orange accent-4 white--text"><v-icon>mdi-account-circle-outline</v-icon></v-chip>
-
-							</v-chip-group>
-						</v-card-text>
-				
-						<v-card-actions>
-							<v-btn
-							color="blue darken-4"
-							text
-							@click="match1"
-							>
-							Match Again
-							</v-btn>
-						</v-card-actions>
-					</v-card>
-					<v-card
-					:loading="loading2"
-					class="mx-auto my-12"
-					max-width="374"
-					>
-					<template slot="progress">
-						<v-progress-linear
-						color="blue darken-4"
-						height="10"
-						indeterminate
-						></v-progress-linear>
-					</template>
-				
-				
-					<v-card-title>ezedksl</v-card-title>
+			
+			
+					<v-card-title>Rielch</v-card-title>
 				
 					<v-card-text>
 						<v-row
@@ -99,7 +27,7 @@
 						class="mx-0"
 						>
 						<v-rating
-							:value="3.0"
+							:value="4.5"
 							color="amber"
 							dense
 							half-increments
@@ -108,21 +36,21 @@
 						></v-rating>
 				
 						<div class="grey--text ms-4">
-							3.0 (200)
+							4.5 (413)
 						</div>
 						</v-row>
 				
 						<div class="my-4 text-subtitle-1">
-							First Person Shooter Player
+							Simulation Player
 						</div>
 				
-						<div>Player specialized on Counter Strike and Call of duty</div>
+						<div>Player specialized on Euro Truck Simulator and Farming Simulator</div>
 					</v-card-text>
 				
 					<v-divider class="mx-4"></v-divider>
 				
 					<v-card-title>Social Media</v-card-title>
-				
+			
 					<v-card-text>
 						<v-chip-group
 						v-model="selection"
@@ -131,21 +59,24 @@
 							<v-chip active-class="blue darken-4 white--text"><v-icon>mdi-steam</v-icon></v-chip>
 					
 							<v-chip active-class="blue accent-4 white--text"><v-icon>mdi-discord</v-icon></v-chip>
+					
+							<v-chip active-class="light-blue accent-4 white--text"><v-icon>mdi-twitter</v-icon></v-chip>
 
 							<v-chip active-class="orange accent-4 white--text"><v-icon>mdi-account-circle-outline</v-icon></v-chip>
+
 						</v-chip-group>
 					</v-card-text>
-				
+			
 					<v-card-actions>
 						<v-btn
 						color="blue darken-4"
 						text
-						@click="match2"
+						@click="match1"
 						>
 						Match Again
 						</v-btn>
 					</v-card-actions>
-					</v-card>
+				</v-card>
 			</v-col>
 		</v-row>
 	</v-container>
@@ -163,11 +94,6 @@ export default {
       this.loading1 = true
 
       setTimeout(() => (this.loading1 = false), 2000)
-    },
-	match2 () {
-      this.loading2 = true
-
-      setTimeout(() => (this.loading2 = false), 2000)
     },
   },
 }

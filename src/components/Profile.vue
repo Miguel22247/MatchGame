@@ -7,11 +7,11 @@
 			<h4>Bio</h4>
 			<p>Simulation player that likes to play to Euro Truck Simulator 2, American Truck Simulator and Farming Simulator 2019</p>
 		</v-row>
-		<v-row justify="space-around" align="center">
+		<v-row>
 			<v-col align="center">
 				<h3>Social Accounts</h3>
 				<v-chip-group
-				center-active
+				align="center"
 				v-model="selection"
 				column
 				>
@@ -27,8 +27,6 @@
 
 				</v-chip-group>
 			</v-col>
-		</v-row>
-		<v-row justify="space-around" align="center">
 			<v-col align="center">
 				<h3>My Games</h3>
 				<v-card color="#ffffff" outlined>
