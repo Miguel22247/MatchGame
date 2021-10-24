@@ -32,6 +32,6 @@ class User(BaseModel, Base):
     password = Column(String(15), nullable=False)
     bio = Column(String(300), nullable=True)
     games = relationship("Game", secondary="user_games", viewonly=False)
-    matches = relationship("Matches", secondary="user_matches", viewonly=False)
-    likes = relationship("Likes", secondary="user_likes", viewonly=False)
+    matches = relationship("User", secondary="user_matches", viewonly=False)
+    likes = relationship("User", secondary="user_likes", viewonly=False)
     socials = relationship("Socials", secondary="user_socials", viewonly=False)
