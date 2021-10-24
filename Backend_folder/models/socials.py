@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Script to create an instance of the class Social"""
 from sqlalchemy import Column, String
-from models import storage
 from models.base_model import Base, BaseModel
 
 
