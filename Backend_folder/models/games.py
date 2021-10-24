@@ -8,5 +8,5 @@ from models.base_model import Base, BaseModel
 class Game(BaseModel, Base):
     """Class to store the game data"""
 
-    __tablename__ = "games"
+    __tablename__ = "game"
     name = Column(String(50), nullable=False)
