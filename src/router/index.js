@@ -1,51 +1,48 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
+import Landing from '../views/Landing.vue'
+import Register from '../components/Register'
+import Login from '../components/Login'
+import Profile from '../components/Profile'
+import Matches from '../components/Matches'
+import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-
-    component: () => import('../views/Landing.vue')
+    name: 'Landing',
+    component: Landing
   },
   {
-    path: '/signup',
-    name: 'SignUp',
-
-    component: () => import('../views/SignUp.vue')
+    path: '/register',
+    name: 'Register',
+    component: Register
   },
   {
-    path: '/signin',
-    name: 'SignIn',
-    
-    component: () => import('../views/SignIn.vue')
+    path: '/login',
+    name: 'Login',
+    component: Login
   },
   {
     path: '/home',
-    name: 'HomePage',
-
-    component: () => import('../views/Homepage.vue')
-  },
-  {
-    path: '/matches',
-    name: 'Matches',
-    
-    component: () => import('../views/Matches.vue')
+    name: 'Home',
+    component: Home
   },
   {
     path: '/profile',
     name: 'Profile',
-    
-    component: () => import('../views/Profile.vue')
+    component: Profile
   },
+  {
+    path: '/matches',
+    name: 'Matches',
+    component: Matches
+  }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
   routes
 })
 
