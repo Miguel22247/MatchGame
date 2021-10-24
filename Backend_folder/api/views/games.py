@@ -14,7 +14,7 @@ def return_games():
     games_list = []
     for game in games.values():
         games_list.append(game.to_dict())
-    return jsonify(games_list)
+    return jsonify(games_list), 200
 
 
 @app_views.route("/games/<user_id>", methods=["PUT"], strict_slashes=False)
