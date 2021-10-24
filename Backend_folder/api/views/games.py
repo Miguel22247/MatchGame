@@ -10,7 +10,7 @@ from models.user import User
 @app_views.route("/games", strict_slashes=False)
 def return_games():
     """Return a list of all games"""
-    games= storage.all(Game)
+    games = storage.all(Game)
     games_list = []
     for game in games.values():
         games_list.append(game.to_dict())
