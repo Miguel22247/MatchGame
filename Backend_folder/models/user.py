@@ -29,7 +29,7 @@ class User(BaseModel, Base):
     __tablename__ = "user"
     email = Column(String(30), nullable=False)
     password = Column(String(16), nullable=False)
-    nickname = Column(String(16), nullable=False)
+    username = Column(String(16), nullable=False)
     bio = Column(String(300), nullable=True)
     games = relationship("Game", secondary="user_games", viewonly=False)
     matches = relationship("User", secondary="user_matches", primaryjoin="User.id==user_matches.c.user_id", secondaryjoin="User.id==user_matches.c.match_id", backref="match", viewonly=False)
