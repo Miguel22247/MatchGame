@@ -34,4 +34,4 @@ class User(BaseModel, Base):
     games = relationship("Game", secondary="user_games", viewonly=False)
     matches = relationship("User", secondary="user_matches", primaryjoin="User.id==user_matches.c.user_id", secondaryjoin="User.id==user_matches.c.match_id", backref="match", viewonly=False)
     likes = relationship("User", secondary="user_likes", primaryjoin="User.id==user_likes.c.user_id", secondaryjoin="User.id==user_likes.c.like_id", backref="like", viewonly=False)
-    socials = relationship("Socials", secondary="user_socials", viewonly=False)
+    socials = relationship("Social", secondary="user_socials", viewonly=False)
