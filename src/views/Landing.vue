@@ -1,12 +1,12 @@
 <template>
-  <v-container fill-height fluid mt-14>
-    <v-row align="top" justify="center">
-        <h2>Welcome to GameMatch</h2>
-    </v-row>
-    <v-row align="end" justify="space-around">
+  <v-container class="container" fluid fill-height>
+      <v-row align ="center" justify="center">
+          <h2>Welcome to GameMatch</h2>
+      </v-row>
+      <v-row align="center" justify="space-around">
         <v-btn outlined color="#00A7CC" to="/register">Sign Up</v-btn>
         <v-btn outlined color="#00A7CC" to="/login">Sign In</v-btn>
-    </v-row>
+      </v-row>
   </v-container>
 </template>
 
@@ -23,4 +23,9 @@ export default {
   a {
     text-decoration: none;
   }
+
+  .container {
+    height: 100%;
+  }
+
 </style>
