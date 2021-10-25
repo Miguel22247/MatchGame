@@ -28,6 +28,7 @@ class User(BaseModel, Base):
 
     __tablename__ = "user"
     email = Column(String(30), nullable=False)
+    password = Column(String(16), nullable=False)
     nickname = Column(String(16), nullable=False)
     bio = Column(String(300), nullable=True)
     games = relationship("Game", secondary="user_games", viewonly=False)

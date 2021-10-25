@@ -51,3 +51,21 @@ def change_nickname(user_id):
     user.nickname = body["nickname"]
     user.save()
     return jsonify(user.to_dict()), 200
+
+
+@app_views.route("/validate_user", strict_slashes=False)
+def validate_user():
+    """Validates the user using email and password
+    Returns the user object
+    {email: <user_email>, password: <user_password>}"""
+    body = request.get_json()
+    if body is None:
+        abort(400, "Not a JSON")
+    users = storage.all(User)
+    for user in users:
+        if user.email == body.email:
+            if user.password == body.password:
+                return jsonify("Ok"), 200
+            else:
+                abort(400, "Wrong password")
+    abort(404, "User doesn't exist")
