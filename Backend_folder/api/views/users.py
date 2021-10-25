@@ -33,6 +33,10 @@ def create_user():
     body = request.get_json()
     if body is None:
         abort(400, "Not a JSON")
+    users = storage.all(User)
+    for user in users:
+        if user.email is body["email"]:
+            return jsonify("Email already in use"), 400
     new_user = User(**body)
     new_user.save()
     user_dict = new_user.to_dict()
