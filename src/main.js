@@ -3,10 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
-import { initializeApp } from 'firebase/app';
-import VeeValidate from 'vee-validate'
+import axios from 'axios'
 
-Vue.use(VeeValidate)
 Vue.config.productionTip = false
 
 new Vue({
