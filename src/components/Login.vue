@@ -1,14 +1,17 @@
 <template>
-  <v-container>
+  <v-container class="container" fluid fill-height>
     <v-layout row>
       <v-flex xs12 sm6 offset-sm3>
-        <v-card>
+        <v-card color="#ffffff" outlined>
           <v-card-text>
             <v-container>
               <form @submit.prevent="onSignup">
                 <v-layout row>
                   <v-flex xs12>
                     <v-text-field
+                      rounded
+                      outlined
+                      color="#00A7CC"
                       name="email"
                       label="Mail"
                       id="email"
@@ -20,6 +23,9 @@
                 <v-layout row>
                   <v-flex xs12>
                     <v-text-field
+                      rounded
+                      outlined
+                      color="#00A7CC"
                       name="password"
                       label="Password"
                       id="password"
@@ -30,7 +36,7 @@
                 </v-layout>
                 <v-layout row>
                   <v-flex xs12>
-                    <v-btn type="submit">Log in</v-btn>
+                    <v-btn color="#00A7CC" rounded outlined type="submit">Log in</v-btn>
                   </v-flex>
                 </v-layout>
               </form>
@@ -41,46 +47,11 @@
     </v-layout>
   </v-container>
 </template>
-
-
-
 <script>
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-
-export default {
-  data () {
-    return {
-      email: '',
-      password: ''
-    }
-  },
-  computed: {
-      comparePasswords () {
-        return this.password !== this.confirmPassword ? 'Passwords do not match' : ''
-      },
-      user () {
-        return this.$store.getters.user
-      }
-    },
-    watch: {
-      user (value) {
-        if (value !== null && value !== undefined) {
-          this.$router.push('/Register')
-        }
-      }
-    },
-  methods: {
-    onSignup () {
-      const auth = getAuth();
-      signInWithEmailAndPassword(auth, this.email, this.password)
-      .then((user) => {
-          this.$router.replace('/home')
-        }).catch((err) => {
-          alert(err.message)
-        });
-      }
-    }
-  }
 </script>
-
+<style scoped>
+.container {
+  height: 100%;
+}
+</style>
 

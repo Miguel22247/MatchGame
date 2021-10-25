@@ -1,5 +1,5 @@
 <template>
-  <v-container fill-height fluid mt-14>
+  <v-container class="container" fluid fill-height>
 	<v-row align="center" justify="center">
 		<login/>
 	</v-row>
@@ -7,11 +7,15 @@
 </template>
 
 <script>
-import Register from '../components/Register.vue'
 import Login from '../components/Login.vue'
 
 export default {
-  components: { Register, Login },
+  components: {Login },
   name: 'Home'
 }
 </script>
+<style scoped>
+.container {
+  height: 100%;
+}
+</style>
