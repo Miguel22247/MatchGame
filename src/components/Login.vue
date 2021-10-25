@@ -1,83 +1,86 @@
 <template>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-header">Login</div>
-          <div class="card-body">
-            <div v-if="error" class="alert alert-danger">{{error}}</div>
-            <form action="#" @submit.prevent="submit">
-              <div class="form-group row">
-                <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
-
-                <div class="col-md-6">
-                  <input
-                    id="email"
-                    type="email"
-                    class="form-control"
-                    name="email"
-                    value
-                    required
-                    autofocus
-                    v-model="form.email"
-                  />
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
-
-                <div class="col-md-6">
-                  <input
-                    id="password"
-                    type="password"
-                    class="form-control"
-                    name="password"
-                    required
-                    v-model="form.password"
-                  />
-                </div>
-              </div>
-
-              <div class="form-group row mb-0">
-                <div class="col-md-8 offset-md-4">
-                  <button type="submit" class="btn btn-primary">Login</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <v-container>
+    <v-layout row>
+      <v-flex xs12 sm6 offset-sm3>
+        <v-card>
+          <v-card-text>
+            <v-container>
+              <form @submit.prevent="onSignup">
+                <v-layout row>
+                  <v-flex xs12>
+                    <v-text-field
+                      name="email"
+                      label="Mail"
+                      id="email"
+                      v-model="email"
+                      type="email"
+                      required></v-text-field>
+                  </v-flex>
+                </v-layout>
+                <v-layout row>
+                  <v-flex xs12>
+                    <v-text-field
+                      name="password"
+                      label="Password"
+                      id="password"
+                      v-model="password"
+                      type="password"
+                      required></v-text-field>
+                  </v-flex>
+                </v-layout>
+                <v-layout row>
+                  <v-flex xs12>
+                    <v-btn type="submit">Log in</v-btn>
+                  </v-flex>
+                </v-layout>
+              </form>
+            </v-container>
+          </v-card-text>
+        </v-card>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
+
+
 <script>
-import { getAuth } from "firebase/auth";
-import firebaseApp from '../firebaseapp'
-const auth = getAuth(firebaseApp);
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 export default {
-  data() {
+  data () {
     return {
-      form: {
-        email: "",
-        password: ""
-      },
-      error: null
-    };
+      email: '',
+      password: ''
+    }
   },
+  computed: {
+      comparePasswords () {
+        return this.password !== this.confirmPassword ? 'Passwords do not match' : ''
+      },
+      user () {
+        return this.$store.getters.user
+      }
+    },
+    watch: {
+      user (value) {
+        if (value !== null && value !== undefined) {
+          this.$router.push('/Register')
+        }
+      }
+    },
   methods: {
-    submit() {
-      auth
-        .signInWithEmailAndPassword(this.form.email, this.form.password)
-        .then(() => {
-          this.$router.replace({ name: "Dashboard" });
-        })
-        .catch(err => {
-          this.error = err.message;
+    onSignup () {
+      const auth = getAuth();
+      signInWithEmailAndPassword(auth, this.email, this.password)
+      .then((user) => {
+          this.$router.replace('/home')
+        }).catch((err) => {
+          alert(err.message)
         });
+      }
     }
   }
-};
 </script>
+
+

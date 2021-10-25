@@ -1,30 +1,49 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import Login from '../components/Login'
+import VueRouter from 'vue-router'
+import Landing from '../views/Landing.vue'
 import Register from '../components/Register'
-import Dashboard from '../components/Dashboard'
-Vue.use(Router)
+import Login from '../components/Login'
+import Profile from '../components/Profile'
+import Matches from '../components/Matches'
+import Home from '../views/Home.vue'
 
-const router = new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: [
-      {
-      path: '/login',
-      name: 'login',
-      component: Login
+Vue.use(VueRouter)
+
+const routes = [
+  {
+    path: '/',
+    name: 'Landing',
+    component: Landing
   },
   {
-      path: '/register',
-      name: 'Register',
-      component: Register
+    path: '/register',
+    name: 'Register',
+    component: Register
   },
   {
-      path: '/dashboard',
-      name: 'Dashboard',
-      component: Dashboard
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '/home',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: Profile
+  },
+  {
+    path: '/matches',
+    name: 'Matches',
+    component: Matches
   }
 ]
-});
+
+const router = new VueRouter({
+  routes
+})
 
 export default router

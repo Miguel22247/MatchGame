@@ -1,106 +1,106 @@
 <template>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-header">Register</div>
-          <div class="card-body">
-            <div v-if="error" class="alert alert-danger">{{error}}</div>
-            <form action="#" @submit.prevent="submit">
-              <div class="form-group row">
-                <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
-
-                <div class="col-md-6">
-                  <input
-                    id="name"
-                    type="name"
-                    class="form-control"
-                    name="name"
-                    value
-                    required
-                    autofocus
-                    v-model="form.name"
-                  />
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
-
-                <div class="col-md-6">
-                  <input
-                    id="email"
-                    type="email"
-                    class="form-control"
-                    name="email"
-                    value
-                    required
-                    autofocus
-                    v-model="form.email"
-                  />
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
-
-                <div class="col-md-6">
-                  <input
-                    id="password"
-                    type="password"
-                    class="form-control"
-                    name="password"
-                    required
-                    v-model="form.password"
-                  />
-                </div>
-              </div>
-
-              <div class="form-group row mb-0">
-                <div class="col-md-8 offset-md-4">
-                  <button type="submit" class="btn btn-primary">Register</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <v-container>
+    <v-layout row>
+      <v-flex xs12 sm6 offset-sm3>
+        <v-card>
+          <v-card-text>
+            <v-container>
+              <form @submit.prevent="onSignup">
+                <v-layout row>
+                  <v-flex xs12>
+                    <v-text-field
+                      outlined
+                      rounded
+                      color="#00A7CC"
+                      name="email"
+                      label="Mail"
+                      id="email"
+                      v-model="email"
+                      type="email"
+                      required></v-text-field>
+                  </v-flex>
+                </v-layout>
+                <v-layout row>
+                  <v-flex xs12>
+                    <v-text-field
+                      outlined
+                      rounded
+                      color="#00A7CC"
+                      name="password"
+                      label="Password"
+                      id="password"
+                      v-model="password"
+                      type="password"
+                      required></v-text-field>
+                  </v-flex>
+                </v-layout>
+                <v-layout row>
+                  <v-flex xs12>
+                    <v-text-field
+                      outlined
+                      rounded
+                      color="#00A7CC"
+                      name="confirmPassword"
+                      label="Confirm Password"
+                      id="confirmPassword"
+                      v-model="confirmPassword"
+                      type="password"
+                      :rules="[comparePasswords]"></v-text-field>
+                  </v-flex>
+                </v-layout>
+                <v-layout row>
+                  <v-flex xs12>
+                    <v-btn outlined rounded color="#00A7CC" type="submit">Sign up</v-btn>
+                  </v-flex>
+                </v-layout>
+              </form>
+            </v-container>
+          </v-card-text>
+        </v-card>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 
+
 <script>
-import { getAuth } from "firebase/auth";
-import firebaseApp from '../firebaseapp'
-const auth = getAuth(firebaseApp);
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 export default {
-  data() {
+  data () {
     return {
-      form: {
-        name: "",
-        email: "",
-        password: ""
-      },
-      error: null
-    };
+      email: '',
+      password: '',
+    }
   },
+  computed: {
+      comparePasswords () {
+        return this.password !== this.confirmPassword ? 'Passwords do not match' : ''
+      },
+      user () {
+        return this.$store.getters.user
+      }
+    },
+    watch: {
+      user (value) {
+        if (value !== null && value !== undefined) {
+          this.$router.push('/Register')
+        }
+      }
+    },
   methods: {
-    submit() {
-      auth
-        .createUserWithEmailAndPassword(this.form.email, this.form.password)
-        .then(data => {
-          data.user
-            .updateProfile({
-              displayName: this.form.name
-            })
-            .then(() => {});
-        })
-        .catch(err => {
-          this.error = err.message;
+    onSignup () {
+      const auth = getAuth();
+      createUserWithEmailAndPassword(auth, this.email, this.password)
+      .then((user) => {
+          this.$router.replace('/home')
+        }).catch((err) => {
+          alert(err.message)
         });
+      }
     }
   }
-};
 </script>
+
+
