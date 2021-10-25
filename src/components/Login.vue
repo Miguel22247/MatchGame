@@ -48,6 +48,31 @@
   </v-container>
 </template>
 <script>
+import axios from 'axios'
+
+export default {
+  data: function() {
+    return {
+      username: '',
+      email: '',
+      password: '',
+    }
+  },
+  // async created() {
+  //   try {
+      
+  //     const req = await axios.post(apiurl, this.userData);
+
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // },
+
+  methods: {
+    onSignin: function(){
+    }
+  }
+}
 </script>
 <style scoped>
 .container {
