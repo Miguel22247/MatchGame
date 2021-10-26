@@ -14,7 +14,7 @@ def get_user(user_id):
         abort(404)
     user_dict = user.to_dict()
     user_dict.pop('password')
-    return jsonify()
+    return jsonify(user_dict), 200
 
 
 @app_views.route("user/<user_id>", methods=["DELETE"], strict_slashes=False)
