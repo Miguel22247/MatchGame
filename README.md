@@ -12,7 +12,7 @@ You can see our demo [here]()
 ## About Us
 
 ### What inspired us?
-GameMatch was inspired after seeing other projects on the cohort related to videogames and after thinking
+GameMatch was inspired after seeing other projects on the cohort related to videogames and after thinking a little bit we notice that some of the video games are multiplayer, so we think in create a social media that allows people to find other people to play that videogames
 
 ### Repository
 Link to the repository on GitHub: click [here](https://github.com/Miguel22247/GameMatch)
