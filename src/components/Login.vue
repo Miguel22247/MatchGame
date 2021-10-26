@@ -64,7 +64,7 @@ export default {
   methods: {
     onSubmit: function(){
        const url = 'http://35.190.147.190:5000/api/user'
-       const datos = { 'username': this.username, 'email': this.email, 'password': this.password };
+       const datos = { 'email': this.email, 'password': this.password };
        const headers = {
          "Access-Control-Allow-Origin": "*"
        };
