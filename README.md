@@ -13,6 +13,24 @@
 ### Repository
 Link to the repository on GitHub: click [here](https://github.com/Miguel22247/GameMatch)
 
+Also you can see our demo [here]()
+
+## Project setup
+if you want to try our project on local follow this steps:
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
 ### Team Members
 * Ezequiel Martinez:
 * Gabriel Prochnau:
