@@ -68,7 +68,7 @@ export default {
        const headers = {
          "Access-Control-Allow-Origin": "*"
        };
-      fetch(url , datos, { headers });
+      axios.get(url , datos, { headers });
   }
   }
 }
