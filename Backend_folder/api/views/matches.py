@@ -71,5 +71,10 @@ def get_users(user_id):
     return jsonify(users), 200
 
 
-#@app_views.route("/get_matches/<user_id>", strict_slashes=False)
-#def get_matches(user_id):
+@app_views.route("/get_matches/<user_id>", strict_slashes=False)
+def get_matches(user_id):
+    """Returns all matches from a user"""
+    user = storage.get(User, user_id)
+    if user is None:
+        abort(404)
+    return jsonify(user.matches)

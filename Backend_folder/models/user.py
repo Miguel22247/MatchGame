@@ -18,10 +18,14 @@ association_table3 = Table("user_likes", Base.metadata,
                            Column("user_id", String(60), ForeignKey("user.id", onupdate="CASCADE", ondelete="CASCADE"), primary_key=True, nullable=False),
                            Column("like_id", String(60), ForeignKey("user.id", onupdate="CASCADE", ondelete="CASCADE"), primary_key=True, nullable=False))
 
-association_table4 = Table("user_socials", Base.metadata,
-                           Column("user_id", String(60), ForeignKey("user.id", onupdate="CASCADE", ondelete="CASCADE"), primary_key=True, nullable=False),
-                           Column("social_id", String(60), ForeignKey("social.id", onupdate="CASCADE", ondelete="CASCADE"), primary_key=True, nullable=False),
-                           Column("link", String(50), nullable=False))
+
+class UserSocial(Base):
+    """Association class between User and Social"""
+    __tablename__ = "user_socials"
+    user_id = Column(ForeignKey('user.id'), primary_key=True)
+    social_id = Column(ForeignKey('social.id'), primary_key=True)
+    user_link = Column(String(30), nullable=False)
+    socials = relationship("Social")
 
 class User(BaseModel, Base):
     """Class to store the user data"""
@@ -34,4 +38,4 @@ class User(BaseModel, Base):
     games = relationship("Game", secondary="user_games", viewonly=False)
     matches = relationship("User", secondary="user_matches", primaryjoin="User.id==user_matches.c.user_id", secondaryjoin="User.id==user_matches.c.match_id", backref="match", viewonly=False)
     likes = relationship("User", secondary="user_likes", primaryjoin="User.id==user_likes.c.user_id", secondaryjoin="User.id==user_likes.c.like_id", backref="like", viewonly=False)
-    socials = relationship("Social", secondary="user_socials", viewonly=False)
+    socials = relationship("UserSocial")
