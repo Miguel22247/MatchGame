@@ -32,6 +32,6 @@ npm run build
 ```
 
 ### Team Members
-* Ezequiel Martinez:
-* Gabriel Prochnau:
+* Ezequiel Martinez:[Github](https://github.com/)
+* Gabriel Prochnau: [Github](https://github.com/Rielch)
 * Miguel Pacheco: [Github](https://github.com/Miguel22247/) | [LinkedIn](https://linkedin.com/in/miguel-pacheco-)

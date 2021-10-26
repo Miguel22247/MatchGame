@@ -1,6 +1,6 @@
 <template>
   <v-container class="container" fluid fill-height>
-    <v-row align="top" justify="center">
+    <v-row align="center" justify="center">
 			<h3>Welcome Back!</h3>
 		</v-row>
     <v-layout row>
