@@ -1,7 +1,7 @@
 <template>
 	<v-container fill-height fluid mt-14>
-    	<v-row justify="left">
-			<h2>Hello Miguel!</h2>
+    	<v-row>
+			<h2>Hello {{ user.username }}!</h2>
 		</v-row>
 		<v-row align="center" justify="center">
 			<h4>Possible Matches</h4>
@@ -10,6 +10,18 @@
 			<v-col>
 				<v-card class="mx-auto my-12" max-width="374">
 					<v-card-title> {{ user.username }} </v-card-title>
+					<v-card-text>
+						<v-row align="center" class="mx-0">
+							<div class="my-4 text-subtitle-1">
+								{{ user.bio }}
+							</div>
+						</v-row>
+					</v-card-text>
+					<v-divider class="mx-4"></v-divider>
+					<v-card-title>Social Media</v-card-title>
+					<v-card-text>
+						
+					</v-card-text>
 				</v-card>
 			</v-col>
 		</v-row>
