@@ -1,5 +1,7 @@
 # GameMatch
 
+<img src="../../public/images/GameMatch.png">
+
 ## Project setup
 ```
 npm install
