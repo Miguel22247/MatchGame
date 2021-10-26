@@ -23,6 +23,6 @@ npm run build
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Authors
-* Ezequiel Martinez - [Github](https://github.com/ezedksl) | [LinkedIn]
-* Gabriel Prochnau - [Github](https://github.com/Rielch) | [LinkedIn]
-* Miguel Pacheco - [Github](https://github.com/Miguel22247) | [LinkedIn]
+* Ezequiel Martinez - [Github](https://github.com/ezedksl) | [LinkedIn]()
+* Gabriel Prochnau - [Github](https://github.com/Rielch) | [LinkedIn]()
+* Miguel Pacheco - [Github](https://github.com/Miguel22247) | [LinkedIn](https://www.linkedin.com/in/miguel-pacheco-/)
