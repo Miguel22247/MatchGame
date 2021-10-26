@@ -67,7 +67,7 @@ export default {
        const headers = {
          "Access-Control-Allow-Origin": "*"
        };
-       axios.post('http://35.190.147.190:5000/api/user', datos, { headers });
+       axios.post('http://35.190.147.190:5000/validate_user', datos, { headers });
   }
   }
 }
