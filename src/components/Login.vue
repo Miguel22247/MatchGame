@@ -63,11 +63,12 @@ export default {
 
   methods: {
     onSubmit: function(){
-       const datos = {'email': this.email, 'password': this.password };
+       const url = 'http://35.190.147.190:5000/api/user'
+       const datos = { 'username': this.username, 'email': this.email, 'password': this.password };
        const headers = {
          "Access-Control-Allow-Origin": "*"
        };
-       axios.post('http://35.190.147.190:5000/validate_user', datos, { headers });
+      fetch(url , datos, { headers });
   }
   }
 }
