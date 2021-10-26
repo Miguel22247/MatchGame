@@ -56,7 +56,7 @@ def get_users(user_id):
     if user is None:
         abort(404)
     if len(user.games) is 0:
-        return jsonify("Add some games in Config"), 200
+        return jsonify("Add some games in Config"), 201
     users = storage.all(User)
     users_list = []
     for game in user.games:
@@ -68,4 +68,4 @@ def get_users(user_id):
         usr_dict = usr.to_dict()
         usr_dict.pop('password')
         users.append(usr_dict)
-    return jsonify(users)
+    return jsonify(users), 200
