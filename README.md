@@ -40,6 +40,9 @@ npm run serve
 npm run build
 ```
 
+### Known Bugs
+- Minor allignment visual errors on some screens
+
 ### Team Members
 - Ezequiel Martinez: [Github](https://github.com/ezedksl/) | [LinkedIn](https://www.linkedin.com/in/ezequiel-martinez-rodriguez/)
 - Gabriel Prochnau: [Github](https://github.com/Rielch/) | [LinkedIn](https://www.linkedin.com/in/gabriel-prochnau-58447a1b7/)
