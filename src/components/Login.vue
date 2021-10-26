@@ -56,24 +56,19 @@ import axios from 'axios'
 export default {
   data: function() {
     return {
-      username: '',
       email: '',
       password: '',
     }
   },
-  // async created() {
-  //   try {
-      
-  //     const req = await axios.post(apiurl, this.userData);
-
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // },
 
   methods: {
-    onSignin: function(){
-    }
+    onSubmit: function(){
+       const datos = {'email': this.email, 'password': this.password };
+       const headers = {
+         "Access-Control-Allow-Origin": "*"
+       };
+       axios.post('http://35.190.147.190:5000/api/user', datos, { headers });
+  }
   }
 }
 </script>

@@ -1,6 +1,6 @@
 # GameMatch
 
-![alt text](https://github.com/Miguel22247/GameMatch/blob/Testing/GameMatch.png?raw=true)
+![Logo](https://github.com/Miguel22247/GameMatch/blob/Testing/public/icons/GameMatch.png?raw=true)
 
 ## Project setup
 ```
