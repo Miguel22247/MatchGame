@@ -70,7 +70,7 @@ export default {
        };
       axios.post(url , datos, { headers });
         this.$router.push('/home');
-  }
+    }
   }
 }
 </script>
