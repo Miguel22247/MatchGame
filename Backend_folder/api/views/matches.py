@@ -51,7 +51,7 @@ def delete_match():
 
 @app_views.route("/get_users/<user_id>", strict_slashes=False)
 def get_users(user_id):
-    """Gets a user to display"""
+    """Gets all users that share at least one game with the user"""
     user = storage.get(User, user_id)
     if user is None:
         abort(404)
@@ -60,7 +60,7 @@ def get_users(user_id):
     users = storage.all(User)
     users_list = []
     for game in user.games:
-        for usr in users:
+        for usr in users.values():
             if game in usr.games and usr not in users_list:
                 users_list.append(usr)
     users = []

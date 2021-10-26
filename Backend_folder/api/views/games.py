@@ -21,7 +21,7 @@ def return_games():
 def update_user_games(user_id):
     """Updates a user games
     Recieves a JSON with all the games in a list
-    [{name: <game_name>, id: <game_id>}, {}]"""
+    [<game_id>, <game_id2>]"""
     body = request.get_json()
     if body is None:
         abort(400, "Not a JSON")
@@ -31,6 +31,6 @@ def update_user_games(user_id):
         abort(404)
     games_list = []
     for game in body:
-        games_list.append(storage.get(Game, game["id"]))
+        games_list.append(storage.get(Game, game))
     user.games = games_list
     return jsonify(user.games), 200
