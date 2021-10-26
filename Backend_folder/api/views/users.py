@@ -35,7 +35,7 @@ def create_user():
         abort(400, "Not a JSON")
     users = storage.all(User)
     for user in users:
-        if user.email is body["email"]:
+        if user.email == body["email"]:
             return jsonify("Email already in use"), 400
     new_user = User(**body)
     new_user.save()
@@ -64,12 +64,12 @@ def validate_user():
     {email: <user_email>, password: <user_password>}"""
     body = request.get_json()
     if body is None:
-        abort(400, "Not a JSON")
+        abort(401, "Not a JSON")
     users = storage.all(User)
     for user in users:
         if user.email == body.email:
             if user.password == body.password:
-                return jsonify("Ok"), 200
+                return jsonify(user.to_dict()), 200
             else:
                 abort(400, "Wrong password")
     abort(404, "User doesn't exist")
