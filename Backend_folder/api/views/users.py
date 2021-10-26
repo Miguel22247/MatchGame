@@ -43,16 +43,17 @@ def create_user():
     return jsonify(user_dict), 201
 
 
-@app_views.route("/nickname/<user_id>", methods=["PUT"], strict_slashes=False)
-def change_nickname(user_id):
-    """Changes the username of a user"""
+@app_views.route("/username", methods=["PUT"], strict_slashes=False)
+def change_nickname():
+    """Changes the username of a user
+    {user_id: <user_id>, username: <new_username>"""
     body = request.get_json()
     if body is None:
         abort (400, "Not a JSON")
-    user = storage.get(User, user_id)
+    user = storage.get(User, body["user_id"])
     if user is None:
         abort(404)
-    user.nickname = body["nickname"]
+    user.nickname = body["username"]
     user.save()
     return jsonify(user.to_dict()), 200
 
