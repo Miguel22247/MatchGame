@@ -12,7 +12,9 @@ def get_user(user_id):
     user = storage.get(User, user_id)
     if user is None:
         abort(404)
-    return jsonify(user.to_dict())
+    user_dict = user.to_dict()
+    user_dict.pop('password')
+    return jsonify()
 
 
 @app_views.route("user/<user_id>", methods=["DELETE"], strict_slashes=False)
@@ -44,7 +46,7 @@ def create_user():
 
 
 @app_views.route("/username", methods=["PUT"], strict_slashes=False)
-def change_nickname():
+def change_username():
     """Changes the username of a user
     {user_id: <user_id>, username: <new_username>"""
     body = request.get_json()
