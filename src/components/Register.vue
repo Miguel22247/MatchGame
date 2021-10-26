@@ -1,5 +1,8 @@
 <template>
   <v-container class="container" fluid fill-height>
+    <v-row align="top" justify="center">
+			<h3>Welcome!</h3>
+		</v-row>
     <v-layout row>
       <v-flex xs12 sm6 offset-sm3>
         <v-card color="#ffffff" outlined>
