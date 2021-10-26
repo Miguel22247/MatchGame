@@ -38,15 +38,17 @@ export default {
     }
   },
   mounted() {
-	  const apiurl = 'http://35.190.147.190:5000/api/user/10b411b5-3152-4958-a5a0-91f2711f5419';
+	  const apiurl = 'http://35.190.147.190:5000/api/user/';
+	  const user_id = this.$store.getters.getId;
       const headers = {
         "Access-Control-Allow-Origin": "*"
       };
-	  axios.get(apiurl, { headers })
+	  axios.get(apiurl.concat('', user_id), { headers })
 	  .then(response => {
 		  this.user = response.data;
 	  })
 	  .catch((error) => console.log(error));
   }
+  
 };
 </script>

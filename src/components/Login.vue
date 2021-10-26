@@ -68,8 +68,12 @@ export default {
        const headers = {
          "Access-Control-Allow-Origin": "*"
        };
-      axios.post(url , datos, { headers });
+      axios.post(url , datos, { headers })
+      .then(response => {
+        this.$store.commit('set_id', response.data.id)
         this.$router.push('/home');
+      })
+
     }
   }
 }

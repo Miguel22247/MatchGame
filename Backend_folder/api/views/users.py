@@ -36,7 +36,7 @@ def create_user():
     if body is None:
         abort(400, "Not a JSON")
     users = storage.all(User)
-    for user in users:
+    for user in users.values():
         if user.email == body["email"]:
             return jsonify("Email already in use"), 400
     new_user = User(**body)
@@ -55,7 +55,7 @@ def change_username():
     user = storage.get(User, body["user_id"])
     if user is None:
         abort(404)
-    user.nickname = body["username"]
+    user.username = body["username"]
     user.save()
     return jsonify(user.to_dict()), 200
 

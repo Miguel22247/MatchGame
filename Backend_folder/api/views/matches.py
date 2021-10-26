@@ -69,3 +69,7 @@ def get_users(user_id):
         usr_dict.pop('password')
         users.append(usr_dict)
     return jsonify(users), 200
+
+
+#@app_views.route("/get_matches/<user_id>", strict_slashes=False)
+#def get_matches(user_id):
