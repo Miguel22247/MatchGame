@@ -7,3 +7,13 @@
 ## Features
 
 ## About Us
+
+### What inspired us?
+
+### Repository
+Link to the repository on GitHub: click [here](https://github.com/Miguel22247/GameMatch)
+
+### Team Members
+Ezequiel Martinez:
+Gabriel Prochnau:
+Miguel Pacheco: [Github](https://github.com/Miguel22247/) | [LinkedIn](https://linkedin.com/in/miguel-pacheco-)
