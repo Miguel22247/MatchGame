@@ -69,6 +69,8 @@ export default {
          "Access-Control-Allow-Origin": "*"
        };
       axios.get(url , datos, { headers });
+      this.$router.push('/home');
+
   }
   }
 }

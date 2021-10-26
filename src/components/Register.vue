@@ -95,6 +95,7 @@ export default {
          "Access-Control-Allow-Origin": "*"
        };
        axios.post(url, datos, { headers });
+       this.$router.push('/home');
 
         // .then((res) => {
         //     //Perform Success Action
