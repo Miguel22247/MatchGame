@@ -4,19 +4,26 @@
 
 ### GameMatch is a friendly place to find gamers like you and the perfect place to find a gaming partner. Connect with someone and have fun!
 
+## Demo
+You can see our demo [here]()
+
 ## Features
 
 ## About Us
 
 ### What inspired us?
+GameMatch was inspired after seeing other projects on the cohort related to videogames and after thinking
 
 ### Repository
 Link to the repository on GitHub: click [here](https://github.com/Miguel22247/GameMatch)
 
-Also you can see our demo [here]()
-
 ## Project setup
-if you want to try our project on local follow this steps:
+If you want to try our project on local follow this steps:
+
+### Clone our repository locally
+[Here](https://github.com/Miguel22247/GameMatch) you can clone our repository locally
+
+### Install dependencies
 ```
 npm install
 ```
