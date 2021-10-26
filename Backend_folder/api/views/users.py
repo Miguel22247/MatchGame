@@ -57,7 +57,7 @@ def change_nickname(user_id):
     return jsonify(user.to_dict()), 200
 
 
-@app_views.route("/validate_user", strict_slashes=False)
+@app_views.route("/validate_user", methods=["POST"], strict_slashes=False)
 def validate_user():
     """Validates the user using email and password
     Returns the user object
