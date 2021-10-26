@@ -67,7 +67,7 @@ def validate_user():
         abort(401, "Not a JSON")
     users = storage.all(User)
     for user in users:
-        if user.email == body.email:
+        if user.email == body["email"]:
             if user.password == body.password:
                 return jsonify(user.to_dict()), 200
             else:
