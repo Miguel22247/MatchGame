@@ -8,7 +8,7 @@
         <v-card color="#ffffff" outlined>
           <v-card-text>
             <v-container>
-              <form @submit.prevent="onSignup">
+              <form @submit.prevent="onSignin">
                 <v-layout row>
                   <v-flex xs12>
                     <v-text-field
@@ -62,16 +62,15 @@ export default {
   },
 
   methods: {
-    onSubmit: function(){
-       const url = 'http://35.190.147.190:5000/api/user'
+    onSignin: function(){
+       const url = 'http://35.190.147.190:5000/api/validate_user'
        const datos = { 'email': this.email, 'password': this.password };
        const headers = {
          "Access-Control-Allow-Origin": "*"
        };
-      axios.get(url , datos, { headers });
-      this.$router.push('/home');
-
-  }
+      axios.post(url , datos, { headers });
+        this.$router.push('/home');
+    }
   }
 }
 </script>

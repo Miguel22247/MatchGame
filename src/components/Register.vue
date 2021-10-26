@@ -89,13 +89,19 @@ export default {
 
   methods: {
     onSubmit: function(){
-       const url = 'http://35.190.147.190:5000/api/user'
-       const datos = { 'username': this.username, 'email': this.email, 'password': this.password };
-       const headers = {
-         "Access-Control-Allow-Origin": "*"
-       };
-       axios.post(url, datos, { headers });
-       this.$router.push('/home');
+      const url = 'http://35.190.147.190:5000/api/user'
+      const datos = { 'username': this.username, 'email': this.email, 'password': this.password };
+      const headers = {
+        "Access-Control-Allow-Origin": "*"
+      };
+      axios.post(url, datos, { headers });
+      if (Response.status == 200) {
+        this.$router.push('/home');
+      } else if (Response.status == 400) {
+          alert('wrong password or wrong email');
+      } else {
+        alert('user not found');
+      }
 
         // .then((res) => {
         //     //Perform Success Action
