@@ -68,7 +68,7 @@ def validate_user():
     users = storage.all(User)
     for user in users.values():
         if user.email == body["email"]:
-            if user.password == body.password:
+            if user.password == body["password"]:
                 return jsonify(user.to_dict()), 200
             else:
                 abort(400, "Wrong password")
