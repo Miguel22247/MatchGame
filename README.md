@@ -8,6 +8,8 @@
 You can see our demo [here]()
 
 ## Features
+- Possibility to match with at least one videogame
+- Possibility to rank previously matched people (Coming soon)
 
 ## About Us
 
