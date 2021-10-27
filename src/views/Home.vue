@@ -38,7 +38,7 @@ export default {
     }
   },
   mounted() {
-	  const apiurl = 'http://35.190.147.190:5000/api/user/';
+	  const apiurl = 'http://35.190.147.190:5000/api/get_users/';
 	  // api/get_users/<userid>  (retrieves all users that match the games of the userid)
 	  // for item in response.data 
 	  // show item.username 

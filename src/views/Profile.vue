@@ -10,41 +10,25 @@
 		<v-row>
 			<v-col align="center">
 				<h3>Social Accounts</h3>
-				<v-chip-group
-				align="center"
-				v-model="selection"
-				column
-				>
-					<a target="_blank" href="https://steamcommunity.com/id/Miguel22247/"><v-chip active-class="blue darken-4 white--text"><v-icon>mdi-steam</v-icon> Steam</v-chip></a>
-
-					<v-chip active-class="orange accent-4 white--text"><v-icon>mdi-origin</v-icon> Origin</v-chip>
-
-					<v-chip active-class="blue-grey accent-4 white--text"><v-icon>mdi-ubisoft</v-icon> Ubisoft</v-chip>
-			
-					<v-chip active-class="blue accent-4 white--text"><v-icon>mdi-discord</v-icon> Discord</v-chip>
-			
-					<v-chip active-class="light-blue accent-4 white--text"><v-icon>mdi-twitter</v-icon> Twitter</v-chip>
-
-				</v-chip-group>
+					<v-card-text align="left">
+						<v-checkbox v-for="social in socials" :key="social.name" v-model="user_socials" :value="social.id">
+							<template v-slot:label>
+								<p justify="center">{{ social.name }}</p>
+							</template>
+						</v-checkbox>
+						<v-btn v-on:click="submit_socials">Update</v-btn>
+					</v-card-text>
 			</v-col>
 			<v-col align="center">
 				<h3>My Games</h3>
 				<v-card color="#ffffff" outlined>
-					<v-chip-group
-					align="right"
-					v-model="selection"
-					column
-					>
-					<v-chip active-class="red darken-2 accent-4 white--text"><v-icon>mdi-truck</v-icon>Euro Truck Simulator</v-chip>
-
-					<v-chip active-class="green accent-4 white--text"><v-icon>mdi-tractor</v-icon> Farming Simulator</v-chip>
-
-					<v-chip active-class="blue-grey accent-4 white--text"><v-icon>mdi-airplane</v-icon> FSX</v-chip>
-			
-					<v-chip active-class="blue accent-4 white--text"><v-icon>mdi-target</v-icon> CS:GO</v-chip>
-			
-					<v-chip active-class="light-blue accent-4 white--text"><v-icon>mdi-car</v-icon> Asseto Corsa</v-chip>
-					</v-chip-group>
+					<v-card-text align="left">
+						<v-checkbox v-for="game in games" :key="game.name" v-model="user_games" :value="game.id">
+							<template v-slot:label>
+								<p justify="center">{{ game.name }}</p>
+							</template>
+						</v-checkbox>
+					</v-card-text>
 				</v-card>
 			</v-col>
 		</v-row>
@@ -57,17 +41,44 @@ import axios from 'axios'
 export default {
   data: function() {
     return {
-		user: {}
+		user: {},
+		games: {},
+		socials: {},
+		user_games: [],
+		user_socials:[]
     }
   },
+  methods: {
+	submit_socials: function (event) {
+		const user_id = user.id
+		const socialsurl = 'http://35.190.147.190:5000/api/socials/'
+		const headers = {
+    		"Access-Control-Allow-Origin": "*"
+    	};
+		axios.put()
+	}
+  },
   mounted() {
-	  const apiurl = 'http://35.190.147.190:5000/api/user/10b411b5-3152-4958-a5a0-91f2711f5419';
+	  const userurl = 'http://35.190.147.190:5000/api/user/10b411b5-3152-4958-a5a0-91f2711f5419';
+	  const gamesurl = 'http://35.190.147.190:5000/api/games/'
+	  const socialurl = 'http://35.190.147.190:5000/api/socials/'
       const headers = {
         "Access-Control-Allow-Origin": "*"
       };
-	  axios.get(apiurl, { headers })
+	axios.get(userurl, { headers })
 	  .then(response => {
 		  this.user = response.data;
+	  })
+	  .catch((error) => console.log(error));
+	axios.get(gamesurl, { headers })
+	  .then(response => {
+		  this.games = response.data
+		  this.user_games = response.data.games["id"];
+	  })
+	  .catch((error) => console.log(error));
+	axios.get(socialurl, { headers })
+	  .then(response => {
+		  this.socials = response.data;
 	  })
 	  .catch((error) => console.log(error));
   }

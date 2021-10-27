@@ -11,18 +11,22 @@
 			<v-col align="center">
 				<h3>Social Accounts</h3>
 					<v-card-text align="left">
-						<li v-for="social in socials" :key="social.name">
-							{{ social.name }}
-						</li>
+						<v-checkbox v-for="social in socials" :key="social.name" v-model="user_socials" :value="social.id">
+							<template v-slot:label>
+								<p justify="center">{{ social.name }}</p>
+							</template>
+						</v-checkbox>
 					</v-card-text>
 			</v-col>
 			<v-col align="center">
 				<h3>My Games</h3>
 				<v-card color="#ffffff" outlined>
 					<v-card-text align="left">
-						<li v-for="game in games" :key="game.name">
-							{{ game.name }}
-						</li>
+						<v-checkbox v-for="game in games" :key="game.name" v-model="user_games" :value="game.id">
+							<template v-slot:label>
+								<p justify="center">{{ game.name }}</p>
+							</template>
+						</v-checkbox>
 					</v-card-text>
 				</v-card>
 			</v-col>
@@ -38,7 +42,9 @@ export default {
     return {
 		user: {},
 		games: {},
-		socials: {}
+		socials: {},
+		user_games: [],
+		user_socials:[]
     }
   },
   mounted() {
@@ -55,7 +61,8 @@ export default {
 	  .catch((error) => console.log(error));
 	axios.get(gamesurl, { headers })
 	  .then(response => {
-		  this.games = response.data;
+		  this.games = response.data
+		  this.user_games = response.data.games["id"];
 	  })
 	  .catch((error) => console.log(error));
 	axios.get(socialurl, { headers })
