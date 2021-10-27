@@ -51,7 +51,7 @@
 	</v-container>
 </template>
 
-<style scoped>
+	<style scoped>
 a {
 	text-decoration: none;
 }

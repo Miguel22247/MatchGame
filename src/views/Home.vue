@@ -28,18 +28,8 @@
 							<v-row
 							align="center"
 							class="mx-0"
-							>
-							<v-rating
-								:value="4.5"
-								color="amber"
-								dense
-								half-increments
-								readonly
-								size="14"
-							></v-rating>
-					
+							>					
 							<div class="grey--text ms-4">
-								4.5 (413)
 							</div>
 							</v-row>
 					
@@ -101,17 +91,8 @@
 						align="center"
 						class="mx-0"
 						>
-						<v-rating
-							:value="3.0"
-							color="amber"
-							dense
-							half-increments
-							readonly
-							size="14"
-						></v-rating>
 				
 						<div class="grey--text ms-4">
-							3.0 (200)
 						</div>
 						</v-row>
 				
@@ -166,11 +147,14 @@ export default {
       this.loading1 = true
 
       setTimeout(() => (this.loading1 = false), 2000)
+	  alert("Match successfully done!")
     },
 	match2 () {
       this.loading2 = true
 
       setTimeout(() => (this.loading2 = false), 2000)
+	  	  alert("Match successfully done!")
+
     },
   },
 }
