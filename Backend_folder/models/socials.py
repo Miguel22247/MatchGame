@@ -8,4 +8,3 @@ class Social(BaseModel, Base):
     """Class to store the social data"""
     __tablename__ = "social"
     name = Column(String(20), nullable=False)
-    username = Column(String(20), nullable=False)
