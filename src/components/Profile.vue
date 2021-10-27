@@ -35,15 +35,15 @@
 					v-model="selection"
 					column
 					>
-					<v-chip active-class="red darken-2 accent-4 white--text"><v-icon>mdi-truck</v-icon>Euro Truck Simulator</v-chip>
+					<v-chip active-class="red darken-2 accent-4 white--text"><v-icon>mdi-truck</v-icon>{{}}</v-chip>
 
-					<v-chip active-class="green accent-4 white--text"><v-icon>mdi-tractor</v-icon> Farming Simulator</v-chip>
+					<v-chip active-class="green accent-4 white--text"><v-icon>mdi-tractor</v-icon>{{}}</v-chip>
 
-					<v-chip active-class="blue-grey accent-4 white--text"><v-icon>mdi-airplane</v-icon> FSX</v-chip>
+					<v-chip active-class="blue-grey accent-4 white--text"><v-icon>mdi-airplane</v-icon>{{}}</v-chip>
 			
-					<v-chip active-class="blue accent-4 white--text"><v-icon>mdi-target</v-icon> CS:GO</v-chip>
+					<v-chip active-class="blue accent-4 white--text"><v-icon>mdi-target</v-icon>{{}}</v-chip>
 			
-					<v-chip active-class="light-blue accent-4 white--text"><v-icon>mdi-car</v-icon> Asseto Corsa</v-chip>
+					<v-chip active-class="light-blue accent-4 white--text"><v-icon>mdi-car</v-icon>{{}}</v-chip>
 					</v-chip-group>
 				</v-card>
 			</v-col>
@@ -61,13 +61,15 @@ export default {
     }
   },
   mounted() {
-	  const apiurl = 'http://35.190.147.190:5000/api/user/10b411b5-3152-4958-a5a0-91f2711f5419';
+	  const userurl = 'http://35.190.147.190:5000/api/user/10b411b5-3152-4958-a5a0-91f2711f5419';
+	  const gamesurl = 'http://35.190.147.190:5000/api/'
       const headers = {
         "Access-Control-Allow-Origin": "*"
       };
-	  axios.get(apiurl, { headers })
+	  axios.get(userurl, gamesurl, { headers })
 	  .then(response => {
 		  this.user = response.data;
+		  this.games = response.data;
 	  })
 	  .catch((error) => console.log(error));
   }
