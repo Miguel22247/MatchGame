@@ -1,13 +1,15 @@
 <template>
-  <v-app id="inspire">
+  <v-app
+  id="app"
+  style="overflow-y: hidden;">
     <v-app-bar
       app
-      color="blue darken-4"
+      color="#7E57C2"
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <v-toolbar-title>GameMatch</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-title> {{ $route.name }}</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
