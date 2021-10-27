@@ -1,5 +1,3 @@
-# GameMatch
-
 ![Logo](https://github.com/Miguel22247/GameMatch/blob/Testing/public/icons/GameMatch.png?raw=true)
 
 #### GameMatch is a friendly place to find gamers like you and the perfect place to find a gaming partner. Connect with someone and have fun!
@@ -23,7 +21,7 @@ Link to the repository on GitHub: click [here](https://github.com/Miguel22247/Ga
 If you want to try our project on local follow this steps:
 
 ### Clone our repository locally
-[Here](https://github.com/Miguel22247/GameMatch) you can clone our repository locally
+[Here](https://github.com/Miguel22247/GameMatch.git) you can clone our repository locally
 
 ### Install dependencies
 ```
