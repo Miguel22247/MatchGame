@@ -4,12 +4,16 @@
   style="overflow-y: hidden;">
     <v-app-bar
       app
-      color="#7E57C2"
+      color="#00A7CC"
       dark
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer">
+        <v-icon color="black">mdi-menu</v-icon>
+      </v-app-bar-nav-icon>
       <v-spacer></v-spacer>
-      <v-toolbar-title class="pr-10"> {{ $route.name }}</v-toolbar-title>
+      <v-toolbar-title class="pr-10" style="color: black">
+        {{ $route.name }}
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <!-- <v-btn icon>
         <v-icon>mdi-magnify</v-icon>
@@ -29,6 +33,7 @@
       absolute
       bottom
       temporary
+      color="#00A7CC"
     >
       <v-list
         nav
