@@ -30,10 +30,13 @@ def update_user_games(user_id):
     if user is None:
         abort(404)
     games_list = []
+    games_dict = []
     for game in user.games:
         user.games.remove(game)
     for game in body:
         games_list.append(storage.get(Game, game))
     for game in games_list:
         user.games.append(game)
-    return jsonify(user.games), 200
+    for game in games_list:
+        games_dict.append(game.to_dict())
+    return jsonify(games_dict), 200
