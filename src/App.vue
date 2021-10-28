@@ -9,10 +9,8 @@
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-spacer></v-spacer>
-      <v-toolbar-title> {{ $route.name }}</v-toolbar-title>
-
+      <v-toolbar-title class="pr-10"> {{ $route.name }}</v-toolbar-title>
       <v-spacer></v-spacer>
-
       <!-- <v-btn icon>
         <v-icon>mdi-magnify</v-icon>
       </v-btn>

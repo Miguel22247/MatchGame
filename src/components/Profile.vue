@@ -8,15 +8,33 @@
 			align="center"
 			back>
 			<v-card
+			elevation="6"
 			height="100vh"
 			width="80vw"
 			>
-				hello
-				asd
-				asd
-				asd
-				asd
-
+				<v-card
+				
+				style="background-color: #EDE7F6"
+				class="pa-2 ma-4"
+				elevation="2"
+				>
+					<v-card-title>My games</v-card-title>
+					<v-chip-group
+					v-model="selection"
+					multiple
+					active-class="primary--text"
+					max="6"
+					column
+				 
+          >
+            <v-chip
+						v-for="game in games"
+						:key="game"
+            >
+              {{ game.name }}
+            </v-chip>
+          </v-chip-group>
+				</v-card>
 			</v-card>
 		</v-row>
 	</v-container>
@@ -30,11 +48,11 @@ export default {
     return {
       user: {},
       games: [],
+			selection: [],
     };
   },
   mounted() {
-    const userurl =
-      "http://35.190.147.190:5000/api/user/10b411b5-3152-4958-a5a0-91f2711f5419";
+    const userurl = "http://35.190.147.190:5000/api/user/10b411b5-3152-4958-a5a0-91f2711f5419";
     const gamesurl = "http://35.190.147.190:5000/api/games";
     const headers = {
       "Access-Control-Allow-Origin": "*",
@@ -45,8 +63,15 @@ export default {
         this.games = response.data;
       })
       .catch((error) => console.log(error));
+		axios
+			.get(userurl, { headers })
+      .then((response) => {
+        this.user = response.data;
+      })
+      .catch((error) => console.log(error));
   },
 };
 </script>
 <style scoped>
+
 </style>
