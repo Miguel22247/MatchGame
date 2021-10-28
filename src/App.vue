@@ -1,14 +1,14 @@
 <template>
   <v-app
-  id="app"
-  style="overflow-y: hidden;">
+  app
+  id="app">
     <v-app-bar
       app
-      color="#00A7CC"
+      color="accent"
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer">
-        <v-icon color="black">mdi-menu</v-icon>
+        <v-icon color="primary">mdi-menu</v-icon>
       </v-app-bar-nav-icon>
       <v-spacer></v-spacer>
       <v-toolbar-title class="pr-10" style="color: black">
@@ -33,15 +33,15 @@
       absolute
       bottom
       temporary
-      color="#00A7CC"
+      color="primary"
     >
       <v-list
+        color="secondary"
         nav
         dense
       >
         <v-list-item-group
           v-model="group"
-          active-class="deep-blue--text text--accent-4"
         >
           <v-list-item
           v-for="item in items"
@@ -50,18 +50,19 @@
           link
           >
             <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
+              <v-icon color="accent">{{ item.icon }}</v-icon>
             </v-list-item-icon>
 
             <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
+              <v-list-item-title style="color: lightgray">{{ item.title }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
 
-    <v-main>
+    <v-main
+    app>
       <!-- If using vue-router -->
       <router-view></router-view>
     </v-main>
@@ -69,6 +70,7 @@
 </template>
 
 <script>
+  document.querySelector('html').style.overflow = "hidden"
   export default {
     data: () => ({ 
       drawer: false,

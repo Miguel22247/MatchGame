@@ -3,23 +3,21 @@
 	fluid
 	>
 		<v-row
-			style="background-color: #19202E"
+			class="primary"
 			justify="center"
 			align="center"
 			back>
 			<v-card
-			style="background-color: #2B3750"
+			class="secondary"
 			elevation="6"
 			height="100vh"
 			width="80vw"
 			>
 				<v-card
-				
-				style="background-color: #19202E"
-				class="pa-2 ma-4"
+				class="primary pa-2 ma-4"
 				elevation="2"
 				>
-					<v-card-title style="color: #00A7CC">My games</v-card-title>
+					<v-card-title class="accent--text">My games</v-card-title>
 					<v-chip-group
 					v-model="selection"
 					multiple
@@ -28,6 +26,7 @@
 				 
           >
             <v-chip
+						style="color: white"
 						color="#2B3750"
 						v-for="game in games"
 						:key="game.name"
