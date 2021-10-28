@@ -19,7 +19,7 @@ association_table3 = Table("user_likes", Base.metadata,
                            Column("like_id", String(60), ForeignKey("user.id", onupdate="CASCADE", ondelete="CASCADE"), primary_key=True, nullable=False))
 
 
-class UserSocial(Base):
+class UserSocial(BaseModel, Base):
     """Association class between User and Social"""
     __tablename__ = "user_socials"
     user_id = Column(ForeignKey('user.id'), primary_key=True)

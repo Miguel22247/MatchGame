@@ -23,8 +23,13 @@ def get_user_socials(user_id):
     user = storage.get(User, user_id)
     if user is None:
         abort(404)
-    user_dict = user.to_dict()
-    return jsonify(user_dict["socials"]), 200
+    socials_list = []
+    social = {}
+    for user_social in user.socials:
+        social["id"] = user_social.social_id
+        social["name"] = user_social.socials.to_dict()["name"]
+        socials_list.append(social)
+    return jsonify(socials_list), 200
 
 
 @app_views.route("/socials/<user_id>", methods=["PUT"], strict_slashes=False)
@@ -43,6 +48,7 @@ def set_user_socials(user_id):
         if social is None:
             abort(404, "Social not found")
         user_social = UserSocial(link=pair["link"])
-        user_socials.append(user_social)
-    user.socials = user_socials
-    return jsonify(user.socials), 201
+        user_social.socials = social
+        user.socials.append(user_social)
+        user_socials.append(user_social.to_dict())
+    return jsonify(user_socials), 200
