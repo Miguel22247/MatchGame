@@ -14,6 +14,14 @@ def get_user(user_id):
         abort(404)
     user_dict = user.to_dict()
     user_dict.pop('password')
+    user_games = []
+    for game in user.games:
+        user_games.append(game.to_dict())
+    user_socials = []
+    for social in user.socials:
+        user_socials.append(social.to_dict())
+    user_dict["games"] = user_games
+    user_dict["socials"] = user_socials
     return jsonify(user_dict), 200
 
 
