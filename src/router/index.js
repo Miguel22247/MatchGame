@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Landing from '../views/Landing.vue'
-import Register from '../components/Register'
-import Login from '../components/Login'
-import Profile from '../components/Profile'
-import Matches from '../components/Matches'
+import Register from '../views/Register'
+import Login from '../views/Login'
+import Profile from '../views/Profile'
+import Matches from '../views/Matches'
 import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)

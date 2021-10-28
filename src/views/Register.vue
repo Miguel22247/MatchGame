@@ -67,8 +67,6 @@
 
 <script>
 import axios from 'axios'
-
-
 export default {
   data: function() {
     return {
@@ -81,12 +79,10 @@ export default {
   //   try {
       
   //     const req = await axios.post(apiurl, this.userData);
-
   //   } catch (e) {
   //     console.error(e);
   //   }
   // },
-
   methods: {
     onSubmit: function(){
       const url = 'http://35.190.147.190:5000/api/user'
@@ -94,15 +90,14 @@ export default {
       const headers = {
         "Access-Control-Allow-Origin": "*"
       };
-      axios.post(url, datos, { headers });
-      if (Response.status == 200) {
+      axios.post(url, datos, { headers })
+      .then(response => {
         this.$router.push('/home');
-      } else if (Response.status == 400) {
-          alert('wrong password or wrong email');
-      } else {
-        alert('user not found');
-      }
-
+      })
+      .catch( function (error) {
+        console.log(error.response)
+        alert(error.response.data)
+      })
         // .then((res) => {
         //     //Perform Success Action
         //     axios.post(url, )

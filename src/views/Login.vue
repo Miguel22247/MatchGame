@@ -73,6 +73,10 @@ export default {
         this.$store.commit('set_id', response.data.id)
         this.$router.push('/home');
       })
+      .catch( function (error) {
+        console.log(error.response)
+        alert(error.response.data)
+      })
 
     }
   }
