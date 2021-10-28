@@ -84,7 +84,7 @@ export default {
 	axios.get(userurl, { headers })
 	  .then(response => {
 		  this.user = response.data;
-		  this.user_games = this.user.games]
+		  this.user_games = this.user.games;
 	  })
 	  .catch((error) => console.log(error));
 	axios.get(gamesurl, { headers })
