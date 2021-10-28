@@ -16,7 +16,7 @@ def get_user(user_id):
     user_dict.pop('password')
     user_games = []
     for game in user.games:
-        user_games.append(game.to_dict())
+        user_games.append(game.to_dict()["id"])
     user_dict["games"] = user_games
     return jsonify(user_dict), 200
 
