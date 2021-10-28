@@ -13,6 +13,9 @@
 			height="100vh"
 			width="80vw"
 			>
+				<v-card-title>{{ user.name }}</v-card-title>
+				<v-card-subtitle>Bio</v-card-subtitle>
+				<v-card-text>{{ user.bio }}</v-card-text>
 				<v-card
 				class="primary pa-2 ma-4"
 				elevation="2"
@@ -36,6 +39,25 @@
             </v-chip>
           </v-chip-group>
 				</v-card>
+				<v-card
+				class="primary pa-2 ma-4"
+				elevation="2"
+				>
+					<v-card-title class="accent--text">My Social Accounts</v-card-title>
+					<v-chip-group
+					v-model="selection"
+					multiple
+					max="6"
+					column>
+            			<v-chip
+						style="color: white"
+						color="#2B3750"
+						v-for="social in socials"
+						:key="social.name"            >
+              {{ social.name }}
+            </v-chip>
+          </v-chip-group>
+				</v-card>
 			</v-card>
 		</v-row>
 	</v-container>
@@ -48,6 +70,7 @@ export default {
   data: function() {
     return {
       user: {},
+	  socials: {},
       games: [],
 			selection: [],
     };
@@ -55,19 +78,23 @@ export default {
   mounted() {
     const userurl = "http://35.190.147.190:5000/api/user/{{ user.id }}";
     const gamesurl = "http://35.190.147.190:5000/api/games";
+	const socialurl = "http://35.190.147.190:5000/api/socials";
     const headers = {
       "Access-Control-Allow-Origin": "*",
     };
-    axios
-      .get(gamesurl, { headers })
+    axios.get(gamesurl, { headers })
       .then((response) => {
         this.games = response.data;
       })
       .catch((error) => console.log(error));
-		axios
-			.get(userurl, { headers })
+	axios.get(userurl, { headers })
       .then((response) => {
         this.user = response.data;
+      })
+      .catch((error) => console.log(error));
+	axios.get(socialurl, { headers })
+      .then((response) => {
+        this.socials = response.data;
       })
       .catch((error) => console.log(error));
   },
