@@ -37,6 +37,7 @@ def update_user_games(user_id):
         games_list.append(storage.get(Game, game))
     for game in games_list:
         user.games.append(game)
+    storage.save()
     for game in games_list:
         games_dict.append(game.to_dict())
     return jsonify(games_dict), 200
