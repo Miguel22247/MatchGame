@@ -28,6 +28,9 @@
 								<p justify="center">{{ game.name }}</p>
 							</template>
 						</v-checkbox>
+						<v-btn v-on:click="submit_games">
+							Update
+						</v-btn>
 					</v-card-text>
 				</v-card>
 			</v-col>
@@ -45,7 +48,8 @@ export default {
 		games: {},
 		socials: {},
 		user_games: [],
-		user_socials:[]
+		user_socials:[],
+		games_response: []
     }
   },
   methods: {
@@ -56,6 +60,18 @@ export default {
     		"Access-Control-Allow-Origin": "*"
     	};
 		axios.put()
+	},
+	submit_games: function (event) {
+		const user_id = user.id
+		const gamesurl = 'http://35.190.147.190:5000/api/games/'
+		const headers = {
+			"Access-Control-Allow-Origin": "*"
+		};
+		axios.put(gamesurl.concat('', user_id), { headers })
+		.then(response => {
+			this.games_response = response;
+		})
+		.catch((error) => console.log(error));
 	}
   },
   mounted() {
@@ -68,12 +84,12 @@ export default {
 	axios.get(userurl, { headers })
 	  .then(response => {
 		  this.user = response.data;
+		  this.user_games = this.user.games]
 	  })
 	  .catch((error) => console.log(error));
 	axios.get(gamesurl, { headers })
 	  .then(response => {
 		  this.games = response.data
-		  this.user_games = response.data.games["id"];
 	  })
 	  .catch((error) => console.log(error));
 	axios.get(socialurl, { headers })

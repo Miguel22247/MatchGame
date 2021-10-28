@@ -27,19 +27,22 @@ def get_user_socials(user_id):
     return jsonify(user_dict["socials"]), 200
 
 
-@app_views.route("/socials", methods=["PUT"], strict_slashes=False)
-def set_user_socials():
+@app_views.route("/socials/<user_id>", methods=["PUT"], strict_slashes=False)
+def set_user_socials(user_id):
     """Changes the user social accounts
-    {user: <user_id>, social: <social_id>, link: <social_link>}"""
+    {[{social: <social_id>, link: <social_link>}, {social: <social_id2>, link: <social_link2>}]}"""
     body = request.get_json()
     if body is None:
         abort(400)
-    user = storage.get(User, body["user"])
+    user = storage.get(User, user_id)
     if user is None:
         abort(404, "User not found")
-    social = storage.get(Social, body["social"])
-    if social is None:
-        abort(404)
-    user_social = UserSocial(link=body["link"])
-    user.socials.append(user_social)
+    user_socials = []
+    for pair in body:
+        social = storage.get(Social, pair["social"])
+        if social is None:
+            abort(404, "Social not found")
+        user_social = UserSocial(link=pair["link"])
+        user_socials.append(user_social)
+    user.socials = user_socials
     return jsonify(user.socials), 201

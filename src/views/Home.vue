@@ -34,11 +34,13 @@ import axios from 'axios'
 export default {
   data: function() {
     return {
-		user: {}
+		user: {},
+		other_users: []
     }
   },
   mounted() {
-	  const apiurl = 'http://35.190.147.190:5000/api/get_users/';
+	  const userurl = 'http://35.190.147.190:5000/api/user/';
+	  const get_users_url = 'http://35.190.147.190:5000/api/get_users/'
 	  // api/get_users/<userid>  (retrieves all users that match the games of the userid)
 	  // for item in response.data 
 	  // show item.username 
@@ -46,9 +48,14 @@ export default {
       const headers = {
         "Access-Control-Allow-Origin": "*"
       };
-	  axios.get(apiurl.concat('', user_id), { headers })
+	  axios.get(userurl.concat('', user_id), { headers })
 	  .then(response => {
 		  this.user = response.data;
+	  })
+	  .catch((error) => console.log(error));
+	  axios.get(get_users_url.concat('', user_id), { headers })
+	  .then(response => {
+		  this.other_users = response.data;
 	  })
 	  .catch((error) => console.log(error));
   }
