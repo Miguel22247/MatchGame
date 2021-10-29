@@ -45,12 +45,12 @@ def set_user_socials(user_id):
         abort(400)
     user = storage.get(User, user_id)
     if user is None:
-        abort(404, "User not found")
+        return jsonify("User not found"), 401
     user_socials = []
     for pair in body:
         social = storage.get(Social, pair["name"])
         if social is None and len(pair["link"]) > 0:
-            abort(404, "Social not found")
+            return jsonify("Social not found"), 402
         user_social = UserSocial(link=pair["link"])
         user_social.socials = social
         user.socials.append(user_social)
