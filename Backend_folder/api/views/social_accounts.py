@@ -49,7 +49,7 @@ def set_user_socials(user_id):
     user_socials = []
     for pair in body:
         social = storage.get(Social, pair["name"])
-        if social is None and len(pair["link"] > 0):
+        if social is None and len(pair["link"]) > 0:
             abort(404, "Social not found")
         user_social = UserSocial(link=pair["link"])
         user_social.socials = social
