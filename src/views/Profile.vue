@@ -101,7 +101,7 @@ export default {
 		  this.games = response.data
 	  })
 	  .catch((error) => console.log(error));
-	axios.get(socialurl, { headers })
+	axios.get(socialurl.concat('', user_id), { headers })
 	  .then(response => {
 		  this.socials = response.data;
 	  })
