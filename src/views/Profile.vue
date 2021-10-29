@@ -18,12 +18,12 @@
 					<v-card-text align="left">
 						<v-form ref="user_socials" @submit.prevent="submit_socials">
 							<v-container v-for="social in socials" :key="social.name" :value="social.link" v-model="user_socials">
-								<v-text-field :label="social.name" v-model="social.link">
+								<v-text-field rounded outlined color="#00A7CC" :label="social.name" v-model="social.link">
 								</v-text-field>
 							</v-container>
 						</v-form>
 						<p>{{ socials }}</p>
-						<v-btn v-on:click="submit_socials">
+						<v-btn rounded outlined color="#00A7CC" v-on:click="submit_socials">
 							Update
 						</v-btn>
 					</v-card-text>
@@ -31,13 +31,13 @@
 			<v-col align="center">
 				<h3>My Games</h3>
 					<v-card-text align="left">
-						<v-checkbox v-for="game in games" :key="game.name" v-model="user_games" :value="game.id">
+						<v-checkbox color="#00A7CC" v-for="game in games" :key="game.name" v-model="user_games" :value="game.id">
 							<template v-slot:label>
 								<p>{{ game.name }}</p>
 							</template>
 						</v-checkbox>
 						<p>{{ user_games }}</p>
-						<v-btn v-on:click="submit_games">
+						<v-btn rounded outlined color="#00A7CC" v-on:click="submit_games">
 							Update
 						</v-btn>
 					</v-card-text>
