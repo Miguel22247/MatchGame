@@ -28,6 +28,7 @@ def get_user_socials(user_id):
     for user_social in user.socials:
         social["id"] = user_social.social_id
         social["name"] = user_social.socials.to_dict()["name"]
+        social["link"] = ""
         socials_list.append(social)
     return jsonify(socials_list), 200
 
@@ -45,7 +46,7 @@ def set_user_socials(user_id):
     user_socials = []
     for pair in body:
         social = storage.get(Social, pair["social"])
-        if social is None:
+        if social is None and len(pair["link"] > 0):
             abort(404, "Social not found")
         user_social = UserSocial(link=pair["link"])
         user_social.socials = social
