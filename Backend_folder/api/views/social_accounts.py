@@ -12,8 +12,11 @@ def get_socials():
     """Returns all social networks"""
     socials = storage.all(Social)
     socials_list = []
+    social_dict = {}
     for social in socials.values():
-        socials_list.append(social.to_dict())
+        social_dict = social.to_dict()
+        social_dict["email"] = ""
+        socials_list.append(social_dict)
     return jsonify(socials_list), 200
 
 
