@@ -27,19 +27,20 @@ def get_user_socials(user_id):
     if user is None:
         abort(404)
     socials_list = []
-    social = {}
+    socials_dict = {}
+    for social in storage.all(Social).values():
+        social_dict = social.to_dict()
+        social_dict["link"] = ""
+        socials_dict[social_dict["id"]] = social_dict
     for user_social in user.socials:
-        social["id"] = user_social.social_id
-        social["name"] = user_social.socials.to_dict()["name"]
-        social["link"] = ""
-        socials_list.append(social)
+        socials_dict[user_social.socials.id]["link"] = user_social.link
     return jsonify(socials_list), 200
 
 
 @app_views.route("/socials/<user_id>", methods=["PUT"], strict_slashes=False)
 def set_user_socials(user_id):
     """Changes the user social accounts
-    {[{id: <social_id>, link: <social_link>}, {id: <social_id2>, link: <social_link2>}]}"""
+    [{id: <social_id>, name: <social_name>, link: <social_link>}, {id: <social_id2>, name: <social_name2>, link: <social_link2>}]"""
     body = request.get_json()
     if body is None:
         abort(400)
@@ -59,5 +60,6 @@ def set_user_socials(user_id):
         user_social_dict = user_social.to_dict()
         user_social_dict["socials"] = user_social_dict["socials"].to_dict()
         user_socials.append(user_social_dict)
+    storage.save()
 
     return jsonify(user_socials), 200
