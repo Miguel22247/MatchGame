@@ -24,7 +24,7 @@ class UserSocial(BaseModel, Base):
     __tablename__ = "user_socials"
     user_id = Column(ForeignKey('user.id'), primary_key=True)
     social_id = Column(ForeignKey('social.id'), primary_key=True)
-    user_link = Column(String(30), nullable=True)
+    link = Column(String(30), nullable=True)
     socials = relationship("Social")
 
 class User(BaseModel, Base):
