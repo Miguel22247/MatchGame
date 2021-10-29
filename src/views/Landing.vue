@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import Register from '../components/Register.vue'
-import Login from '../components/Login.vue'
+import Register from '../views/Register.vue'
+import Login from '../views/Login.vue'
 
 export default {
   components: { Register, Login },

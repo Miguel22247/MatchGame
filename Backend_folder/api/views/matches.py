@@ -61,7 +61,7 @@ def get_users(user_id):
     users_list = []
     for game in user.games:
         for usr in users.values():
-            if game in usr.games and usr not in users_list:
+            if game in usr.games and usr not in users_list and usr not in user.likes:
                 users_list.append(usr)
     users = []
     for usr in users_list:
