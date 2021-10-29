@@ -34,8 +34,8 @@ def get_user_socials(user_id):
         socials_dict[social_dict["id"]] = social_dict
     for user_social in user.socials:
         socials_dict[user_social.socials.id]["link"] = user_social.link
-    for social in socials_dict:
-        socials_list.append(social["id"])
+    for social in socials_dict.values():
+        socials_list.append(social.to_dict())
     return jsonify(socials_list), 200
 
 
