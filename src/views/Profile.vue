@@ -1,13 +1,16 @@
 <template>
 	<v-container fill-height fluid mt-14>
-    	<v-row align="top" justify="center">
-			<h3>{{ user.username }}</h3>
-		</v-row>
-		<v-row justify="center">
-			<h4>Bio</h4>
-		</v-row>
-		<v-row justify="center">
-			<p>{{ user.bio }}</p>
+    	<v-row>
+			<v-form ref="user" @submit.prevent="submit_bio">
+				<v-text-field label="Username" v-model="user.username">
+				</v-text-field>
+				<v-textarea label="Bio" v-model="user.bio">
+				</v-textarea>
+			</v-form>
+			<p>{{ user }}</p>
+			<v-btn v-on:click="submit">
+				Submit
+			</v-btn>
 		</v-row>
 		<v-row>
 			<v-col align="center">
@@ -78,6 +81,18 @@ export default {
 		axios.put(gamesurl.concat('', user_id), this.user_games, { headers })
 		.then(response => {
 			this.user_games = response.data;
+		})
+		.catch((error) => console.log(error));
+	},
+	submit_bio: function (event) {
+		const user_id = this.user["id"]
+		const biourl = 'http://35.190.147.190:5000/api/bio/'
+		const headers = {
+			"Access-Control-Allow-Origin": "*"
+		};
+		axios.put(biourl.concat('', user_id), this.user.bio, { headers })
+		.then(response => {
+			this.user = response.data;
 		})
 		.catch((error) => console.log(error));
 	}
