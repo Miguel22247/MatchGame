@@ -56,5 +56,8 @@ def set_user_socials(user_id):
         user_social = UserSocial(link=pair["link"])
         user_social.socials = social
         user.socials.append(user_social)
-        user_socials.append(user_social.to_dict())
+        user_social_dict = user_social.to_dict()
+        user_social_dict["socials"] = user_social_dict["socials"].to_dict()
+        user_socials.append(user_social_dict)
+
     return jsonify(user_socials), 200
