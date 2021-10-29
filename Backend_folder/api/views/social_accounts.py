@@ -49,6 +49,9 @@ def set_user_socials(user_id):
     user = storage.get(User, user_id)
     if user is None:
         return jsonify("User not found"), 401
+    for social in user.socials:
+        user.socials.remove(social)
+        storage.delete(social)
     user_socials = []
     for pair in body:
         if len(pair["link"]) == 0:
