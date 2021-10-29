@@ -39,7 +39,7 @@ def get_user_socials(user_id):
 @app_views.route("/socials/<user_id>", methods=["PUT"], strict_slashes=False)
 def set_user_socials(user_id):
     """Changes the user social accounts
-    {[{name: <social_id>, link: <social_link>}, {name: <social_id2>, link: <social_link2>}]}"""
+    {[{id: <social_id>, link: <social_link>}, {id: <social_id2>, link: <social_link2>}]}"""
     body = request.get_json()
     if body is None:
         abort(400)
@@ -50,7 +50,7 @@ def set_user_socials(user_id):
     for pair in body:
         if len(pair["link"]) == 0:
             continue
-        social = storage.get(Social, pair["name"])
+        social = storage.get(Social, pair["id"])
         if social is None:
             return jsonify("Social not found"), 402
         user_social = UserSocial(link=pair["link"])
