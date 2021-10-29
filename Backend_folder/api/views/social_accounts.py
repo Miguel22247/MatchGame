@@ -15,7 +15,7 @@ def get_socials():
     social_dict = {}
     for social in socials.values():
         social_dict = social.to_dict()
-        social_dict["email"] = ""
+        social_dict["link"] = ""
         socials_list.append(social_dict)
     return jsonify(socials_list), 200
 
