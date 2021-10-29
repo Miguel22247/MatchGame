@@ -48,8 +48,10 @@ def set_user_socials(user_id):
         return jsonify("User not found"), 401
     user_socials = []
     for pair in body:
+        if len(pair["link"]) == 0:
+            continue
         social = storage.get(Social, pair["name"])
-        if social is None and len(pair["link"]) > 0:
+        if social is None:
             return jsonify("Social not found"), 402
         user_social = UserSocial(link=pair["link"])
         user_social.socials = social
