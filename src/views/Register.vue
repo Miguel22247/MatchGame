@@ -1,8 +1,8 @@
 <template>
   <v-container class="container" fluid fill-height>
     <v-row align="top" justify="center">
-			<h3>Welcome!</h3>
-		</v-row>
+      <h3>Welcome!</h3>
+    </v-row>
     <v-layout row>
       <v-flex xs12 sm6 offset-sm3>
         <v-card color="#ffffff" outlined>
@@ -20,7 +20,8 @@
                       id="email"
                       v-model="email"
                       type="email"
-                      required></v-text-field>
+                      required
+                    ></v-text-field>
                   </v-flex>
                 </v-layout>
                 <v-layout row>
@@ -34,7 +35,8 @@
                       id="username"
                       v-model="username"
                       type="text"
-                      required></v-text-field>
+                      required
+                    ></v-text-field>
                   </v-flex>
                 </v-layout>
                 <v-layout row>
@@ -48,12 +50,15 @@
                       id="password"
                       v-model="password"
                       type="password"
-                      required></v-text-field>
+                      required
+                    ></v-text-field>
                   </v-flex>
-                </v-layout> 
+                </v-layout>
                 <v-layout row>
                   <v-flex xs12>
-                    <v-btn outlined rounded color="#00A7CC" type="submit">Sign up</v-btn>
+                    <v-btn outlined rounded color="#00A7CC" type="submit"
+                      >Sign up</v-btn
+                    >
                   </v-flex>
                 </v-layout>
               </form>
@@ -66,49 +71,39 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 export default {
   data: function() {
     return {
-      username: '',
-      email: '',
-      password: '',
-    }
+      username: "",
+      email: "",
+      password: "",
+    };
   },
-  // async created() {
-  //   try {
-      
-  //     const req = await axios.post(apiurl, this.userData);
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // },
   methods: {
-    onSubmit: function(){
-      const url = 'http://35.190.147.190:5000/api/user'
-      const datos = { 'username': this.username, 'email': this.email, 'password': this.password };
-      const headers = {
-        "Access-Control-Allow-Origin": "*"
+    onSubmit: function() {
+      const url = "http://35.190.147.190:5000/api/user";
+      const datos = {
+        username: this.username,
+        email: this.email,
+        password: this.password,
       };
-      axios.post(url, datos, { headers })
-      .then(response => {
-        this.$router.push('/home');
-      })
-      .catch( function (error) {
-        console.log(error.response)
-        alert(error.response.data)
-      })
-        // .then((res) => {
-        //     //Perform Success Action
-        //     axios.post(url, )
-        // })
-        // .catch((error) => {
-        //     // error.response.status Check status code
-        // });
-        // .finally(() => {
-        //     //Perform action in always
-        // });
-    }
+      const headers = {
+        "Access-Control-Allow-Origin": "*",
+      };
+      axios
+        .post(url, datos, { headers })
+        .then((response) => {
+          this.$router.push("/home");
+        })
+        .catch(function(error) {
+          console.log(error.response);
+          alert(error.response.data);
+        });
+      // .finally(() => {
+      //     //Perform action in always
+      // });
+    },
   },
-}
+};
 </script>

@@ -1,8 +1,8 @@
 <template>
   <v-container class="container" fluid fill-height>
     <v-row align="center" justify="center">
-			<h3>Welcome Back!</h3>
-		</v-row>
+      <h3>Welcome Back!</h3>
+    </v-row>
     <v-layout row>
       <v-flex xs12 sm6 offset-sm3>
         <v-card color="#ffffff" outlined>
@@ -20,7 +20,8 @@
                       id="email"
                       v-model="email"
                       type="email"
-                      required></v-text-field>
+                      required
+                    ></v-text-field>
                   </v-flex>
                 </v-layout>
                 <v-layout row>
@@ -34,12 +35,15 @@
                       id="password"
                       v-model="password"
                       type="password"
-                      required></v-text-field>
+                      required
+                    ></v-text-field>
                   </v-flex>
                 </v-layout>
                 <v-layout row>
                   <v-flex xs12>
-                    <v-btn color="#00A7CC" rounded outlined type="submit">Log in</v-btn>
+                    <v-btn color="#00A7CC" rounded outlined type="submit"
+                      >Log in</v-btn
+                    >
                   </v-flex>
                 </v-layout>
               </form>
@@ -51,40 +55,39 @@
   </v-container>
 </template>
 <script>
-import axios from 'axios'
+import axios from "axios";
 
 export default {
   data: function() {
     return {
-      email: '',
-      password: '',
-    }
+      email: "",
+      password: "",
+    };
   },
 
   methods: {
-    onSignin: function(){
-       const url = 'http://35.190.147.190:5000/api/validate_user'
-       const datos = { 'email': this.email, 'password': this.password };
-       const headers = {
-         "Access-Control-Allow-Origin": "*"
-       };
-      axios.post(url , datos, { headers })
-      .then(response => {
-        this.$store.commit('set_id', response.data.id)
-        this.$router.push('/home');
-      })
-      .catch( function (error) {
-        console.log(error.response)
-        alert(error.response.data)
-      })
-
-    }
-  }
-}
+    onSignin: function() {
+      const url = "http://35.190.147.190:5000/api/validate_user";
+      const datos = { email: this.email, password: this.password };
+      const headers = {
+        "Access-Control-Allow-Origin": "*",
+      };
+      axios
+        .post(url, datos, { headers })
+        .then((response) => {
+          this.$store.commit("set_id", response.data.id);
+          this.$router.push("/home");
+        })
+        .catch(function(error) {
+          console.log(error.response);
+          alert(error.response.data);
+        });
+    },
+  },
+};
 </script>
 <style scoped>
 .container {
   height: 100%;
 }
 </style>
-
