@@ -1,7 +1,8 @@
 <template>
 	<v-container fill-height fluid mt-14>
+		<h2>{{ user.username }}</h2>
 		<v-row align="center" justify="center">
-			<h4>Last Matches</h4>
+			<h4>Matches</h4>
 		</v-row>
 		<v-row justify="space-around">
 			<v-col>
@@ -17,8 +18,8 @@
 					<v-divider class="mx-4"></v-divider>
 					<v-card-title>Social Accounts</v-card-title>
 					<v-card-text>
-						<div v-for="social in match.social" :key="social.name">
-							{{ social.name }}: {{ social.link }}
+						<div v-for="match_social in match.socials" :key="match_social.name">
+							{{ match_social.name }}: {{ match_social.link }}
 						</div>
 					</v-card-text>
 					<v-card-title>Games</v-card-title>
