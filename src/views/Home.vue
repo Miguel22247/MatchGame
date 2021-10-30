@@ -6,6 +6,8 @@
 		<v-row align="center" justify="center">
 			<h4>Possible Matches</h4>
 		</v-row>
+		<p>{{ user }}</p>
+		<p>{{ other_users }}</p>
 		<v-row justify="space-around">
 			<v-col>
 				<v-card class="mx-auto my-12" max-width="374">

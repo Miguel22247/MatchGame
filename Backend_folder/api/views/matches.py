@@ -57,18 +57,18 @@ def get_users(user_id):
         abort(404)
     if len(user.games) is 0:
         return jsonify("Add some games in Config"), 201
-    users = storage.all(User)
+    users = storage.all(User).values()
     users_list = []
     for game in user.games:
-        for usr in users.values():
+        for usr in users:
             if game in usr.games and usr not in users_list and usr not in user.likes and usr not in user.matches:
                 users_list.append(usr)
-    users = []
+    users_dicts = []
     for usr in users_list:
         usr_dict = usr.to_dict()
         usr_dict.pop('password')
-        users.append(usr_dict)
-    return jsonify(users), 200
+        users_dicts.append(usr_dict)
+    return jsonify(users_dicts), 200
 
 
 @app_views.route("/get_matches/<user_id>", strict_slashes=False)
@@ -77,4 +77,7 @@ def get_matches(user_id):
     user = storage.get(User, user_id)
     if user is None:
         abort(404)
-    return jsonify(user.matches)
+    matches_list = []
+    for usr in user.matches:
+        matches_list.append(usr.to_dict())
+    return jsonify(matches_list)
