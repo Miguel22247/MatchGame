@@ -61,12 +61,16 @@ def get_users(user_id):
     users_list = []
     for game in user.games:
         for usr in users:
-            if game in usr.games and usr not in users_list and usr not in user.likes and usr not in user.matches:
+            if game in usr.games and usr not in users_list and usr not in user.likes and usr not in user.matches and usr is not user:
                 users_list.append(usr)
     users_dicts = []
     for usr in users_list:
         usr_dict = usr.to_dict()
         usr_dict.pop('password')
+        games_dicts = []
+        for game in usr.games:
+            games_dicts.append(game.to_dict)
+        usr_dict["games"] = games_dicts
         users_dicts.append(usr_dict)
     return jsonify(users_dicts), 200
 
