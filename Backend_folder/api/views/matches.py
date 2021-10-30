@@ -93,7 +93,7 @@ def get_matches(user_id):
             games_list.append(game.to_dict())
         usr_dict["games"] = games_list
         socials_list = []
-        for user_social in user.socials:
+        for user_social in usr.socials:
             user_social_dict = {}
             user_social_dict["name"] = user_social.socials.name
             user_social_dict["link"] = user_social.link
