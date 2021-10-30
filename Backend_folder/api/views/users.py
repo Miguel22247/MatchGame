@@ -61,8 +61,13 @@ def change_username(user_id):
         abort(404)
     user.username = body["username"]
     user.bio = body["bio"]
+    games_list =[]
+    for game in user.games:
+        games_list.append(game.to_dict())
+    user_dict = user.to_dict()
+    user_dict["games"] = games_list
     user.save()
-    return jsonify(user.to_dict()), 200
+    return jsonify(user_dict), 200
 
 
 @app_views.route("/validate_user", methods=["POST"], strict_slashes=False)

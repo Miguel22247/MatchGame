@@ -8,7 +8,7 @@
 				</v-textarea>
 			</v-form>
 			<p>{{ user }}</p>
-			<v-btn v-on:click="submit">
+			<v-btn v-on:click="submit_bio">
 				Submit
 			</v-btn>
 		</v-row>
@@ -90,7 +90,7 @@ export default {
 		const headers = {
 			"Access-Control-Allow-Origin": "*"
 		};
-		axios.put(biourl.concat('', user_id), this.user.bio, { headers })
+		axios.put(biourl.concat('', user_id), this.user, { headers })
 		.then(response => {
 			this.user = response.data;
 		})
