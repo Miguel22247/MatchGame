@@ -26,7 +26,8 @@ class DBStorage:
         self.__engine = create_engine("mysql+mysqldb://{}:{}@{}/{}".
                                       format(self.__user, self.__pwd,
                                              self.__host, self.__db),
-                                             pool_pre_ping=True)
+                                             pool_pre_ping=True,
+                                             pool_recicle=1800)
 
     def all(self, cls=None):
         """turns a list with all objects. If a class is given
