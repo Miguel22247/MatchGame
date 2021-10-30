@@ -44,14 +44,20 @@ export default {
     }
   },
   mounted() {
-	  const apiurl = 'http://35.190.147.190:5000/api/user/';
+	  const userurl = 'http://35.190.147.190:5000/api/user/';
+	  const matchurl = 'http://35.190.147.190:5000/api/get_matches/';
 	  const userid = this.$store.getters.getId;
 	  const headers = {
         "Access-Control-Allow-Origin": "*"
       };
-	  axios.get(apiurl.concat('', userid), { headers })
+	  axios.get(userurl.concat('', userid), { headers })
 	  .then(response => {
 		  this.user = response.data;
+	  })
+	  .catch((error) => console.log(error));
+	  axios.get(matchurl.concat('', userid), { headers })
+	  .then(response => {
+		  this.matches = response.data;
 	  })
 	  .catch((error) => console.log(error));
   }
