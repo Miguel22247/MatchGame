@@ -6,6 +6,8 @@
 		<v-row align="center" justify="center">
 			<h4>Possible Matches</h4>
 		</v-row>
+		<p>{{ user }}</p>
+		<p>{{ other_users }}</p>
 		<v-row justify="space-around">
 			<v-col>
 				<v-card v-for="usr in other_users" :key="usr.username" class="mx-auto my-12" max-width="374">
@@ -50,7 +52,7 @@ export default {
 		axios.post(likeurl, body, { headers })
 		.then(response => {
 			this.responsestatus = response.status
-			if (responsestatus === 201) {
+			if (response.status === 201) {
 				alert("It's a match, check your matches to see their contact info and start to play")
 			}
 		})

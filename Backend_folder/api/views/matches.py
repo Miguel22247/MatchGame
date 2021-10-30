@@ -25,6 +25,8 @@ def add_like():
         user.matches.append(like)
         storage.save()
         return jsonify("Match"), 201
+    elif user in like.matches:
+        return jsonify("Already a match"), 201
     else:
         user.likes.append(like)
         storage.save()
