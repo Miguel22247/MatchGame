@@ -69,7 +69,7 @@ def get_users(user_id):
         usr_dict.pop('password')
         games_dicts = []
         for game in usr.games:
-            games_dicts.append(game.to_dict)
+            games_dicts.append(game.to_dict())
         usr_dict["games"] = games_dicts
         users_dicts.append(usr_dict)
     return jsonify(users_dicts), 200
