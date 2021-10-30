@@ -23,9 +23,11 @@ def add_like():
         like.likes.remove(user)
         like.matches.append(user)
         user.matches.append(like)
+        storage.save()
         return jsonify("Match"), 201
     else:
         user.likes.append(like)
+        storage.save()
         return jsonify("Like"), 200
 
 
