@@ -25,7 +25,7 @@ def add_like():
         user.matches.append(like)
         return jsonify("Match"), 201
     else:
-        user.likes.append(like.id)
+        user.likes.append(like)
         return jsonify("Like"), 200
 
 

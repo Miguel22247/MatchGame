@@ -22,7 +22,7 @@
 					<div v-for="game in usr.games" :key="game.name">
 						{{game.name}}
 					</div>
-					<v-btn v-on:click="submit_like(usr.id)">
+					<v-btn v-on:click="submit_like(usr.id)">Like</v-btn>
 				</v-card>
 			</v-col>
 		</v-row>
@@ -42,7 +42,7 @@ export default {
   },
   methods: {
 	  submit_like: function (usr_id) {
-		  const body = {user_id: this.user["id"], like_id: usr_id}
+		  const body = {user: this.user["id"], like: usr_id}
 		  const likeurl = 'http://35.190.147.190:5000/api/add_like/'
 		  const headers = {
 			"Access-Control-Allow-Origin": "*"
