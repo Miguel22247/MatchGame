@@ -5,19 +5,27 @@
 		</v-row>
 		<v-row justify="space-around">
 			<v-col>
-				<v-card class="mx-auto my-12" max-width="374">
-					<v-card-title> {{ user.username }} </v-card-title>
+				<v-card v-for="match in matches" :key="match.username" class="mx-auto my-12" max-width="374">
+					<v-card-title> {{ match.username }} </v-card-title>
 					<v-card-text>
 						<v-row align="center" class="mx-0">
 							<div class="my-4 text-subtitle-1">
-								{{ user.bio }}
+								{{ match.bio }}
 							</div>
 						</v-row>
 					</v-card-text>
 					<v-divider class="mx-4"></v-divider>
-					<v-card-title>Social Media</v-card-title>
+					<v-card-title>Social Accounts</v-card-title>
 					<v-card-text>
-						
+						<div v-for="social in match.social" :key="social.name">
+							{{ social.name }}: {{ social.link }}
+						</div>
+					</v-card-text>
+					<v-card-title>Games</v-card-title>
+					<v-card-text>
+						<div v-for="game in match.games" :key="game.name">
+							{{ game.name }}
+						</div>
 					</v-card-text>
 				</v-card>
 			</v-col>
@@ -31,15 +39,17 @@ import axios from 'axios'
 export default {
   data: function() {
     return {
-		user: {}
+		user: {},
+		matches: []
     }
   },
   mounted() {
-	  const apiurl = 'http://35.190.147.190:5000/api/user/10b411b5-3152-4958-a5a0-91f2711f5419';
-      const headers = {
+	  const apiurl = 'http://35.190.147.190:5000/api/user/';
+	  const userid = this.$store.getters.getId;
+	  const headers = {
         "Access-Control-Allow-Origin": "*"
       };
-	  axios.get(apiurl, { headers })
+	  axios.get(apiurl.concat('', userid), { headers })
 	  .then(response => {
 		  this.user = response.data;
 	  })

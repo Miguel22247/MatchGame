@@ -87,5 +87,17 @@ def get_matches(user_id):
         abort(404)
     matches_list = []
     for usr in user.matches:
-        matches_list.append(usr.to_dict())
+        usr_dict = usr.to_dict()
+        games_list = []
+        for game in usr.games:
+            games_list.append(game.to_dict())
+        usr_dict["games"] = games_list
+        socials_list = []
+        for user_social in user.socials:
+            user_social_dict = {}
+            user_social_dict["name"] = user_social.socials.name
+            user_social_dict["link"] = user_social.link
+            socials_list.append(user_social_dict)
+        usr_dict["socials"] = socials_list
+        matches_list.append(usr_dict)
     return jsonify(matches_list)
