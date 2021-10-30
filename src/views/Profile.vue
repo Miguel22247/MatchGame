@@ -60,7 +60,7 @@ export default {
     }
   },
   methods: {
-	submit_socials: function (event) {
+	submit_socials: function () {
 		const user_id = this.user["id"]
 		const socialsurl = 'http://35.190.147.190:5000/api/socials/'
 		const headers = {
@@ -72,7 +72,7 @@ export default {
 		})
 		.catch((error) => console.log(error));
 	},
-	submit_games: function (event) {
+	submit_games: function () {
 		const user_id = this.user["id"]
 		const gamesurl = 'http://35.190.147.190:5000/api/games/'
 		const headers = {
@@ -84,7 +84,7 @@ export default {
 		})
 		.catch((error) => console.log(error));
 	},
-	submit_bio: function (event) {
+	submit_bio: function () {
 		const user_id = this.user["id"]
 		const biourl = 'http://35.190.147.190:5000/api/bio/'
 		const headers = {
