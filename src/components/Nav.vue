@@ -25,6 +25,11 @@
 
         <v-icon>mdi-heart-multiple</v-icon>
       </v-btn>
+      <v-btn to="/">
+        <span>Logout</span>
+
+        <v-icon>mdi-logout</v-icon>
+      </v-btn>
     </v-bottom-navigation>
   </v-app-bar>
 </template>
@@ -42,6 +47,8 @@ export default {
           return "blue";
         case 2:
           return "pink";
+        case 3:
+          return "red";
         default:
           return "blue-grey";
       }
