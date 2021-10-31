@@ -2,14 +2,14 @@
 	<v-container fill-height fluid mt-14>
     	<v-row>
 			<v-form ref="user" @submit.prevent="submit_bio">
-				<v-text-field label="Username" v-model="user.username">
+				<v-text-field rounded outlined color="#00A7CC" label="Username" v-model="user.username">
 				</v-text-field>
-				<v-textarea label="Bio" v-model="user.bio">
+				<v-textarea rounded outlined color="#00A7CC" label="Bio" v-model="user.bio">
 				</v-textarea>
 			</v-form>
 			<p>{{ user }}</p>
-			<v-btn v-on:click="submit_bio">
-				Submit
+			<v-btn rounded outlined color="#00A7CC" v-on:click="submit_bio">
+				Update
 			</v-btn>
 		</v-row>
 		<v-row>
