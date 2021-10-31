@@ -46,7 +46,7 @@
           </v-text-field>
 
           <v-flex text-center>
-            <v-btn outlined type="submit">Sign Up</v-btn>
+            <v-btn outlined type="submit">Register</v-btn>
           </v-flex>
         </v-col>
       </v-form>
@@ -78,7 +78,7 @@ export default {
     };
   },
   methods: {
-    onSubmit: function () {
+    submit: function () {
       const url = "http://35.190.147.190:5000/api/user";
       const datos = {
         username: this.username,
@@ -91,7 +91,7 @@ export default {
       axios
         .post(url, datos, { headers })
         .then(() => {
-          this.$router.push("/home");
+          this.$router.push("/login");
         })
         .catch(function (error) {
           console.log(error.response);

@@ -98,11 +98,11 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      user: [1, 2],
-      games: [{name: "Leauge"}, {name: "Vaolrant"}],
-      socials: [1, 2],
-      user_games: ["a", "a"],
-      user_socials: [1, 2],
+      user: [],
+      games: {},
+      socials: {},
+      user_games: [],
+      user_socials: [],
     };
   },
   methods: {

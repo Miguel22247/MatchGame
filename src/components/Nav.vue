@@ -8,28 +8,34 @@
       shift
       grow
     >
-      <v-btn to="/profile">
+      <v-btn to="/profile" v-if="isDisabled">
         <span>Profile</span>
 
         <v-icon>mdi-account-circle</v-icon>
       </v-btn>
 
-      <v-btn to="/home">
+      <v-btn to="/home" v-if='isDisabled'>
         <span>Find</span>
 
         <v-icon color="">mdi-crosshairs</v-icon>
       </v-btn>
 
-      <v-btn to="/matches">
+      <v-btn to="/matches" v-if='isDisabled'>
         <span>Matches</span>
 
         <v-icon>mdi-heart-multiple</v-icon>
       </v-btn>
-      <v-btn to="/">
-        <span>Logout</span>
+      <v-btn to="/register" v-if='!isDisabled'>
+        <span>Sign up</span>
 
-        <v-icon>mdi-logout</v-icon>
+        <v-icon>mdi-account-plus</v-icon>
       </v-btn>
+      <v-btn to="/login" v-if='!isDisabled'>
+        <span>Sign in</span>
+
+        <v-icon>mdi-login</v-icon>
+      </v-btn>
+      
     </v-bottom-navigation>
   </v-app-bar>
 </template>
@@ -39,6 +45,15 @@ export default {
   data: () => ({ value: 1 }),
 
   computed: {
+
+    isDisabled: function(){
+      if (!this.$store.getters.getId) {
+        return false
+      } else {
+        return true
+      }
+    },
+
     color() {
       switch (this.value) {
         case 0:

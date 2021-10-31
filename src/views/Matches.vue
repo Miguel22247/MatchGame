@@ -1,39 +1,11 @@
 <template>
-  <v-container fill-height fluid mt-14>
-    <h2>{{ user.username }}</h2>
-    <v-row align="center" justify="center">
-      <h4>My Matches</h4>
-    </v-row>
-    <v-row justify="space-around">
+  <v-container fill-height pa-12>
+    <v-row fluid dense align="center" justify="center" grow>
       <v-col>
-        <v-card
-          v-for="match in matches"
-          :key="match.username"
-          class="mx-auto my-12"
-          max-width="374"
-        >
-          <v-card-title> {{ match.username }} </v-card-title>
-          <v-card-text>
-            <v-row align="center" class="mx-0">
-              <div class="my-4 text-subtitle-1">
-                {{ match.bio }}
-              </div>
-            </v-row>
-          </v-card-text>
-          <v-divider class="mx-4"></v-divider>
-          <v-card-title>Social Accounts</v-card-title>
-          <v-card-text>
-            <div v-for="match_social in match.socials" :key="match_social.name">
-              {{ match_social.name }}: {{ match_social.link }}
-            </div>
-          </v-card-text>
-          <v-card-title>Games</v-card-title>
-          <v-card-text>
-            <div v-for="game in match.games" :key="game.name">
-              {{ game.name }}
-            </div>
-          </v-card-text>
-        </v-card>
+        <v-flex text-center pb-8>
+          <h1>POSSIBLE MATCHES</h1>
+        </v-flex>
+        
       </v-col>
     </v-row>
   </v-container>
