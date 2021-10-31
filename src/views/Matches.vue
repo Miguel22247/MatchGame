@@ -2,7 +2,7 @@
   <v-container fill-height fluid mt-14>
     <h2>{{ user.username }}</h2>
     <v-row align="center" justify="center">
-      <h4>Matches</h4>
+      <h4>My Matches</h4>
     </v-row>
     <v-row justify="space-around">
       <v-col>
