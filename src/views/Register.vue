@@ -35,6 +35,16 @@
           >
           </v-text-field>
 
+          <v-text-field
+            v-model="username"
+            label="Username"
+            outlined
+            clearable
+            append-icon="mdi-account-circle"
+            type="text"
+          >
+          </v-text-field>
+
           <v-flex text-center>
             <v-btn outlined type="submit">Sign Up</v-btn>
           </v-flex>
@@ -52,6 +62,19 @@ export default {
       username: "",
       email: "",
       password: "",
+      emailRules: [
+        (v) => !!v || "E-mail is required",
+        (v) =>
+          /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) ||
+          "E-mail must be valid",
+        (v) => v.length <= 30 || "Max 30 characters",
+      ],
+      passwordRules: [
+        (v) => !!v || "Password is required",
+        (v) => v.length >= 8 || "Min 8 characters",
+        (v) => v.length <= 30 || "Max 30 characters",
+      ],
+      errorMessage: "",
     };
   },
   methods: {
