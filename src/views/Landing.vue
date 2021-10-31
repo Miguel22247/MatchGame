@@ -1,55 +1,28 @@
-<template style="overflow: hidden;">
-  <v-container style="overflow-y: hidden;" app fluid>
-    <v-row style="overflow: hidden;" justify="center" align="center" back>
-      <v-card
-        color="primary"
-        elevation="6"
-        height="100vh"
-        width="80vw"
-        align="center"
-      >
-        <v-card flat color="secondary" class="pa-2 ma-4" elevation="2" outlined>
-          <v-card-title class="justify-center">Welcome</v-card-title>
-        </v-card>
-
-        <v-card
-          flat
-          class="pa-2 ma-4"
-          color="secondary"
-          elevation="2"
-          align="center"
-        >
-          <v-img
-            max-height="250"
-            max-width="250"
-            src="../../public/icons/GameMatch.png"
-          ></v-img>
-        </v-card>
-        <v-btn outlined color="accent" to="/register">Sign Up</v-btn>
-        <v-btn outlined color="accent" to="/login">Sign In</v-btn>
-      </v-card>
+<template>
+  <v-container class="container" fluid fill-height>
+    <v-row align="center" justify="center">
+      <h2>Welcome to GameMatch</h2>
+    </v-row>
+    <v-row align="center" justify="center"> </v-row>
+    <v-row align="center" justify="space-around">
+      <v-btn outlined color="#00A7CC" to="/register">Sign Up</v-btn>
+      <v-btn outlined color="#00A7CC" to="/login">Sign In</v-btn>
     </v-row>
   </v-container>
 </template>
 
 <script>
-import Register from "./Register.vue";
-import Login from "./Login.vue";
-import About from "./About.vue";
-
+import Register from "../views/Register.vue";
+import Login from "../views/Login.vue";
 export default {
-  components: { Register, Login, About },
+  components: { Register, Login },
   name: "Home",
 };
 </script>
 <style scoped>
-.scrollbar-hidden::-webkit-scrollbar {
-  display: none;
-}
 a {
   text-decoration: none;
 }
-
 .container {
   height: 100%;
 }

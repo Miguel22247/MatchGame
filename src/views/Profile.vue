@@ -1,69 +1,112 @@
 <template>
-  <v-container fluid>
-    <v-row class="primary" justify="center" align="center" back>
-      <v-card class="secondary" elevation="6" height="100vh" width="70vw">
-        <v-card class="accent pa-2 ma-4" elevation="2">
-          <v-card-title class="primary--text justify-center"
-            >{{ user.username }}
-          </v-card-title>
-          <v-card-text class="secondary--text ">{{ user.bio }}</v-card-text>
-        </v-card>
+  <v-container fill-height pa-12>
+    <v-row fluid dense align="center" justify="center" grow>
+      <v-col>
+        <v-flex text-left pb-8>
+          <h1>PROFILE</h1>
+        </v-flex>
+        <form ref="user" @submit.prevent="submit_bio">
+          <v-text-field
+            label="Username"
+            v-model="user.username"
+            outlined
+            clearable
+            append-icon="mdi-account"
+          >
+          </v-text-field>
+          <v-text-field
+            label="Bio"
+            v-model="user.bio"
+            outlined
+            clearable
+            append-icon="mdi-text-account"
+          >
+          </v-text-field>
+          <v-flex text-right>
+            <v-btn outlined type="submit_bio">Save</v-btn>
+          </v-flex>
+        </form>
+      </v-col>
+    </v-row>
+    <v-row fluid>
+      <v-divider dark></v-divider>
+    </v-row>
+    <v-row dense align="center" justify="center" grow>
+      <v-col>
+        <v-flex text-left pb-8>
+          <h1>SOCIALS</h1>
+        </v-flex>
+        <form ref="user_socials" @submit.prevent="submit_socials">
+          <v-flex
+            v-for="social in socials"
+            :key="social.name"
+            :value="social.link"
+            v-model="user_socials"
+          >
+            <v-text-field
+              outlined
+              :label="social.name"
+              v-model="social.link"
+              :append-icon="'mdi-' + social.name"
+            >
+            </v-text-field>
+          </v-flex>
 
-        <v-card class="primary pa-2 ma-4" elevation="2">
-          <v-card-title class="accent--text">My games</v-card-title>
-          <v-chip-group v-model="user_games" multiple max="6" column>
+          <v-flex text-right>
+            <v-btn outlined type="submit_socials">Save</v-btn>
+          </v-flex>
+        </form>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-divider dark></v-divider>
+    </v-row>
+    <v-row dense align="center" justify="center" grow>
+      <v-col>
+        <v-flex text-left pb-8>
+          <h1>GAMES</h1>
+        </v-flex>
+        <v-flex>
+          <v-chip-group
+            active-class="primary--text"
+            v-model="user_games"
+            multiple
+            column
+          >
             <v-chip
+              dark
               label
-              color="secondary accent--text"
-              active-class="accent"
               v-for="game in games"
               :key="game.name"
               :value="game.id"
             >
               {{ game.name }}
             </v-chip>
-            <p>{{ user_games }}</p>
           </v-chip-group>
-          <v-card-actions class="justify-end">
-            <v-btn color="accent primary--text" v-on:click="submit_games">
-              Update
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-        <v-card class="primary pa-2 ma-4" elevation="2">
-          <v-card-title class="accent--text">My Social Accounts</v-card-title>
-          <v-chip-group v-model="user_games" multiple max="6" column>
-            <v-chip
-              label
-              color="secondary accent--text"
-              active-class="accent"
-              v-for="social in socials"
-              :key="social.name"
-            >
-              {{ social.name }}
-            </v-chip>
-          </v-chip-group>
-        </v-card>
-      </v-card>
+        </v-flex>
+        <v-flex text-right>
+          <v-btn outlined type="submit_games">Save</v-btn>
+        </v-flex>
+      </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
 import axios from "axios";
-
 export default {
-  data: function() {
+  data: function () {
     return {
-      user: {},
-      games: {},
-      socials: {},
-      user_games: {},
-      user_socials: {},
+      user: [1, 2],
+      games: [{name: "Leauge"}, {name: "Vaolrant"}],
+      socials: [1, 2],
+      user_games: ["a", "a"],
+      user_socials: [1, 2],
     };
   },
   methods: {
-    submit_socials: function(event) {
+    submit_socials: function () {
       const user_id = this.user["id"];
       const socialsurl = "http://35.190.147.190:5000/api/socials/";
       const headers = {
@@ -76,7 +119,7 @@ export default {
         })
         .catch((error) => console.log(error));
     },
-    submit_games: function(event) {
+    submit_games: function () {
       const user_id = this.user["id"];
       const gamesurl = "http://35.190.147.190:5000/api/games/";
       const headers = {
@@ -86,6 +129,19 @@ export default {
         .put(gamesurl.concat("", user_id), this.user_games, { headers })
         .then((response) => {
           this.user_games = response.data;
+        })
+        .catch((error) => console.log(error));
+    },
+    submit_bio: function () {
+      const user_id = this.user["id"];
+      const biourl = "http://35.190.147.190:5000/api/bio/";
+      const headers = {
+        "Access-Control-Allow-Origin": "*",
+      };
+      axios
+        .put(biourl.concat("", user_id), this.user, { headers })
+        .then((response) => {
+          this.user = response.data;
         })
         .catch((error) => console.log(error));
     },
@@ -112,7 +168,7 @@ export default {
       })
       .catch((error) => console.log(error));
     axios
-      .get(socialurl, { headers })
+      .get(socialurl.concat("", user_id), { headers })
       .then((response) => {
         this.socials = response.data;
       })
@@ -120,9 +176,9 @@ export default {
   },
 };
 </script>
-
 <style scoped>
-.v-chip--active >>> .v-chip__content {
-  color: black;
+a {
+  text-decoration: none;
 }
 </style>
+*/
