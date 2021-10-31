@@ -36,7 +36,7 @@
           </v-text-field>
 
           <v-flex text-center>
-            <v-btn outlined type="submit">Sign Ups</v-btn>
+            <v-btn outlined type="submit">Sign Up</v-btn>
           </v-flex>
         </v-col>
       </v-form>
