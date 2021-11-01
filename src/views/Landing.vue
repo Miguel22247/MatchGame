@@ -1,7 +1,7 @@
 <template>
   <v-container fill-height pa-16>
     <v-row align="center" justify="center" grow>
-      <h1>Welcome to GameMatch</h1>
+      <h1 style="text-align: -webkit-center">Welcome to GameMatch</h1>
     </v-row>
     <v-row align="center" justify="center" grow>
       <v-img
