@@ -31,7 +31,7 @@
         <v-icon>mdi-account-plus</v-icon>
       </v-btn>
       <v-btn to="/login" v-if='!isDisabled'>
-        <span>Sign in</span>
+        <span>Login</span>
 
         <v-icon>mdi-login</v-icon>
       </v-btn>
@@ -57,13 +57,11 @@ export default {
     color() {
       switch (this.value) {
         case 0:
-          return "gray";
-        case 1:
           return "blue";
+        case 1:
+          return "gray";
         case 2:
-          return "pink";
-        case 3:
-          return "red";
+          return "#A300FF";
         default:
           return "blue-grey";
       }

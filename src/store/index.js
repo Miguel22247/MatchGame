@@ -17,12 +17,14 @@ export default new Vuex.Store({
   // this.$store.commit (commits a mutation)
   mutations: {
     set_id(state, user_id) {
-      state.id = user_id;
-    },
+        state.id = user_id;
+      },
+    deleteId(state) {
+      state.id = undefined
+    }
   },
   // actions are triggered thorough 'dispatch' method
   // this.$store.dispatch
-  actions: {},
   modules: {},
   plugins: [
     createPersistedState({
@@ -34,4 +36,7 @@ export default new Vuex.Store({
       return state.id;
     },
   },
+  actions: {
+  }
+  
 });

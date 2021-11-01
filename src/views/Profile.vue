@@ -2,6 +2,9 @@
   <v-container fill-height pa-12>
     <v-row fluid dense align="center" justify="center" grow>
       <v-col>
+          <v-flex text-right>
+            <v-btn outlined v-on:click="deleteId">Logout</v-btn>
+          </v-flex>
         <v-flex text-left pb-8>
           <h1>PROFILE</h1>
         </v-flex>
@@ -86,7 +89,7 @@
           </v-chip-group>
         </v-flex>
         <v-flex text-right>
-          <v-btn outlined type="submit_games">Save</v-btn>
+          <v-btn outlined v-on:click="submit_games">Save</v-btn>
         </v-flex>
       </v-col>
     </v-row>
@@ -95,6 +98,8 @@
 
 <script>
 import axios from "axios";
+// import store from "../store"
+
 export default {
   data: function () {
     return {
@@ -106,6 +111,10 @@ export default {
     };
   },
   methods: {
+    deleteId: function () {
+      this.$store.commit('deleteId')
+      this.$router.push("/login")
+    },
     submit_socials: function () {
       const user_id = this.user["id"];
       const socialsurl = "http://35.190.147.190:5000/api/socials/";
