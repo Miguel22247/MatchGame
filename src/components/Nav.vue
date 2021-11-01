@@ -17,7 +17,7 @@
       <v-btn to="/home" v-if='isDisabled'>
         <span>Find</span>
 
-        <v-icon color="">mdi-crosshairs</v-icon>
+        <v-icon color="">mdi-magnify</v-icon>
       </v-btn>
 
       <v-btn to="/matches" v-if='isDisabled'>
@@ -53,9 +53,9 @@ export default {
     color() {
       switch (this.value) {
         case 0:
-          return "blue";
+          return "#007ACC";
         case 1:
-          return "gray";
+          return "#ff5e00";
         case 2:
           return "#A300FF";
         default:
