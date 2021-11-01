@@ -113,7 +113,7 @@ export default {
   methods: {
     deleteId: function () {
       this.$store.commit('deleteId')
-      this.$router.push("/login")
+      this.$router.push("/")
     },
     submit_socials: function () {
       const user_id = this.user["id"];

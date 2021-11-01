@@ -1,38 +1,38 @@
 <template>
-  <v-container fill-height fluid mt-14>
-    <v-row>
-      <h2>Hello {{ user.username }}!</h2>
-    </v-row>
-    <v-row align="center" justify="center">
-      <h4>Possible Matches</h4>
-    </v-row>
-    <v-row justify="space-around">
+  <v-container fluid dense fill-height pa-6>
+    <v-row fluid dense align="center" justify="center">
       <v-col>
-        <v-card
-          v-for="usr in other_users"
-          :key="usr.username"
-          class="mx-auto my-12"
-          max-width="374"
-        >
-          <v-card-title> {{ usr.username }} </v-card-title>
-          <v-card-text>
-            <v-row align="center" class="mx-0">
-              <div class="my-4 text-subtitle-1">
-                {{ usr.bio }}
-              </div>
-            </v-row>
-          </v-card-text>
-          <v-divider class="mx-4"></v-divider>
-          <v-card-title>Games</v-card-title>
-          <div v-for="game in usr.games" :key="game.name">
-            {{ game.name }}
-          </div>
-          <v-btn v-on:click="submit_like(usr.id)">Like</v-btn>
-        </v-card>
+        <v-flex text-center pb-n16>
+          <h1>Possible Matches</h1>
+        </v-flex>
+      </v-col>
+    </v-row>
+    <v-row fluid dense align="center" justify="center">
+      <v-col style="text-align: -webkit-center">
+        <v-scale-transition mode="in" hide-on-leave="true">
+          <v-card
+            v-show="true"
+            max-width="420"
+            v-for="usr in other_users"
+            :key="usr.username"
+          >
+            <v-card-title> {{ usr.username }} </v-card-title>
+            <v-card-text> {{ usr.bio }} </v-card-text>
+            <v-divider class="mx-4"></v-divider>
+            <v-card-title>Games</v-card-title>
+            <div v-for="game in usr.games" :key="game.name">
+              {{ game.name }}
+            </div>
+            <v-flex text-right>
+              <v-btn v-on:click="submit_like(usr.id)">Like</v-btn>
+            </v-flex>
+          </v-card>
+        </v-scale-transition>
       </v-col>
     </v-row>
   </v-container>
 </template>
+
 <script>
 import axios from "axios";
 export default {
