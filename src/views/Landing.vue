@@ -1,20 +1,30 @@
 <template>
-  <v-container class="container" fluid fill-height>
-    <v-row align="center" justify="center">
-      <h2>Welcome to GameMatch</h2>
+  <v-container fill-height pa-16>
+    <v-row align="center" justify="center" grow>
+      <h1>Welcome to GameMatch</h1>
     </v-row>
-    <v-row align="center" justify="center"> </v-row>
-    <v-row align="center" justify="space-around">
-      <v-btn outlined color="#00A7CC" to="/register">Sign Up</v-btn>
-      <v-btn outlined color="#00A7CC" to="/login">Sign In</v-btn>
+    <v-row align="center" justify="center" grow>
+      <v-img
+        max-height="250"
+        max-width="250"
+        src="../../src/assets/GameMatch.png"
+      ></v-img>
+    </v-row>
+
+    <v-row align="center" justify="center" grow>
+      <v-col align="center" justify="center">
+        <v-flex text-center pb-2>
+          <v-btn outlined to="/register">Create an account</v-btn>
+        </v-flex>
+        <a href="#/login">Already have an account?</a>
+      </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-
 export default {
-  components: {   },
+  components: {},
   name: "Home",
 };
 </script>

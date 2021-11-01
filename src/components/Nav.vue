@@ -25,15 +25,11 @@
 
         <v-icon>mdi-heart-multiple</v-icon>
       </v-btn>
-      <v-btn to="/register" v-if='!isDisabled'>
-        <span>Sign up</span>
 
-        <v-icon>mdi-account-plus</v-icon>
-      </v-btn>
-      <v-btn to="/login" v-if='!isDisabled'>
-        <span>Login</span>
+      <v-btn to="/" v-if='!isDisabled'>
+        <span>Authenticate</span>
 
-        <v-icon>mdi-login</v-icon>
+        <v-icon>mdi-home-account</v-icon>
       </v-btn>
       
     </v-bottom-navigation>
