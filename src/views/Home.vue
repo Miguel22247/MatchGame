@@ -20,9 +20,11 @@
             <v-card-text> {{ usr.bio }} </v-card-text>
             <v-divider class="mx-4"></v-divider>
             <v-card-title>Games</v-card-title>
-            <div v-for="game in usr.games" :key="game.name">
-              {{ game.name }}
-            </div>
+            <v-chip-group class="nowrap" justify-center column>
+              <v-chip color="#ff5e00" v-for="game in usr.games" :key="game.name">
+                {{ game.name }}
+              </v-chip>
+            </v-chip-group>
             <v-flex text-right>
               <v-btn v-on:click="submit_like(usr.id)">Like</v-btn>
             </v-flex>
