@@ -60,8 +60,6 @@ export default {
       ],
       passwordRules: [
         (v) => !!v || "Password is required",
-        (v) => v.length >= 8 || "Min 8 characters",
-        (v) => v.length <= 30 || "Max 30 characters",
       ],
       errorMessage: "",
     };
