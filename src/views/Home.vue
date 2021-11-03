@@ -7,28 +7,28 @@
         </v-flex>
       </v-col>
     </v-row>
-    <v-row fluid dense align="center" justify="center">
+    <v-row fluid dense align="center" justify="center" class="pb-4">
       <v-col style="text-align: -webkit-center">
-        <v-scale-transition mode="in" hide-on-leave="true">
-          <v-card
-            v-show="true"
-            max-width="420"
-            v-for="usr in other_users"
-            :key="usr.username"
-          >
-            <v-card-title> {{ usr.username }} </v-card-title>
-            <v-card-text> {{ usr.bio }} </v-card-text>
-            <v-divider class="mx-4"></v-divider>
-            <v-card-title>Games</v-card-title>
-            <v-chip-group class="nowrap" justify-center column>
-              <v-chip color="#ff5e00" v-for="game in usr.games" :key="game.name">
-                {{ game.name }}
-              </v-chip>
-            </v-chip-group>
-            <v-flex text-right>
-              <v-btn v-on:click="submit_like(usr.id)">Like</v-btn>
-            </v-flex>
-          </v-card>
+        <v-scale-transition mode="in" hide-on-leave="true" v-for="usr in other_users" :key="usr.username">
+          <v-flex pb-4>
+            <v-card
+              v-show="true"
+              max-width="420"
+            >
+              <v-card-title> {{ usr.username }} </v-card-title>
+              <v-card-text> {{ usr.bio }} </v-card-text>
+              <v-divider class="mx-4"></v-divider>
+              <v-card-title>Games</v-card-title>
+              <v-chip-group class="nowrap" justify-center column>
+                <v-chip color="#ff5e00" v-for="game in usr.games" :key="game.name">
+                  {{ game.name }}
+                </v-chip>
+              </v-chip-group>
+              <v-flex text-right>
+                <v-btn v-on:click="submit_like(usr.id)">Like</v-btn>
+              </v-flex>
+            </v-card>
+          </v-flex>
         </v-scale-transition>
       </v-col>
     </v-row>
