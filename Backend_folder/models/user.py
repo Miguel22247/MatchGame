@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python3.6
 """Script to create an instance of the class user"""
 from sqlalchemy import Column, String, ForeignKey
 from sqlalchemy.sql.schema import Table

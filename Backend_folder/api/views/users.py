@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python3.6
 """Handles RESTApi actions for users"""
 from flask import abort, jsonify, request
 from api.views import app_views

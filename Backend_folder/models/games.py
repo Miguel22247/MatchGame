@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python3.6
 """Script to create an instance of the class game"""
 from sqlalchemy import Column, String
 from models.base_model import Base, BaseModel

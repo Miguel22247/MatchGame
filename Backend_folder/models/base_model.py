@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python3.6
 """Base model for all objects"""
 import models
 from sqlalchemy.ext.declarative import declarative_base

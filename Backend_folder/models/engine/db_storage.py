@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python3.6
 """Engine to manipulate the storage in the database"""
 from models.base_model import Base, BaseModel
 from models.games import Game
