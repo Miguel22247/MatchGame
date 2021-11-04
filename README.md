@@ -1,6 +1,29 @@
-# GameMatch
+![Logo](https://github.com/Miguel22247/GameMatch/blob/Testing/public/icons/GameMatch.png?raw=true)
+
+#### GameMatch is a friendly place to find gamers like you and the perfect place to find a gaming partner. Connect with someone and have fun!
+
+## Demo
+You can see our demo [here]()
+
+## Features
+- Possibility to match with at least one videogame
+- Possibility to rank previously matched people (Coming soon)
+
+## About Us
+
+### What inspired us?
+GameMatch was inspired after seeing other projects on the cohort related to videogames and after thinking a little bit we notice that some of the video games are multiplayer, so we think in create a social media that allows people to find other people to play that videogames
+
+### Repository
+Link to the repository on GitHub: click [here](https://github.com/Miguel22247/GameMatch)
 
 ## Project setup
+If you want to try our project on local follow this steps:
+
+### Clone our repository locally
+[Here](https://github.com/Miguel22247/GameMatch.git) you can clone our repository locally
+
+### Install dependencies
 ```
 npm install
 ```
@@ -14,11 +37,10 @@ npm run serve
 ```
 npm run build
 ```
+### Known Bugs
+- Minor allignment visual errors on some screens
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-## Authors
-* Ezequiel - [Github](https://github.com/ezedksl)
-* Gabriel Prochnau - [Github](https://github.com/Rielch)
-* Miguel Pacheco - [Github](https://github.com/Miguel22247)
+### Team Members
+- Ezequiel Martinez: [Github](https://github.com/ezedksl/) | [LinkedIn](https://www.linkedin.com/in/ezequiel-martinez-rodriguez/)
+- Gabriel Prochnau: [Github](https://github.com/Rielch/) | [LinkedIn](https://www.linkedin.com/in/gabriel-prochnau-58447a1b7/)
+- Miguel Pacheco: [Github](https://github.com/Miguel22247/) | [LinkedIn](https://linkedin.com/in/miguel-pacheco-ruiz)

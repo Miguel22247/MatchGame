@@ -2,7 +2,7 @@
   <v-app id="inspire">
     <v-app-bar
       app
-      color="deep-blue accent-4"
+      color="blue darken-4"
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
@@ -57,11 +57,8 @@
     </v-navigation-drawer>
 
     <v-main>
-      <v-container fluid>
-
       <!-- If using vue-router -->
       <router-view></router-view>
-      </v-container>
     </v-main>
   </v-app>
 </template>
