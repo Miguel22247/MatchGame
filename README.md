@@ -2,6 +2,9 @@
 
 ![logo](https://github.com/Miguel22247/MatchGame/blob/main/src/assets/GameMatch.png)
 
+## What it is MatchGame
+MatchGame is a social app designed to allow video games to connect to other players, in the style of a matching app. Thought for a regular gamer who wants to find people or new friends that play the same games
+
 ## Project setup
 ```
 npm install
