@@ -1,4 +1,6 @@
+# MatchGame
 
+![logo](https://github.com/Miguel22247/MatchGame/blob/main/src/assets/GameMatch.png)
 
 ## Project setup
 ```
