@@ -7,7 +7,9 @@
 
 ## Project setup
 ### Clone the Repository
-```https://github.com/Miguel22247/MatchGame.git```
+```
+https://github.com/Miguel22247/MatchGame.git
+```
 
 ### Install all the dependencies
 ```
