@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>MatchGame</title>
+		<link rel="stylesheet" href="../../public/styles/styles.css">
+		<link rel="icon" href="./img/Logo.png">
+	</head>
+	<body>
+		<header>
+			<nav class="bg-gray-800 shadow-lg">
+				<div class="max-w-6xl mx-auto px-4">
+					<div class="flex justify-between">
+						<div class="flex space-x-7">
+							<div>
+								<!-- Website Logo -->
+								<a href="#" class="flex items-center py-4 px-2">
+									<img src="./img/Logo.png" alt="Logo" class="h-8 w-8 mr-2">
+									<span class="font-semibold text-gray-500 text-lg">MatchGame</span>
+								</a>
+							</div>
+							<!-- Primary Navbar items -->
+							<div class="hidden md:flex items-center space-x-1">
+								<a id="home" href="#" class="py-4 px-2 text-gray-500 border-b-4 border-blue-500 font-semibold ">Home</a>
+								<a id="features" href="#features" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Features</a>
+								<a id="demo" href="#demo" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Demo</a>
+								<a id="about" href="#about" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">About</a>
+								<a id="team" href="#team" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Team</a>
+								<a id="contact" href="#contact" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Contact Us</a>
+								<script src="./js/nav.js"></script>
+							</div>
+						</div>
+						<!-- Secondary Navbar items -->
+						<div class="hidden md:flex items-center space-x-3 ">
+							<a target="blank" href="" class=" hidden py-2 px-2 font-medium text-white bg-blue-500 rounded hover:bg-blue-400 transition duration-300">Try Now</a>
+						</div>
+						<!-- Mobile menu button -->
+						<div class="md:hidden flex items-center">
+							<button class="outline-none mobile-menu-button">
+							<svg class=" w-6 h-6 text-gray-500 hover:text-blue-500 "
+								x-show="!showMenu"
+								fill="none"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path d="M4 6h16M4 12h16M4 18h16"></path>
+							</svg>
+						</button>
+						</div>
+					</div>
+				</div>
+				<!-- mobile menu -->
+				<div class="hidden mobile-menu">
+					<ul class="">
+						<li class="active"><a id="home" href="#" class="block text-sm px-2 py-4 text-white bg-blue-500 font-semibold">Home</a></li>
+						<li><a id="features" href="#features" class="block text-sm px-2 py-4 text-white hover:bg-blue-500 transition duration-300">Features</a></li>
+						<li><a id="demo" href="#demo" class="block text-sm px-2 py-4 text-white hover:bg-blue-500 transition duration-300">Demo</a></li>
+						<li><a id="about" href="#about" class="block text-sm px-2 py-4 text-white hover:bg-blue-500 transition duration-300">About</a></li>
+						<li><a id="team" href="#team" class="block text-sm px-2 py-4 text-white hover:bg-blue-500 transition duration-300">Team</a></li>
+						<li><a id="contact" href="#contact" class="block text-sm px-2 py-4 text-white hover:bg-blue-500 transition duration-300">Contact Us</a></li>
+					</ul>
+				</div>
+				<script>
+					const btn = document.querySelector("button.mobile-menu-button");
+					const menu = document.querySelector(".mobile-menu");
+
+					btn.addEventListener("click", () => {
+						menu.classList.toggle("hidden");
+					});
+				</script>
+			</nav>
+		</header>
+		<div class="w-full bg-gray-800">
+			<br>
+			<div class="text-center">
+				<h1 class="text-blue-400 text-2xl md:text-3xl lg:text-4xl font-bold p-4">Welcome to MatchGame</h1>
+				<p class="text-blue-400">MatchGame is a friendly place to find gamers like you and the perfect place to find a gaming partner. Connect with someone and have fun!</p>
+				<br>
+				<br>
+				<p class="text-white text-2xl md:text-3xl"> You can access to our <a href="https://github.com/Miguel22247/MatchGame">Github</a> repository to download the code</p>
+			</div>
+			<br>
+			<br>
+			<section id="features">
+				<div class="w-full bg-gray-800">
+					<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+						<div class="text-center pb-12">
+							<h1 class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-white">
+								Features
+							</h1>
+						</div>
+						<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+							<div class="w-full bg-gray-900 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+								<div class="w-full md:w-2/5 h-80">
+								<!--<img class="object-center object-cover w-full h-full" src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="photo"> --->
+								</div>
+								<div class="w-full md:w-3/5 text-left p-6 md:p-4 space-y-2">
+									<p class="text-xl text-white font-bold">Customizable Profile</p>	
+									<p class="text-base text-gray-400 font-normal"></p>
+									<p class="text-base leading-relaxed text-gray-500 font-normal">On our profile page you can add or remove easily the games that you play and social media's without using complex menus.</p>
+								</div>
+							</div>
+							<div class="w-full bg-gray-900 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+								<div class="w-full md:w-2/5 h-80">
+								<!--<img class="object-center object-cover w-full h-full" src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="photo"> --->
+								</div>
+								<div class="w-full md:w-3/5 text-left p-6 md:p-4 space-y-2">
+									<p class="text-xl text-white font-bold">Matches</p>	
+									<p class="text-base text-gray-400 font-normal"></p>
+									<p class="text-base leading-relaxed text-gray-500 font-normal">You can have Customizable matches basing on the videogames that you play with links to their social media Accounts.</p>
+								</div>
+							</div>
+							<div class="w-full bg-gray-900 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+								<div class="w-full md:w-2/5 h-80">
+								<!--<img class="object-center object-cover w-full h-full" src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="photo"> --->
+								</div>
+								<div class="w-full md:w-3/5 text-left p-6 md:p-4 space-y-2">
+									<p class="text-xl text-white font-bold"> And More!</p>	
+									<p class="text-base text-gray-400 font-normal">Coming soon</p>
+									<p class="text-base leading-relaxed text-gray-500 font-normal">And so much more coming in the future.</p>
+								</div>
+							</div>
+					</section>
+				</div>
+			</section>
+			<section id="demo">
+				<div class="w-full bg-gray-800">
+					<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+						<div class="text-center pb-12">
+							<h1 class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-white">
+								Demo
+							</h1>
+						</div>
+						<div class="w-full bg-gray-900 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+							<div class="w-full md:w-2/5 h-80">
+								<iframe class="object-center object-cover w-full h-full" src="add our video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+							<div class="w-full md:w-3/5 text-left p-6 md:p-4 space-y-2">
+								<p class="text-xl text-white font-bold">Youtube demo video</p>	
+								<p class="text-base text-gray-400 font-normal"></p>
+								<p class="text-base leading-relaxed text-gray-500 font-normal">Here you can see our demo in action.</p>
+								<div class="flex justify-start space-x-2">
+									<p class="text-white">Link to our repository</p>
+									<a target="blank" href="https://github.com/Miguel22247/MatchGame" class="text-gray-500 hover:text-gray-600">
+										<svg class="w-7 h-7" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+											<path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</section>
+			<section id="about">
+				<div class="w-full bg-gray-800">
+					<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+						<div class="text-center pb-12">
+							<h1 class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-white">
+								About Us
+							</h1>
+						</div>
+						<div class="w-full bg-gray-900 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+							<div class="w-full md:w-2/5 h-80">
+								<img class="object-center object-cover w-full h-full" src="./img/GameMatch.png" alt="photo">
+							</div>
+							<div class="w-full md:w-3/5 text-left p-6 md:p-4 space-y-2">
+								<p class="text-xl text-white font-bold">Our history</p>	
+								<p class="text-base text-gray-400 font-normal"></p>
+								<p class="text-base leading-relaxed text-gray-500 font-normal">MatchGame started in 2021 as an idea during the pandemic, after seeing a lot of people start playing more video games, we started thinking about create a social media platform that allows people to play together to their favourite videogames.</p>
+								<div class="flex justify-start space-x-2">
+									<p class="text-white">Link to our repository</p>
+									<a target="blank" href="https://github.com/Miguel22247/MatchGame" class="text-gray-500 hover:text-gray-600">
+										<svg class="w-7 h-7" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+											<path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</section>
+			<section id="team">
+				<div class="w-full bg-gray-800">
+					<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+						<div class="text-center pb-12">
+							<h1 class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-white">
+								The Team
+							</h1>
+						</div>
+						<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+							<div class="w-full bg-gray-900 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+								<div class="w-full md:w-2/5 h-80">
+									<img class="object-center object-cover w-full h-full" src="./img/Ezequiel.jpg" alt="photo">
+								</div>
+								<div class="w-full md:w-3/5 text-left p-6 md:p-4 space-y-2">
+									<p class="text-xl text-white font-bold">Ezequiel Martinez</p>	
+									<p class="text-base text-gray-400 font-normal">Project Manager</p>
+									<p class="text-base leading-relaxed text-gray-500 font-normal"></p>
+									<div class="flex justify-start space-x-2">
+										<a target="blank" href="https://github.com/ezedksl" class="text-gray-500 hover:text-gray-600">
+											<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+												<path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+											</svg>
+										</a>
+										<a target="blank" href="https://www.linkedin.com/in/ezequiel-martinez-rodriguez/" class="text-gray-500 hover:text-gray-600">
+											<svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+												<path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="w-full bg-gray-900 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+								<div class="w-full md:w-2/5 h-80">
+									<img class="object-center object-cover w-full h-full" src="./img/Gabriel.jpg" alt="photo">
+								</div>
+								<div class="w-full md:w-3/5 text-left p-4 md:p-4 space-y-2">
+									<p class="text-xl text-white font-bold">Gabriel Prochnau</p>
+									<p class="text-base text-gray-400 font-normal">Back-end Developer</p>
+									<p class="text-base leading-relaxed text-gray-500 font-normal"></p>
+									<div class="flex justify-start space-x-2">
+										<a target="blank" href="https://github.com/Rielch" class="text-gray-500 hover:text-gray-600">
+											<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+												<path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+											</svg>
+										</a>
+										<a target="blank" href="https://www.linkedin.com/in/gabriel-prochnau-58447a1b7/" class="text-gray-500 hover:text-gray-600">
+											<svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+												<path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="w-full bg-gray-900 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+								<div class="w-full md:w-2/5 h-80">
+									<img class="object-center object-cover w-full h-full" src="./img/Miguel.jpg" alt="photo">
+								</div>
+								<div class="w-full md:w-3/5 text-left p-4 md:p-4 space-y-2">
+									<p class="text-xl text-white font-bold">Miguel Pacheco</p>
+									<p class="text-base text-gray-400 font-normal">Front-End Developer</p>
+									<p class="text-base leading-relaxed text-gray-500 font-normal"></p>
+									<div class="flex justify-start space-x-2">
+										<a target="blank" href="https://github.com/Miguel22247" class="text-gray-500 hover:text-gray-600">
+											<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+												<path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+											</svg>
+										</a>
+										<a target="blank" href="https://www.linkedin.com/in/miguel-pacheco-ruiz/" class="text-gray-500 hover:text-gray-600">
+											<svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+												<path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section id="contact">
+						<div class="text-center pb-12 hidden">
+							<h1 class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-white">
+								Contact Us
+							</h1>
+						</div>
+					</section>
+					<section id="back2Top">
+						<div class="fixed z-30 bottom-0 right-0 mr-6 mb-6">
+							<a id="back2Top" href="#" class="text-white bg-red-800 bg-opacity-50 rounded-md">
+								<span class="hidden">Back to Top</span>
+								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24" class="h-10 w-10">
+									<path fill="currentColor" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" />
+								</svg>
+							</a>
+						</div>
+						<script src="./js/index.js"></script>
+					</section>
+					<footer class="bg-gray-900">
+						<p class="text-white flex items-center justify-center h-16">Copyright MatchGame 2021 &copy; </p>
+					</footer>
+			</section>
+		</div>
+	</body>
+</html>
