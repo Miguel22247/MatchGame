@@ -30,6 +30,20 @@ npm run build
 ```
 npm run lint
 ```
+## Demo
+
+
+
+https://user-images.githubusercontent.com/66649043/142918366-6a4800b2-a518-4fe8-aac6-bf0776f4aea4.mp4
+
+
+
+https://user-images.githubusercontent.com/66649043/142917434-296b11e1-1865-4d63-9ef9-9d0fbb382103.mp4
+
+
+
+https://user-images.githubusercontent.com/66649043/142917449-3e5cd77f-695f-4932-83da-9d57c1219935.mp4
+
 
 ## Authors
 <p align="center">
